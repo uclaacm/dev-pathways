@@ -3,9 +3,9 @@ import './LogoButton.css';
 import logo from './acm_logo.svg';
 import Pressable from '../Pressable/Pressable';
 
-const LogoButton = onClick => {
+const LogoButton = props => {
     return (
-        <Pressable onClick={onClick}>
+        <Pressable onClick={props.onClick}>
             <img className="logo" src={logo} alt="ACM logo" />
             <span className="logotype">Dev Pathways</span>
         </Pressable>

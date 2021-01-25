@@ -3,9 +3,9 @@ import './Pressable.css';
 
 //an unstyled button useful as a base for custom buttons
 
-const Pressable = (props, onClick) => {
+const Pressable = props => {
     return (
-        <button className="pressable" onClick={onClick}>
+        <button className="pressable" onClick={props.onClick}>
             { props.children }
         </button>
     );

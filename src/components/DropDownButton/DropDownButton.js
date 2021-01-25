@@ -3,9 +3,9 @@ import './DropDownButton.css';
 import arrow from './arrow.svg';
 import Pressable from '../Pressable/Pressable';
 
-const DropDownButton = onClick => {
+const DropDownButton = props => {
     return (
-        <Pressable onClick={onClick}>
+        <Pressable onClick={props.onClick}>
             <span>Resources</span>
             <img className="arrow" src={arrow} alt="arrow" />
         </Pressable>
