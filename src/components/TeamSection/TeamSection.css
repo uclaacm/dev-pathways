@@ -1,0 +1,9 @@
+.team-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.team-container h2 {
+    margin-top: 75px;
+}

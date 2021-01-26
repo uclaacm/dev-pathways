@@ -2,12 +2,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     height: 484px;
+    width: 100%;
     background-color: #00000010;
     margin-top: 65px; /* for nav bar */
 }
 
-h1 {
-    font-size: 48px;
+.search-container h1 {
+    margin-top: 135px;
 }

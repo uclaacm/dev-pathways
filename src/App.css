@@ -1,3 +1,23 @@
 .App {
   text-align: center;
 }
+
+h1 {
+  font-size: 44px;
+  margin: 20px;
+}
+
+h2 {
+  font-size: 44px;
+  font-weight: 500;
+  margin: 20px;
+}
+
+@media screen and (min-width: 720px){
+  h1 {
+      font-size: 48px;
+  }
+  h2 {
+    font-size: 48px;
+  }
+}

@@ -3,7 +3,9 @@ import './TeamSection.css';
 
 const TeamSection = () => {
     return (
-        <div>Team Section</div>
+        <div className="team-container">
+            <h2>Team Overviews</h2>
+        </div>
     );
 }
 
