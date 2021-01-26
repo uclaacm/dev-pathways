@@ -1,0 +1,24 @@
+.card {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    background-color: #ffffff;
+    border: solid 2px #00000010;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: start;
+}
+
+.card img {
+    height: 40px;
+}
+
+.card h3 {
+    width: 100%;
+}
+
+.card ul {
+    margin-top: 0px;
+    width: 100%;
+}
