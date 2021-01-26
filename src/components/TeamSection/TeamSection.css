@@ -2,8 +2,31 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    padding: 45px;
 }
 
 .team-container h2 {
-    margin-top: 75px;
+    margin-top: 40px;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+}
+
+@media screen and (min-width: 600px) {
+    .cards-grid {
+        grid-template-columns: 1fr 1fr;
+    } 
+}
+
+@media screen and (min-width: 1280px) {
+    .cards-grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-column-gap: 60px;
+        grid-row-gap: 60px;
+    } 
 }
