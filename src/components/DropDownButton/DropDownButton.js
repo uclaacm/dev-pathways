@@ -1,7 +1,7 @@
 import React from 'react';
 import './DropDownButton.css';
 import arrow from './arrow.svg';
-import Pressable from '../Pressable/Pressable';
+import Pressable from '../Clickable/Clickable';
 
 const DropDownButton = props => {
     return (

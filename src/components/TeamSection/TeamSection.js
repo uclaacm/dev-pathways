@@ -10,7 +10,10 @@ const TeamSection = () => {
             <h2>Team Overviews</h2>
             <div className="cards-grid">
                 {teams.map(team =>
-                    <TeamCard team={team} />
+                    <TeamCard 
+                        team={team} 
+                        key={team.name}
+                    />
                 )}
             </div>
         </div>

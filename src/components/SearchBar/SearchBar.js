@@ -1,6 +1,6 @@
 import React from 'react';
 import './SearchBar.css';
-import Pressable from '../Pressable/Pressable';
+import Clickable from '../Clickable/Clickable';
 import line from './line.svg';
 import search from './search.svg';
 
@@ -10,9 +10,9 @@ import search from './search.svg';
 const SearchBar = props => {
     return (
         <div className="searchbar">
-            <Pressable onClick={props.onSubmit}>
+            <Clickable onClick={props.onSubmit}>
                 <img src={search} className="search-icon" alt="search icon"/>
-            </Pressable>
+            </Clickable>
             <img src={line} alt="line"/>
             <input 
                 value={props.value}

@@ -1,4 +1,4 @@
-.pressable {
+.clickable {
     background-color: #ffffff00;
     border-width: 0px;
     font-size: 18px;
@@ -7,10 +7,10 @@
     align-items: center;
 }
 
-.pressable:hover {
+.clickable:hover {
     cursor: pointer;
 }
 
-.pressable:focus {
+.clickable:focus {
     outline: 0;
 }

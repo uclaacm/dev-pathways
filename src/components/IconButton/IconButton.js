@@ -1,6 +1,6 @@
 import React from 'react';
 import './IconButton.css';
-import Pressable from '../Pressable/Pressable';
+import Pressable from '../Clickable/Clickable';
 
 const IconButton = props => {
     return (
