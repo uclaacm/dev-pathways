@@ -1,4 +1,4 @@
-import react from 'react';
+import React from 'react';
 import './CategoryList.css';
 
 //passing index as key is okay since list is static, would need to use a unique id if list is not static

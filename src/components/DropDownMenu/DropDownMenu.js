@@ -1,4 +1,4 @@
-import react from 'react';
+import React from 'react';
 import "./DropDownMenu.css"
 import "../CategoryList/CategoryList";
 import CategoryList from '../CategoryList/CategoryList';

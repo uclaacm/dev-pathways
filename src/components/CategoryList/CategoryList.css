@@ -10,5 +10,11 @@
     display: block;
     color: #1e6cff;
     text-decoration: none;
+    transition: .15s;
+    font-size: 1.2em;
     /* font-size: 25;  */
+}
+
+.category-list a:hover {
+    font-weight: 500;
 }
