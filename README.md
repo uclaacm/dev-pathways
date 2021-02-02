@@ -43,10 +43,10 @@ Want to make a change? Great! Here are the steps:
 7. If your code passes code review, we'll merge it into `master`. Congratulations! If you'd like, it's now safe to delete your branch/fork.
 
 ## The Team
-- @EinarBalan
-- @c-m-kim
-- @nicole-chang
-- @nendow02
+- [@EinarBalan](https://github.com/EinarBalan)
+- [@c-m-kim](https://github.com/c-m-kim)
+- [@nicole-chang](https://github.com/nicole-chang)
+- [@nendow02](https://github.com/nendow02)
 
 ## Licensing & Attribution
 
