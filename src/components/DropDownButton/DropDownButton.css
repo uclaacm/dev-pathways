@@ -2,4 +2,9 @@
     width: 12px;
     height: 7px;
     margin-left: 10px;
+    transition: .3s;
+}
+
+.flip {
+    transform: rotateX(180deg);
 }
