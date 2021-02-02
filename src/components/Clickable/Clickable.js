@@ -1,14 +1,14 @@
 import React from 'react';
-import './Pressable.css';
+import './Clickable.css';
 
 //an unstyled button useful as a base for custom buttons
 
-const Pressable = props => {
+const Clickable = props => {
     return (
-        <button className="pressable" onClick={props.onClick}>
+        <button className="clickable" onClick={props.onClick}>
             { props.children }
         </button>
     );
 }
 
-export default Pressable;
+export default Clickable;
