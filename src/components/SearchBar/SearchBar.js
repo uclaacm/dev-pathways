@@ -18,6 +18,7 @@ const SearchBar = props => {
                 value={props.value}
                 type="text" 
                 onChange={props.onChange}
+                onKeyDown={props.onKeyDown}
                 autoComplete="off"
                 placeholder="What do you want to learn?"
             />
