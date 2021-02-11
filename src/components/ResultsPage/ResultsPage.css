@@ -1,0 +1,14 @@
+.results-page-section{
+    display: flex;
+}
+
+.results-body-section{
+    width: 70%;
+    height: 100%;
+}
+
+.filters-body-section{
+    width: 30%;
+    height: 100%;
+    border-left: 2px solid #00000015
+}
