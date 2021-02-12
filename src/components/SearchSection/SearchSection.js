@@ -11,11 +11,11 @@ const SearchSection = () => {
 
     const handleSearchInput = onChange => {
         let tempSuggest = [];
-        var value = onChange.target.value;
+        let value = onChange.target.value;
         setSearchBarText(value);
         value = value.toLowerCase();
         if (value.trim() !== "") {
-            for (var i=0; i < resources.length; i++) {
+            for(let i=0; i < resources.length; i++) {
                 const indexI = resources[i].category.toLowerCase().indexOf(value);
                 if (tempSuggest.length === 10) {break;}
                 if (indexI !== -1) {
@@ -24,7 +24,7 @@ const SearchSection = () => {
                         index:  indexI,
                         id:[i,-1]});
                 }
-                for (var j=0; j< resources[i].links.length; j++) {
+                for (let j=0; j< resources[i].links.length; j++) {
                     if (tempSuggest.length === 10) {break;}
                     const indexJ = resources[i].links[j].name.toLowerCase().indexOf(value);
                     if (indexJ !== -1) {
@@ -43,7 +43,7 @@ const SearchSection = () => {
     }
 
     const handleSuggestionSelect = id => {
-        var val = "";
+        let val = "";
         if (id[1] === -1) {
             val = resources[id[0]].category.toLowerCase();
         } else {
