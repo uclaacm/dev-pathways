@@ -5,9 +5,11 @@ import resources from '../../data/resources';
 import IconButton from '../IconButton/IconButton';
 import DropDownButton from '../DropDownButton/DropDownButton';
 import DropDownMenu from '../DropDownMenu/DropDownMenu';
+import { useNavigate } from 'react-router-dom';
 
 const NavBar = () => {
     const [isMenuExpanded, setMenuExpanded] = useState(false);
+    const navigate = useNavigate();
 
     return (
         <div>
@@ -17,7 +19,7 @@ const NavBar = () => {
                         text="Dev Pathways"
                         icon={logo}
                         alt="acm logo"
-                        onClick={() => console.log("click logo!")} />
+                        onClick={() => navigate("/")} />
                 </div>
                 <div className="element-container">
                     <DropDownButton
