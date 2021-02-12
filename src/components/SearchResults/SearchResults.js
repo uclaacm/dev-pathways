@@ -2,11 +2,12 @@ import React from 'react';
 import './SearchResults.css';
 
 const SearchResults = props => {
-
     let suggested;
+
     if (props.data.length === 0) {
-        suggested = <li>No results found...</li>
-    } else {
+        suggested = <li id="no-results">No results found...</li>
+    } 
+    else {
          suggested = props.data.map((item) =>
             <li className="search" key={item.id} onClick={() => props.suggestionSelect(item.id)}>
                 <b>{item.name.substring(0,item.index)}</b>

@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import './ResultsSearchSection.css'
-import SearchBar from '../../SearchBar/SearchBar'
+import SearchBar from '../SearchBar/SearchBar'
 
 const ResultsSearchSection = () => {
     //NOTE: Copy-pasted from SearchSection

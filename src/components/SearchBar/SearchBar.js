@@ -4,7 +4,6 @@ import Clickable from '../Clickable/Clickable';
 import line from './line.svg';
 import search from './search.svg';
 
-//TODO: implement Google-esque drop down functionality
 //TODO: implement search bar query cycling animation
 
 const SearchBar = props => {

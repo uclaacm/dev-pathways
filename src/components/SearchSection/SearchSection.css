@@ -16,8 +16,9 @@
     align-items: center;
     justify-content: center;
     background-color: #ffffff;
+    border: solid #00000015 2px;
     border-radius: 30px;
-    box-shadow: 0px 2px #0000001b;
+    /* box-shadow: 0px 2px #0000001b; */
     z-index: 1;
 }
 
