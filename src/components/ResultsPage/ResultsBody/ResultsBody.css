@@ -1,6 +1,8 @@
 .results-container{
+    width: 70%;
+    height: 100%;
+    margin: 2%;
     text-align: left;
-    margin: 4.3%;
 }
 
 h2{

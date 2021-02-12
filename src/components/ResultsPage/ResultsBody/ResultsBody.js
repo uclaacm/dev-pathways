@@ -1,7 +1,7 @@
 import React from 'react'
 import './ResultsBody.css'
 
-function ResultsBody() {
+const ResultsBody = () => {
     //TODO: show results from search query
     //I'm not really sure how this will be implemented
 

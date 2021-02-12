@@ -5,7 +5,7 @@ import ResultsSearchSection from './ResultsSearchSection/ResultsSearchSection'
 import ResultsBody from './ResultsBody/ResultsBody'
 import FiltersBody from './FiltersBody/FiltersBody'
 
-function ResultsPage() {
+const ResultsPage = () => {
     
     
     //TODO: When the search functionality is properly in place, 
@@ -16,8 +16,8 @@ function ResultsPage() {
             <NavBar />
             <ResultsSearchSection />
             <div className="results-page-section">
-                <div className="results-body-section"><ResultsBody /></div>
-                <div className="filters-body-section"><FiltersBody /></div>
+                <ResultsBody />
+                <FiltersBody />
             </div>
         </div>
     )

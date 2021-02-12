@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import './ResultsSearchSection.css'
 import SearchBar from '../../SearchBar/SearchBar'
 
-function ResultsSearchSection() {
+const ResultsSearchSection = () => {
     //NOTE: Copy-pasted from SearchSection
     //Similar functionality, different styling
 

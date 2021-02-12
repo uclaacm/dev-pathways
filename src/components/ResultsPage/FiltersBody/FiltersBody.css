@@ -1,6 +1,9 @@
 .filters-container{
+    width: 30%;
+    height: 100%;
+    margin: 2%;
     text-align: left;
-    margin: 10%;
+    border-left: 2px solid #00000015;
 }
 
 h2{
@@ -10,6 +13,6 @@ h2{
 .filter-category{
     border: 2px solid #00000015;
     border-radius: 15px;
-    margin: 30px 5%;
+    margin: 30px;
     padding: 15px;
 }
