@@ -4,15 +4,12 @@ import SearchSection from './components/SearchSection/SearchSection';
 import TeamSection from './components/TeamSection/TeamSection';
 import './App.css';
 
-import ResultsPage from './components/ResultsPage/ResultsPage'
-
 const App = () => {
   return (
     <div className="App">
-      {/*<NavBar/>
+      <NavBar/>
       <SearchSection/>
-      <TeamSection/>*/}
-      <ResultsPage />
+      <TeamSection/>
     </div>
   );
 }
