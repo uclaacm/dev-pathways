@@ -3,17 +3,20 @@ import './SearchSection.css';
 import SearchBar from '../SearchBar/SearchBar';
 import SearchResults from '../SearchResults/SearchResults';
 import resources from '../../../src/data/resources.js';
+import { useNavigate } from 'react-router-dom';
 
 const SearchSection = () => {
     const [searchBarText, setSearchBarText] = useState("");
     const [suggestedItem, setSuggestedItem] = useState([]);
     const [showResults, setShowResults] = useState(false);
+    const navigate = useNavigate(); //note: this hook can be used along with useLocation to pass data between pages
 
     const handleSearchInput = onChange => {
         let tempSuggest = [];
         let value = onChange.target.value;
         setSearchBarText(value);
         value = value.toLowerCase();
+
         if (value.trim() !== "") {
             for(let i=0; i < resources.length; i++) {
                 const indexI = resources[i].category.toLowerCase().indexOf(value);
@@ -61,6 +64,7 @@ const SearchSection = () => {
 
     const search = text => {
         console.log(`searched for ${text}`); //TODO: implement actual funtionality
+        navigate('/results')
     }
 
     return (
@@ -73,12 +77,11 @@ const SearchSection = () => {
                     onKeyDown={(event) => handleKeyInput(event)}
                     onSubmit={() => search(searchBarText)}
                 />
-                {showResults ? <hr/> : null}
                 {showResults ? <SearchResults 
-                data={suggestedItem}
-                text = {searchBarText}
-                suggestionSelect = {handleSuggestionSelect}
-                /> : null}
+                    data={suggestedItem} 
+                    text={searchBarText}
+                    suggestionSelect={handleSuggestionSelect}/>
+                : null}
             </div>
         </div>
     );

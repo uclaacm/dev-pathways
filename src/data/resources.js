@@ -1,3 +1,6 @@
+//NOTE:
+//  - resource names should be both descriptive and concise (< 40 characters)
+
 const resources = [
     {
         category: "HTML/CSS",
@@ -31,7 +34,7 @@ const resources = [
                 url: "https://marksheet.io/",
             },
             {
-                name: "TeachLA| A Complete Guide to CSS Concepts and Fundamentals",
+                name: "TeachLA| CSS Concepts and Fundamentals",
                 url: "https://www.taniarascia.com/overview-of-css-concepts/",
             },
         ],

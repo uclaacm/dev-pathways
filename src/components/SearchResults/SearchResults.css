@@ -1,16 +1,30 @@
-
 .searchresults li {
     list-style-type: none;
     text-align: left;
     font-size: 20px;
+    cursor: pointer;
+    /* background: url('./search.svg') no-repeat left center;  */
+    padding: 8px 3px 8px 80px;
 }
 
-.search {
-    background: url('./search.svg') no-repeat left center; 
-    padding: 5px 3px 5px 35px;
-    cursor: pointer;
+.searchresults li:last-child {
+    border-radius: 0px 0px 28px 28px;
+}
+
+.search:hover {
+    background-color: #00000012;
+}
+
+#no-results {
+    cursor: default;
+}
+
+#no-results:hover {
+    background-color: none; 
 }
 
 .searchresults ul {
-    padding-left: 80px;
+    padding: 0px;
+    margin: 0px;
+    border-top: solid #00000012 2px;
 }

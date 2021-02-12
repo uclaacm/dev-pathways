@@ -7,7 +7,7 @@ const CategoryList = props => {
         <div className="category-list">
             <span className="list-head">{props.category}</span>
             {props.resources.map((resource, index) => {
-                return <a href={resource.url} key={index}> 
+                return <a href={resource.url} target="_blank" rel="noopener noreferrer" key={index}> 
                     {resource.name}
                 </a>
             })}

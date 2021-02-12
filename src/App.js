@@ -1,16 +1,23 @@
 import React from 'react';
-import NavBar from './components/NavBar/NavBar';
-import SearchSection from './components/SearchSection/SearchSection';
-import TeamSection from './components/TeamSection/TeamSection';
+import Home from './pages/Home/Home';
+import Results from './pages/Results/Results';
 import './App.css';
+
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
 
 const App = () => {
   return (
-    <div className="App">
-      <NavBar/>
-      <SearchSection/>
-      <TeamSection/>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/results" element={<Results/>}/>
+      </Routes>
+
+    </Router>
   );
 }
 

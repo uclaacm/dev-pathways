@@ -17,6 +17,10 @@
     grid-row-gap: 30px;
 }
 
+/* .cards-grid .card:last-child {
+    grid-column-end: 4;
+} */
+
 @media screen and (min-width: 600px) {
     .cards-grid {
         grid-template-columns: 1fr 1fr;

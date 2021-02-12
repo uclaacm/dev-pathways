@@ -6,7 +6,7 @@ import icpc from "../img/icpc.svg";
 import design from "../img/design.svg";
 import ai from "../img/ai.svg";
 import cyber from "../img/cyber.svg";
-import studio from "../img/studio.svg";
+// import studio from "../img/studio.svg";
 
 const teams = [
     {
@@ -41,7 +41,7 @@ const teams = [
     },
     {
         logotype: ai,
-        technologies: ["HTML/CSS", "Jekyll/Liquid", "React"],
+        technologies: ["HTML/CSS", "Jekyll/Liquid", "React", "Jupyter Notebook", "Python"],
         projects: ["Learning Labs"],
     },
     {
@@ -49,11 +49,11 @@ const teams = [
         technologies: ["HTML/CSS", "Jekyll/Liquid", "React"],
         projects: ["Bruin Quest Website", "Learning Labs"],
     },
-    {
-        logotype: studio,
-        technologies: ["HTML/CSS", "Jekyll/Liquid", "React"],
-        projects: ["Static Site", "Learning Labs"],
-    },
+    // {
+    //     logotype: studio,
+    //     technologies: ["HTML/CSS", "Jekyll/Liquid", "React"],
+    //     projects: ["Static Site", "Learning Labs"],
+    // },
 ];
 
 export default teams;
