@@ -10,13 +10,14 @@ const SearchSection = () => {
     const [showResults, setShowResults] = useState(false);
 
     const handleSearchInput = onChange => {
-        var tempSuggest = [];
+        let tempSuggest = [];
         var value = onChange.target.value;
         setSearchBarText(value);
         value = value.toLowerCase();
         if (value.trim() !== "") {
             for (var i=0; i < resources.length; i++) {
                 const indexI = resources[i].category.toLowerCase().indexOf(value);
+                if (tempSuggest.length === 10) {break;}
                 if (indexI !== -1) {
                     tempSuggest.push({ 
                         name:resources[i].category.toLowerCase(),
@@ -24,6 +25,7 @@ const SearchSection = () => {
                         id:[i,-1]});
                 }
                 for (var j=0; j< resources[i].links.length; j++) {
+                    if (tempSuggest.length === 10) {break;}
                     const indexJ = resources[i].links[j].name.toLowerCase().indexOf(value);
                     if (indexJ !== -1) {
                         tempSuggest.push({ 
@@ -33,13 +35,11 @@ const SearchSection = () => {
                     }
                 }
             }
-         }
-        setSuggestedItem(tempSuggest);
-        if (tempSuggest.length === 0) {
-            setShowResults(false);
-        } else {
             setShowResults(true);
-        }
+         } else {
+             setShowResults(false);
+         }
+         setSuggestedItem(tempSuggest);
     }
 
     const handleSuggestionSelect = id => {

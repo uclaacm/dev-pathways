@@ -1,10 +1,13 @@
 
 .searchresults li {
-    background: url('./search.svg') no-repeat left center; 
-    padding: 5px 3px 5px 35px;
     list-style-type: none;
     text-align: left;
     font-size: 20px;
+}
+
+.search {
+    background: url('./search.svg') no-repeat left center; 
+    padding: 5px 3px 5px 35px;
     cursor: pointer;
 }
 
