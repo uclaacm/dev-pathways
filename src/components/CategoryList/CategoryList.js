@@ -20,6 +20,9 @@ const CategoryList = props => {
                         </a>
                     );
                 }
+                else {
+                    return null;
+                }
             })}
         </div>  
     );
