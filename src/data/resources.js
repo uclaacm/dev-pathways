@@ -1,301 +1,158 @@
 //NOTE:
 //  - resource names should be both descriptive and concise (< 40 characters)
+//  - in general (with some exceptions), external resources should be ranked below resources coming from ACM
+//  - each resource can contain several links (video, article, interactive, or doc) that indicate the resource type(s)
+//  - only first 5 resources are shown in resources drop down (so most important are at top)
 
 const resources = [
     {
         category: "HTML/CSS",
         links: [
             {
-                name: "Hack| Hackschool Session 1a: Intro to HTML/CSS",
-                url: "https://github.com/uclaacm/hackschool-f20/blob/main/session-1-intro-to-html-css/README.md",
+                name: "Hackschool | Intro to HTML/CSS",
+                video: "https://www.youtube.com/watch?v=sttIgSTnSg0",
+                article: "https://github.com/uclaacm/hackschool-f20/blob/main/session-1-intro-to-html-css/README.md",
+                source: "Hack",
             },
             {
-                name: "Hack| Hackschool Session 1b: Intro to HTML/CSS",
-                url: "https://www.youtube.com/watch?v=sttIgSTnSg0",
+                name: "Hackschool | Advanced CSS",
+                video: "https://www.youtube.com/watch?v=vZj9uawoGMg",
+                article: "https://github.com/uclaacm/hackschool-f20/tree/main/session-4-advanced-css",
+                source: "Hack",
+
             },
             {
-                name: "Dev| Mozilla CSS Basics",
-                url: "https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics",
+                name: "Learning Labs | Intro to HTML/CSS",
+                video: "https://www.youtube.com/watch?v=TlfR0JU5gSg&list=PLPO7_kXilXFa6YdXxn5oln1gagcqnFI4l&index=2&t=0s",
+                article: "https://github.com/uclaacm/learning-lab-crash-course-su20/tree/master/01-intro-html-css",
+                source: "Teach LA",
             },
             {
-                name: "TeachLA| Learning Lab 1a: Intro to HTML/CSS",
-                url: "https://github.com/uclaacm/learning-lab-crash-course-su20/tree/master/01-intro-html-css",
+                name: "Flexbox Froggy | CSS",
+                interactive: "https://flexboxfroggy.com/",
+                source: "External",
             },
             {
-                name: "TeachLA| Learning Lab 1b: Intro to HTML/CSS",
-                url: "https://www.youtube.com/watch?v=TlfR0JU5gSg&list=PLPO7_kXilXFa6YdXxn5oln1gagcqnFI4l&index=2&t=0s",
+                name: "Grid Garden | CSS",
+                interactive: "https://codepip.com/games/grid-garden/",
+                source: "External",
             },
             {
-                name: "TeachLA| Interneting is Hard: HTML/CSS",
-                url: "https://www.internetingishard.com/html-and-css/",
+                name: "Learning Labs | Intro to SASS",
+                video: "https://www.youtube.com/watch?v=hJqrfq3r950",
+                article: "https://github.com/uclaacm/learning-lab-crash-course-su20/tree/master/10-sass",
+                source: "Teach LA",
             },
             {
-                name: "TeachLA| MarkSheet: a free HTML/CSS tutorial",
-                url: "https://marksheet.io/",
+                name: "Learning Labs | CSS Box Model & Positioning",
+                video: "https://www.youtube.com/watch?v=ar1Ni6SNaEE&list=PLPO7_kXilXFa6YdXxn5oln1gagcqnFI4l&index=2",
+                article: "https://github.com/uclaacm/learning-lab-crash-course-su20/tree/master/02-intermediate-css",
+                source: "Teach LA",
             },
             {
-                name: "TeachLA| CSS Concepts and Fundamentals",
-                url: "https://www.taniarascia.com/overview-of-css-concepts/",
-            },
-        ],
-    },
-    {
-        category: "Javascript",
-        links: [
-            {
-                name: "Hack| Hackschool Session 2a: Intro to JavaScript",
-                url: "https://github.com/uclaacm/hackschool-f20/blob/main/session-2-intro-to-js/README.md",
+                name: "Learning Labs | CSS Flexbox & Grid",
+                video: "https://www.youtube.com/watch?v=CBR0R50-jGg",
+                article: "https://github.com/uclaacm/learning-lab-crash-course-su20/tree/master/04-flexbox-grid",
+                source: "Teach LA",
             },
             {
-                name: "Hack| Hackschool Session 2b: Intro to JavaScript",
-                url: "https://www.youtube.com/watch?v=Dk9kob-9Wkw&ab_channel=JuliaWuJuliaWuOfficialArtistChannel",
+                name: "Learning Labs | CSS Animations",
+                video: "https://youtu.be/eqogXB3tLes",
+                article: "https://github.com/uclaacm/learning-lab-crash-course-su20/tree/master/06-css-animations",
+                source: "Teach LA",
             },
             {
-                name: "Hack| JavaScript Chats: Curriculum",
-                url: "https://hack.uclaacm.com/posts/fall2019/js-chats-summary/",
+                name: "Interneting is Hard | Intro to HTML/CSS",
+                article: "https://www.internetingishard.com/html-and-css/",
+                source: "External",
             },
             {
-                name: "Hack| Functions and this",
-                url: "https://hack.uclaacm.com/posts/fall2019/js-chat-1/",
+                name: "Marksheet | Intro to HTML/CSS",
+                article: "https://www.internetingishard.com/html-and-css/",
+                source: "External",
             },
             {
-                name: "Hack| Asynchronous JavaScript",
-                url: "https://hack.uclaacm.com/posts/fall2019/js-chats-2/",
-            },
-            {
-                name: "Hack| Multi-threading",
-                url: "https://hack.uclaacm.com/posts/fall2019/js-chats-5/",
-            },
-            {
-                name: "Hack| Testing",
-                url: "https://hack.uclaacm.com/posts/fall2019/js-chats-6/",
-            },
-            {
-                name: "Board| Mozilla Javascript Basics",
-                url: "https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics",
-            },
-            {
-                name: "TeachLA| Learning Lab 3a: Intro to JS",
-                url: "https://github.com/uclaacm/learning-lab-crash-course-su20/tree/master/03-intro-js",
-            },
-            {
-                name: "TeachLA| Learning Lab 3b: Intro to JS",
-                url: "https://www.youtube.com/watch?v=wTMeQSq2PJg",
-            },
-            {
-                name: "TeachLA| Learning Lab 17a: Testing in JS with Jest",
-                url: "https://github.com/uclaacm/learning-lab-crash-course-su20/tree/master/17-intro-testing-js",
-            },
-            {
-                name: "TeachLA| Learning Lab 17b: Testing in JS with Jest",
-                url: "https://www.youtube.com/watch?v=aPJm91_cDw4",
-            },
-            {
-                name: "TeachLA| Eloquent JS",
-                url: "https://eloquentjavascript.net/",
-            },
-            {
-                name: "TeachLA| You Don't Know JS",
-                url: "https://github.com/getify/You-Dont-Know-JS",
-            },
-            {
-                name: "TeachLA| Dependency Injection",
-                url: "https://medium.com/@daniel.oliver.king/dependency-injection-practical-examples-for-testing-and-refactoring-in-javascript-3cb5b58b50be",
+                name: "Mozilla | CSS Basics",
+                doc: "https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics",
+                source: "External",
             },
         ],
     },
     {
-        category: "DOM API",
+        category: "Intro Javascript",
         links: [
             {
-                name: "Hack| Hackschool 3a: DOM API",
-                url: "https://github.com/uclaacm/hackschool-f20/tree/main/session-3-dom-api",
+                name: "Hackschool | Intro to JavaScript",
+                video: "https://www.youtube.com/watch?v=Dk9kob-9Wkw",
+                article: "https://github.com/uclaacm/hackschool-f20/blob/main/session-2-intro-to-js",
+                source: "Hack",
             },
             {
-                name: "Hack| Hackschool 3b: DOM API",
-                url: "https://www.youtube.com/watch?v=Au3F9R0qr7M&t=5s",
+                name: "Learning Labs | Intro to JavaScript",
+                video: "https://www.youtube.com/watch?v=wTMeQSq2PJg",
+                article: "https://github.com/uclaacm/learning-lab-crash-course-su20/tree/master/03-intro-js",
+                source: "Teach LA",
             },
             {
-                name: "Board| Mozilla Introduction to the DOM",
-                url: "https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction",
+                name: "Learning Labs | Testing in JavaScript",
+                video: "https://www.youtube.com/watch?v=aPJm91_cDw4",
+                article: "https://github.com/uclaacm/learning-lab-crash-course-su20/tree/master/17-intro-testing-js",
+                source: "Teach LA",
+            },
+            {
+                name: "Mozilla | Javascript Basics",
+                doc: "https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics",
+                source: "External",
+            },
+            {
+                name: "Mozilla | Re-Intro to JavaScript",
+                article: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript",
+                source: "External",
             },
         ],
     },
     {
-        category: "CSS",
+        category: "Advanced Javascript",
         links: [
             {
-                name: "Hack| Hackschool 4a: Advanced CSS",
-                url: "https://github.com/uclaacm/hackschool-f20/tree/main/session-4-advanced-css",
+                name: "Hackschool | Javascript DOM API",
+                video: "https://www.youtube.com/watch?v=Au3F9R0qr7M",
+                article: "https://github.com/uclaacm/hackschool-f20/tree/main/session-3-dom-api",
+                source: "Hack",
             },
             {
-                name: "Hack| Hackschool 4b: Advanced CSS",
-                url: "https://www.youtube.com/watch?v=vZj9uawoGMg",
+                name: "Hackschool | Asynchronous JS & API's",
+                video: "https://www.youtube.com/watch?v=KUr5qG_ZGuY",
+                article: "https://github.com/uclaacm/hackschool-f20/tree/main/session-5-async-and-web-APIs",
+                source: "Hack",
             },
             {
-                name: "Board| Advanced CSS: 5 New Methods",
-                url: "https://pagely.com/blog/advanced-css-5-methods/",
+                name: "Learning Labs | Asynchronous JS",
+                video: "https://www.youtube.com/watch?v=T9mslksU_Vg",
+                article: "https://github.com/uclaacm/learning-lab-crash-course-su20/tree/master/15-async-js",
+                source: "Teach LA",
             },
             {
-                name: "TeachLA| Learning Lab 2a: Box Model & Positioning",
-                url: "https://github.com/uclaacm/learning-lab-crash-course-su20/tree/master/02-intermediate-css",
+                name: "JavaScript Chats | Deep Dive into JS",
+                article: "https://hack.uclaacm.com/posts/fall2019/js-chats-summary/",
+                source: "Hack",
             },
             {
-                name: "TeachLA| Learning Lab 2b: Box Model & Positioning",
-                url: "https://www.youtube.com/watch?v=ar1Ni6SNaEE&list=PLPO7_kXilXFa6YdXxn5oln1gagcqnFI4l&index=2",
+                name: "Mozilla | Javascript DOM API",
+                doc: "https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction",
+                source: "External",
+
             },
             {
-                name: "TeachLA| Learning Lab 4a: Flexbox & Grid",
-                url: "https://github.com/uclaacm/learning-lab-crash-course-su20/tree/master/04-flexbox-grid",
+                name: "Eloquent Javascript",
+                doc: "https://eloquentjavascript.net/",
+                source: "External",
             },
             {
-                name: "TeachLA| Learning Lab 4a: Flexbox & Grid",
-                url: "https://www.youtube.com/watch?v=CBR0R50-jGg",
-            },
-            {
-                name: "TeachLA| Learning Lab 6a: Animations",
-                url: "https://github.com/uclaacm/learning-lab-crash-course-su20/tree/master/06-css-animations",
-            },
-            {
-                name: "TeachLA| Learning Lab 6b: Animations",
-                url: "https://youtu.be/eqogXB3tLes",
-            },
-            {
-                name: "TeachLA| Interneting is Hard: Adv CSS",
-                url: "https://www.internetingishard.com/html-and-css/",
-            },
-            {
-                name: "TeachLA| Marksheet: Adv CSS",
-                url: "https://marksheet.io/",
-            },
-            {
-                name: "TeachLA| Flexbox Froggy",
-                url: "https://flexboxfroggy.com/",
-            },
-            {
-                name: "TeachLA| Grid Garden",
-                url: "https://codepip.com/games/grid-garden/",
-            },
-            {
-                name: "TeachLA| Learn CSS Grid",
-                url: "https://learncssgrid.com/",
-            },
-            {
-                name: "TeachLA| A Complete Guide to CSS",
-                url: "https://www.taniarascia.com/overview-of-css-concepts/",
-            },
-        ],
-    },
-    {
-        category: "SASS",
-        links: [
-            {
-                name: "TeachLA| Learning Lab 10a: Intro to SASS",
-                url: "https://github.com/uclaacm/learning-lab-crash-course-su20/tree/master/10-sass",
-            },
-            {
-                name: "TeachLA| Learning Lab 10b: Intro to SASS",
-                url: "https://www.youtube.com/watch?v=hJqrfq3r950",
-            },
-        ],
-    },
-    {
-        category: "Async JS and Web APIs",
-        links: [
-            {
-                name: "Hack| Hackschool 5a: Async JS and Web APIs",
-                url: "https://github.com/uclaacm/hackschool-f20/tree/main/session-5-async-and-web-APIs",
-            },
-            {
-                name: "Hack| Hackschool 5b: Async JS and Web APIs",
-                url: "https://www.youtube.com/watch?v=KUr5qG_ZGuY&t=2s",
-            },
-            {
-                name: "Hack| JavaScript Chats: Deeper Dive",
-                url: "https://hack.uclaacm.com/posts/fall2019/js-chats-2/",
-            },
-            {
-                name: "Board| Async JS: Using Promises with REST APIs",
-                url: "https://www.twilio.com/blog/asynchronous-javascript-using-promises-rest-apis-nodejs",
-            },
-            {
-                name: "TeachLA| Learning Lab 15a: Async in JS",
-                url: "https://github.com/uclaacm/learning-lab-crash-course-su20/tree/master/15-async-js",
-            },
-            {
-                name: "TeachLA| Learning Lab 15b: Async in JS",
-                url: "https://www.youtube.com/watch?v=T9mslksU_Vg",
-            },
-            {
-                name: "TeachLA| MDN: Concurrency Model and Event Loop",
-                url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop",
-            },
-            {
-                name: "TeachLA| How to Connect to an API with JS",
-                url: "https://www.taniarascia.com/how-to-connect-to-an-api-with-javascript/",
-            },
-        ],
-    },
-    {
-        category: "Responsive Design and Accessibility",
-        links: [
-            {
-                name: "Hack| Hackschool 6a: Design and Accessibility",
-                url: "https://github.com/uclaacm/hackschool-f20/tree/main/session-6-responsive-design-and-accessibility",
-            },
-            {
-                name: "Hack| Hackschool 6b: Design and Acccessibility",
-                url: "https://www.youtube.com/watch?v=jy_OtcErlRY",
-            },
-            {
-                name: "Board| W3C: Designing for Web Accessibility",
-                url: "https://www.w3.org/WAI/tips/designing/",
-            },
-            {
-                name: "TeachLA| Learning Lab 13a: Accessibility on the Web",
-                url: "https://github.com/uclaacm/learning-lab-crash-course-su20/tree/master/13-accessibility",
-            },
-            {
-                name: "TeachLA| Learning Lab 13b: Accessibility on the Web",
-                url: "https://youtu.be/C4owSuA5S1Y",
-            },
-            {
-                name: "TeachLA| Web Fundamentals: Accessibility",
-                url: "https://developers.google.com/web/fundamentals/accessibility",
-            },
-            {
-                name: "TeachLA| Digital.gov: Introduction to Accessibility",
-                url: "https://digital.gov/resources/introduction-accessibility/",
-            },
-            {
-                name: "TeachLA| Introduction to Web Accessibility",
-                url: "https://webaim.org/intro/",
-            },
-            {
-                name: "TeachLA| How I Audit a Website for Accessibility",
-                url: "https://marcysutton.com/how-i-audit-a-website-for-accessibility",
-            },
-        ],
-    },
-    {
-        category: "Backend - Databases",
-        links: [
-            {
-                name: "Hack| Hackschool: Databases",
-                url: "https://github.com/uclaacm/hackschool-f19/tree/master/session-6-backend-database",
-            },
-        ],
-    },
-    {
-        category: "Full Stack",
-        links: [
-            {
-                name: "Hack| Hackschool: Full Stack",
-                url: "https://github.com/uclaacm/hackschool-f19/tree/master/session-7-fullstack-bringing-it-together",
-            },
-            {
-                name: "Board| How to Get Started with MERN",
-                url: "https://www.digitalocean.com/community/tutorials/getting-started-with-the-mern-stack",
+                name: "Twilio | Async Javscript in Node.js",
+                article: "https://www.twilio.com/blog/asynchronous-javascript-using-promises-rest-apis-nodejs",
+                source: "External",
+
             },
         ],
     },
@@ -303,142 +160,85 @@ const resources = [
         category: "React",
         links: [
             {
-                name: "Sample React Curriculum",
-                url: "https://www.codecademy.com/learn/react-101",
+                name: "Hackschool | Intro to React",
+                video: "https://www.youtube.com/watch?v=1X84EQR92F4&ab_channel=ACMatUCLA",
+                article: "https://github.com/uclaacm/hackschool-f20/tree/main/session-7-intro-react",
+                source: "Hack",
             },
             {
-                name: "Build Your First App with Mobx and React",
-                url: "https://dev.to/rosyshrestha/build-your-first-app-with-mobx-and-react-4896",
+                name: "QWER Hacks | Intro to React & Firebase",
+                article: "https://github.com/malsf21/qwerhacks-web-dev-workshop",
+                source: "Teach LA",
             },
             {
-                name: "The MERN Stack Tutorial",
-                url: "https://codingthesmartway.com/the-mern-stack-tutorial-building-a-react-crud-application-from-start-to-finish-part-1/",
+                name: "Javascript Chats | React Hooks",
+                article: "https://hack.uclaacm.com/posts/fall2019/js-chats-3/",
+                source: "Hack",
             },
             {
-                name: "How to Get Started with the MERN Stack",
-                url: "https://www.digitalocean.com/community/tutorials/getting-started-with-the-mern-stack",
+                name: "Learning Labs | Intro to React",
+                video: "https://www.youtube.com/watch?v=3UKF9qMBIzA",
+                article: "https://github.com/uclaacm/learning-lab-crash-course-su20/tree/master/07-intro-react",
+                source: "Teach LA",
             },
             {
-                name: "Hack| Hackschool 7a: Intro to React",
-                url: "https://github.com/uclaacm/hackschool-f20/tree/main/session-7-intro-react",
+                name: "Learning Labs | Intermediate React",
+                video: "https://youtu.be/SJOWiYyRjkE",
+                article: "https://github.com/uclaacm/learning-lab-crash-course-su20/tree/master/09-intermediate-react-1",
+                source: "Teach LA",
             },
             {
-                name: "Hack| Hackschool 7b: Intro to React",
-                url: "https://www.youtube.com/watch?v=1X84EQR92F4&ab_channel=ACMatUCLA",
+                name: "Learning Labs | Intermediate React",
+                video: "https://youtu.be/SJOWiYyRjkE",
+                article: "https://github.com/uclaacm/learning-lab-crash-course-su20/tree/master/09-intermediate-react-1",
+                source: "Teach LA",
             },
             {
-                name: "Hack| Hackschool 2019: Intro to React",
-                url: "https://github.com/uclaacm/hackschool-f19/tree/master/session-5-frontend-intro-to-react",
+                name: "Learning Labs | React Hooks",
+                video: "https://www.youtube.com/watch?v=-cKLNanIPYA",
+                article: "https://github.com/uclaacm/learning-lab-crash-course-su20/tree/master/11-react-hooks",
+                source: "Teach LA",
             },
             {
-                name: "Hack| Hackschool 2019: More on React",
-                url: "https://github.com/uclaacm/hackschool-f19/tree/master/session-6-frontend-more-on-react",
+                name: "Facebook | Intro to React",
+                article: "https://reactjs.org/tutorial/tutorial.html",
+                source: "External",
             },
             {
-                name: "Hack| React Hooks",
-                url: "https://hack.uclaacm.com/posts/fall2019/js-chats-3/",
-            },
-            {
-                name: "Hack| Optimizing Frontend and React Apps",
-                url: "https://hack.uclaacm.com/posts/fall2019/js-chats-4/",
-            },
-            {
-                name: "Hack| Web Dev Simplified: React Hooks",
-                url: "https://www.youtube.com/watch?v=O6P86uwfdR0&list=PLZlA0Gpn_vH8EtggFGERCwMY5u5hOjf-h&ab_channel=ACMatUCLAACMatUCLA",
-            },
-            {
-                name: "Board| Official Documentation",
-                url: "https://reactjs.org/tutorial/tutorial.html",
-            },
-            {
-                name: "TeachLA| Learning Lab 7a: Intro to React",
-                url: "https://github.com/uclaacm/learning-lab-crash-course-su20/tree/master/07-intro-react",
-            },
-            {
-                name: "TeachLA| Learning Lab 7b: Intro to React",
-                url: "https://www.youtube.com/watch?v=3UKF9qMBIzA",
-            },
-            {
-                name: "TeachLA| Learning Lab 9a: Intermediate React",
-                url: "https://github.com/uclaacm/learning-lab-crash-course-su20/tree/master/09-intermediate-react-1",
-            },
-            {
-                name: "TeachLA| Learning Lab 9b: Intermediate React",
-                url: "https://youtu.be/SJOWiYyRjkE",
-            },
-            {
-                name: "TeachLA| Learning Lab 11a: React Hooks",
-                url: "https://github.com/uclaacm/learning-lab-crash-course-su20/tree/master/11-react-hooks",
-            },
-            {
-                name: "TeachLA| Learning Lab 11b: React Hooks",
-                url: "https://www.youtube.com/watch?v=-cKLNanIPYA",
-            },
-            {
-                name: "TeachLA| Learning Lab 7a: Intro to Firebase",
-                url: "https://github.com/uclaacm/learning-lab-crash-course-su20/tree/master/18-firebase",
-            },
-            {
-                name: "TeachLA| Learning Lab 7b: Intro to Firebase",
-                url: "https://www.youtube.com/watch?v=K5OQD7DdDoo",
-            },
-            {
-                name: "TeachLA| React Tutorial",
-                url: "https://www.taniarascia.com/getting-started-with-react/",
-            },
-            {
-                name: "TeachLA| Redux Tutorial",
-                url: "https://www.taniarascia.com/redux-react-guide/",
-            },
-            {
-                name: "TeachLA| Intro to Web Dev with React and Firebase",
-                url: "https://github.com/malsf21/qwerhacks-web-dev-workshop",
-            },
-            {
-                name: "W| create-react-app Tutorial",
-                url: "https://reactjs.org/docs/create-a-new-react-app.html",
-            },
-            {
-                name: "W| Getting Started with React",
-                url: "https://reactjs.org/docs/getting-started.html",
-            },
-            {
-                name: "W| Thinking in React",
-                url: "https://reactjs.org/docs/thinking-in-react.html",
-            },
-            {
-                name: "W| ACM Repo with React",
-                url: "https://github.com/uclaacm/acm-w-website",
-            },
-            {
-                name: "A Firebase in React Tutorial",
-                url: "https://www.robinwieruch.de/complete-firebase-authentication-react-tutorial",
+                name: "Facebook | Thinking in React",
+                article: "https://reactjs.org/docs/thinking-in-react.html",
+                source: "External",
             },
         ],
     },
     {
-        category: "GraphQL",
+        category: "Git & GitHub",
         links: [
             {
-                name: "W| Apollo GraphQL",
-                url: "https://www.apollographql.com/docs/",
+                name: "Tooling Series | Git",
+                video: "https://www.youtube.com/watch?v=GBa6uuPTlr0",
+                article: "https://github.com/uclaacm/hack-tooling-series/tree/master/session-2-git",
+                source: "Hack",
             },
             {
-                name: "Board| Official Documentation",
-                url: "https://graphql.org/learn/",
-            },
-        ],
-    },
-    {
-        category: "Static Site Generators",
-        links: [
-            {
-                name: "Let's Learn Eleventy!",
-                url: "https://www.netlify.com/blog/2020/04/09/lets-learn-eleventy-boost-your-jamstack-skills-with-11ty/",
+                name: "QWER Hacks | Deploying with GitHub",
+                video: "https://www.youtube.com/watch?v=u7uGoV9DT3M",
+                source: "Teach LA",
             },
             {
-                name: "ACM Design Guideline",
-                url: "http://www.github.com/uclaacm/design-guideline",
+                name: "GitHub | Hello World",
+                article: "https://guides.github.com/activities/hello-world/",
+                source: "External",
+            },
+            {
+                name: "GitHub | Mastering Issues",
+                article: "https://guides.github.com/features/issues/",
+                source: "External",
+            },
+            {
+                name: "GitHub | All Guides",
+                article: "https://guides.github.com/",
+                source: "External",
             },
         ],
     },
@@ -446,136 +246,135 @@ const resources = [
         category: "Graphic Design",
         links: [
             {
-                name: "Design| Training Menu: Graphic Design",
-                url: "https://docs.google.com/document/d/1UhSDU4qNX1D9WPTY9qi46iJyVwvKnOjSTQ0wBfLcNJk/edit?usp=sharing",
+                name: "Bloom Design | Storytelling",
+                video: "https://www.youtube.com/watch?v=CPel8OzGRSc",
+                source: "Creative Labs",
+            },
+            {
+                name: "Bloom Design | Typography",
+                video: "https://www.youtube.com/watch?v=ol9KoOUqK4c",
+                source: "Creative Labs",
+            },
+            {
+                name: "Bloom Design | Design & Colors",
+                video: "https://www.youtube.com/watch?v=Zbonn0ysq5M",
+                source: "Creative Labs",
+            },
+            {
+                name: "Bloom Design | Grid & Layout",
+                video: "https://www.youtube.com/watch?v=WUjqASyONLE",
+                source: "Creative Labs",
+            },
+            {
+                name: "Bloom Design | UI Design Flow",
+                video: "https://www.youtube.com/watch?v=p1Y5jqpDP-M",
+                source: "Creative Labs",
+            },
+            {
+                name: "Bloom Design | How Shit Looks!",
+                video: "https://www.youtube.com/watch?v=VQ8eaYMKS90",
+                source: "Creative Labs",
             },
         ],
     },
     {
-        category: "UX/UI",
+        category: "Accessibility",
         links: [
             {
-                name: "Design| Training Menu: UX/UI",
-                url: "https://docs.google.com/document/d/1UhSDU4qNX1D9WPTY9qi46iJyVwvKnOjSTQ0wBfLcNJk/edit?usp=sharing",
+                name: "Hackschool | Responsive, Accessibility",
+                video: "https://www.youtube.com/watch?v=jy_OtcErlRY",
+                article: "https://github.com/uclaacm/hackschool-f20/tree/main/session-6-responsive-design-and-accessibility",
+                source: "Hack",
             },
             {
-                name: "Hack/Bloom| Creative Labs",
-                url: "https://www.youtube.com/channel/UC917WXknuSu1IMn34PdJr3Q",
+                name: "Learning Labs | Web Accessibility",
+                video: "https://youtu.be/C4owSuA5S1Y",
+                article: "https://github.com/uclaacm/learning-lab-crash-course-su20/tree/master/13-accessibility",
+                source: "Teach LA",
+            },
+            {
+                name: "Google | Web Accessibility",
+                article: "https://developers.google.com/web/fundamentals/accessibility/",
+                source: "External",
+            },
+            {
+                name: "W3 | Web Accessibility",
+                article: "https://www.w3.org/WAI/tips/designing/",
+                source: "External",
+            },
+            {
+                name: "Digital.gov | Web Accessibility",
+                article: "https://digital.gov/resources/introduction-accessibility/",
+                source: "External",
+
+            },
+            {
+                name: "Marcy Sutton | Auditing Accessibility",
+                article: "https://marcysutton.com/how-i-audit-a-website-for-accessibility",
+                source: "External",
+
             },
         ],
     },
     {
-        category: "Vanilla JS",
+        category: "Product Managment",
         links: [
             {
-                name: "JavaScript 30",
-                url: "https://javascript30.com/",
-            },
-        ],
-    },
-    {
-        category: "Express",
-        links: [
-            {
-                name: "Hack| Hackschool: Express",
-                url: "https://github.com/uclaacm/hackschool-f19/tree/master/session-4-backend-express",
+                name: "Hack | Passion Talks: What is a PM?",
+                article: "https://www.youtube.com/watch?v=lcvhWjPMZR8",
+                source: "Hack",
             },
             {
-                name: "Express Tutorial: The Local Library Website",
-                url: "https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website",
-            },
-            {
-                name: "TeachLA| Learning Lab 16a: Intro to Backend w/Node & Express",
-                url: "https://github.com/uclaacm/learning-lab-crash-course-su20/tree/master/16-intro-backend",
-            },
-            {
-                name: "TeachLA| Learning Lab 16b: Intro to Backend w/Node & Express",
-                url: "https://www.youtube.com/watch?v=kwy4U0980Eg",
-            },
-        ],
-    },
-    {
-        category: "Flask",
-        links: [
-            {
-                name: "The Flask Mega-Tutorial Part I",
-                url: "https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world",
-            },
-            {
-                name: "Flask Documentation Tutorial",
-                url: "https://flask.palletsprojects.com/en/1.1.x/tutorial/",
-            },
-        ],
-    },
-    {
-        category: "Meteor",
-        links: [
-            {
-                name: "Meteor React Tutorial: Home",
-                url: "https://www.meteor.com/tutorials/react/creating-an-app",
-            },
-        ],
-    },
-    {
-        category: "DevOps",
-        links: [
-            {
-                name: "TeachLA| Learning Lab 14: Misc DevOps",
-                url: "https://youtu.be/HH2c3YZZasg",
-            },
-        ],
-    },
-    {
-        category: "Go",
-        links: [
-            {
-                name: "TeachLA| Learn Go with Test-Driven Development",
-                url: "https://github.com/quii/learn-go-with-tests",
-            },
-        ],
-    },
-    {
-        category: "PM",
-        links: [
-            {
-                name: "PM Interview Prep",
-                url: "https://github.com/keianasnell/pm-interview-prep",
-            },
-            {
-                name: "Everything You Were Going to Ask Me About APM",
-                url: "https://medium.com/@emchenran/everything-you-were-going-to-ask-me-about-apm-92b9b5e82fe6",
-            },
-            {
-                name: "Advice when Recruiting for Salesforce APM",
-                url: "https://docs.google.com/document/d/1dNrdwlZpP8lbAWHok02XrF4b8u4Osci5UNTGpk7SY6M/edit",
-            },
-            {
-                name: "Preparing APM: Entry Level PM Interviews",
-                url: "https://www.linkedin.com/pulse/preparing-apmentry-level-pm-case-interviews-ryan-ham/",
+                name: "ACM | PM Interview Prep",
+                article: "https://github.com/keianasnell/pm-interview-prep",
+                source: "ACM",
             },
             {
                 name: "5 Must-Know PM Resources",
-                url: "https://medium.com/swlh/5-must-know-resources-for-product-management-in-2020-e5f005d46986",
-            },
-            {
-                name: "Hack| Passion Talks: What is a PM?",
-                url: "https://www.youtube.com/watch?v=lcvhWjPMZR8",
+                article: "https://medium.com/swlh/5-must-know-resources-for-product-management-in-2020-e5f005d46986",
+                source: "External",
             },
             {
                 name: "Evolution of a Product",
-                url: "https://www.sequoiacap.com/article/evolution-of-a-product",
+                article: "https://www.sequoiacap.com/article/evolution-of-a-product",
+                source: "External",
+
             },
             {
                 name: "Measuring Product Health",
-                url: "https://www.sequoiacap.com/article/measuring-product-health",
+                article: "https://www.sequoiacap.com/article/measuring-product-health",
+                source: "External",
+
+            },
+            {
+                name: "Everything You Were Going to Ask Me About APM",
+                article: "https://medium.com/@emchenran/everything-you-were-going-to-ask-me-about-apm-92b9b5e82fe6",
+                source: "External",
+
+            },
+            {
+                name: "Advice when Recruiting for Salesforce APM",
+                article: "https://docs.google.com/document/d/1dNrdwlZpP8lbAWHok02XrF4b8u4Osci5UNTGpk7SY6M/edit",
+                source: "External",
+
+            },
+            {
+                name: "Preparing APM: Entry Level PM Interviews",
+                article: "https://www.linkedin.com/pulse/preparing-apmentry-level-pm-case-interviews-ryan-ham/",
+                source: "External",
+
             },
             {
                 name: "Retention",
-                url: "https://www.sequoiacap.com/article/retention",
+                article: "https://www.sequoiacap.com/article/retention",
+                source: "External",
+
             },
             {
                 name: "SaaS Growth Metrics",
-                url: "https://www.appcues.com/blog/saas-growth-metrics",
+                article: "https://www.appcues.com/blog/saas-growth-metrics",
+                source: "External",
+
             },
         ],
     },
