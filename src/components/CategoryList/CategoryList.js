@@ -7,9 +7,22 @@ const CategoryList = props => {
         <div className="category-list">
             <span className="list-head">{props.category}</span>
             {props.resources.map((resource, index) => {
-                return <a href={resource.url} target="_blank" rel="noopener noreferrer" key={index}> 
-                    {resource.name}
-                </a>
+                if (index < 5) {
+                    let url;
+                    if (resource.video) url = resource.video;
+                    else if (resource.article) url = resource.article;
+                    else if (resource.doc) url = resource.doc;
+                    else if (resource.interactive) url = resource.interactive;
+    
+                    return (
+                        <a href={url} target="_blank" rel="noopener noreferrer" key={index}> 
+                            {resource.name}
+                        </a>
+                    );
+                }
+                else {
+                    return null;
+                }
             })}
         </div>  
     );
