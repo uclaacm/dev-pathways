@@ -4,19 +4,39 @@
     margin: 2%;
     text-align: left;
 }
-
 h2{
     font-size: 36px;
 }
-
-p{
-    margin: 5px;
-}
-
-.temp-result{
+.result{
     border: 2px solid #00000015;
     border-radius: 15px;
     margin: 30px 2%;
     padding: 15px;
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
 }
+.result a:link {
+    color: #1E6CFF;
+    text-decoration: none;
+}
+.result a:visited {
+    color: purple;
+}
+.result a:hover {
+    text-decoration: underline;
+}
+.titleLink {
+    font-size: 20px;
+}
+.otherSource {
+    font-size: 15px;
+    padding: 0px 5px 0px 5px;
+}
+.result p {
+    font-size: 17px;
+    height: 50px;
+    margin: 5px 0px 5px 0px;
+}
+.result footer {
+    font-size: 12px;
+}
+
