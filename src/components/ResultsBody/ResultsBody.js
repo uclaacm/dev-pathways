@@ -1,10 +1,9 @@
 import React from 'react'
 import './ResultsBody.css'
 import resources from '../../../src/data/resources.js';
+import ResultsItem from '../ResultsItem/ResultsItem.js';
 
 const ResultsBody = props => {
-    //TODO: show results from search query
-    //I'm not really sure how this will be implemented
     let results = [];
     let resultsDiv = [];
     let value = props.text.toLowerCase();
@@ -46,13 +45,12 @@ const ResultsBody = props => {
             const item = <a className="otherSource" key={[i,j,-1]} href={vals[j]}>{keys[j]}</a>
             otherSources.push(item);
         }
-        const item = (
-        <div className="result" key={results[i].id}>
-            <a href={vals[0]} className="titleLink">{results[i].resource.name}</a>
-            <p>{results[i].resource.description ?? "No description available."}{otherSources}</p>
-            <footer>{results[i].resource.source}</footer>
-        </div> );
-        resultsDiv.push(item);
+         const resourceItem = <ResultsItem 
+            item = {results[i]}
+            link = {vals[0]}
+            otherSources = {otherSources}
+            />
+        resultsDiv.push(resourceItem);
     }
 
     return (

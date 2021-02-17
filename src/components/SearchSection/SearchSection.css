@@ -19,6 +19,7 @@
     border-radius: 30px;
     /* box-shadow: 0px 2px #0000001b; */
     z-index: 1;
+    width:fit-content
 }
 
 .search-container hr {
