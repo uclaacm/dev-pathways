@@ -10,7 +10,6 @@
 .search-container h1 {
     margin-top: 135px;
 }
-
 .searchandresults {
     display: block;
     align-items: center;
@@ -20,6 +19,7 @@
     border-radius: 30px;
     /* box-shadow: 0px 2px #0000001b; */
     z-index: 1;
+    width:fit-content
 }
 
 .search-container hr {

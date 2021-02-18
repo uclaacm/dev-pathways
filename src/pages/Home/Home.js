@@ -8,7 +8,7 @@ const Home = () => {
     return (
         <div className="Home">
             <NavBar />
-            <SearchSection />
+            <SearchSection/>
             <TeamSection />
         </div>
     );
