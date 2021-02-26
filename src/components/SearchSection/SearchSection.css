@@ -5,6 +5,9 @@
     height: 484px;
     width: 100%;
     background-color: #00000010;
+
+    background-image: url(../../img/landing_background.svg);
+    background-position: center;
 }
 
 .search-container h1 {

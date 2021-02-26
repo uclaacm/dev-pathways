@@ -5,6 +5,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    position: relative;
+    overflow: hidden;
+    border-radius: 10%;
 }
 
 .clickable:hover {
@@ -14,3 +18,35 @@
 .clickable:focus {
     outline: 0;
 }
+
+
+.clickable::after {
+    display: none;
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background-color: #00000015;
+    width: 100px;
+    height: 100px;
+    margin-top: -50px;
+    margin-left: -50px;
+    top: 50%;
+    left: 50%;
+    animation: ripple 1s;
+    opacity: 0;
+  }
+
+  .clickable:focus:not(:active)::after {
+    display: block;
+  }
+  
+  @keyframes ripple {
+    from {
+      opacity: 1;
+      transform: scale(0);
+    }
+    to {
+      opacity: 0;
+      transform: scale(10);
+    }
+  }
