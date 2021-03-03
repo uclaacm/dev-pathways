@@ -7,7 +7,7 @@ const ResultsBody = props => {
     let results = [];
     let resultsDiv = [];
     let value = props.text.toLowerCase();
-    let foundResults = "We found some results!";
+    let foundResults = "No results found...";
     
     //Find applicable resources
     if (value.trim() !== "") {
@@ -26,8 +26,11 @@ const ResultsBody = props => {
             }
         }
      }
-     if (results.length === 0) {
-         foundResults = "No results found...";
+     if (results.length === 1) {
+        foundResults = "We found 1 result!";
+    }
+     else if (results.length !== 0) {
+         foundResults = "We found " + results.length + " results!";
      }
 
      //Create resource items and store in resultsDiv
