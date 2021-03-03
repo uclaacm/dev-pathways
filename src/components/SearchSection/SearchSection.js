@@ -5,8 +5,10 @@ import { useNavigate } from 'react-router-dom';
 const SearchSection = props => {
     const navigate = useNavigate();
     const search = text => {
-        console.log(`searched for ${text}`);
-        navigate(`/results/${encodeURIComponent(text)}`); 
+        if (text.trim().length !== 0) {     
+            console.log(`searched for ${text}`);          
+            navigate(`/results/${encodeURIComponent(text)}`); 
+        }
     }
     return (
         <div className="search-container">
