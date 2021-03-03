@@ -34,9 +34,11 @@ const ResultsBody = props => {
     for (let i=0;i<results.length;i++) {
         let keys = Object.keys(results[i].resource);
         let vals = Object.values(results[i].resource);
+        //Add new source names here
+        let validSources = ["video","article","interactive","doc"];
         let otherSources = [];
         for (let j=keys.length-1;j>=0;j--){
-            if (keys[j] === "description" || keys[j] ==="name" || keys[j] === "source") {
+            if (!validSources.includes(keys[j])) {
                 keys.splice(j,1);
                 vals.splice(j,1);
             }
@@ -49,6 +51,7 @@ const ResultsBody = props => {
             item = {results[i]}
             link = {vals[0]}
             otherSources = {otherSources}
+            key = {i}
             />
         resultsDiv.push(resourceItem);
     }
