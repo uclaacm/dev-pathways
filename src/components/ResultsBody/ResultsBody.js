@@ -45,7 +45,7 @@ const ResultsBody = props => {
         let keys = Object.keys(results[i].resource);
         let vals = Object.values(results[i].resource);
         //Add new source names here
-        let validSources = ["video","article","interactive","doc"];
+        let validSources = ["video","article","game","documentation"]; //TODO: better solution
         let otherSources = [];
         for (let j=keys.length-1;j>=0;j--){
             if (!validSources.includes(keys[j])) {
