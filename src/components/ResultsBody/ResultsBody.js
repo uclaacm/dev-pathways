@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import './ResultsBody.css'
 import resources from '../../../src/data/resources.js';
 import ResultsItem from '../ResultsItem/ResultsItem.js';
@@ -9,6 +9,24 @@ const ResultsBody = props => {
     let value = props.text.toLowerCase();
     let foundResults = "We found some results!";
     
+    useEffect(() => {
+        results = results.filter(resource=>{
+            let filters = []
+            for(let key in props.checkedItems){
+                if(props.checkedItems[key]){
+                    filters.push(key)
+                }
+            }
+            for(let name of filters){
+                if(resource.source === name){
+                    return false
+                }
+            }
+            return true
+        })
+        console.log(results);
+    }, [props.checkedItems]);
+
     //Find applicable resources
     if (value.trim() !== "") {
         for(let i=0; i < resources.length; i++) {
