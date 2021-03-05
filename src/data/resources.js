@@ -3,6 +3,7 @@
 //  - in general (with some exceptions), external resources should be ranked below resources coming from ACM
 //  - each resource can contain several links (video, article, game, or doc) that indicate the resource type(s)
 //  - only first 5 resources are shown in resources drop down (so most important are at top)
+//  - these items will be selectable in resultsItem: video, article, interactive, doc (add new sources in ResultsBody)
 
 const resources = [
     {
