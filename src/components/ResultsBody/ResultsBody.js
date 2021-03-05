@@ -32,8 +32,8 @@ const ResultsBody = props => {
     optionsFilter(props, results, "Preferred Format");
     optionsFilter(props, results, "Experience Level");
 
-     }
-     if (results.length === 1) {
+     
+    if (results.length === 1) {
         foundResults = "We found 1 result!";
     }
      else if (results.length !== 0) {
