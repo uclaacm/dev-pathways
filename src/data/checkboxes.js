@@ -14,7 +14,7 @@ const checkboxes = {
         ],
     },
     "Preferred Format": {
-        predicate: (obj, name) => obj.resource[name.toLowerCase()] != undefined,
+        predicate: (obj, name) => obj.resource[name.toLowerCase()] !== undefined,
         names: [
             { name: "Video" },
             { name: "Article" },
