@@ -301,7 +301,7 @@ const resources = [
                 name: "Facebook | Thinking in React",
                 article: "https://reactjs.org/docs/thinking-in-react.html",
                 source: "External",
-                iocn: external,
+                icon: external,
                 description: '"In this document, we’ll walk you through the thought process of building a searchable product data table using React."',
                 difficulty: "Advanced",
             },

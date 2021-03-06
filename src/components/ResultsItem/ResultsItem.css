@@ -34,6 +34,11 @@
     font-size: 20px;
 }
 
+.resource-type-icon {
+    height: 20px;
+    margin-left: 10px;
+}
+
 .description {
     font-size: 17px;
     margin: 10px 0px;
