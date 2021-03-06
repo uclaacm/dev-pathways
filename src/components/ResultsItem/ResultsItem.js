@@ -35,7 +35,7 @@ const Home = props => {
             <div className="result-body">
             <a href={props.link} className="titleLink">{props.item.resource.name}</a>
             <img className="resource-type-icon" src={resourceTypeIcon} alt="resource type icon"></img>
-            {props.otherSources !== 0 ? <img className="resource-type-icon" src={article} alt="resource type icon"></img> : ""}
+            {props.otherSources !== 0 && resourceTypeIcon !== article ? <img className="resource-type-icon" src={article} alt="resource type icon"></img> : ""}
 
             <div className="description">{props.item.resource.description ?? "No description available."}</div>
             
