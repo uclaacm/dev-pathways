@@ -6,6 +6,7 @@
     padding: 15px;
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
     display: flex;
+    min-width: 300px;
 }
 
 .result a:link {
@@ -14,7 +15,7 @@
 }
 
 .result a:visited {
-    color: purple;
+    color: #1E6CFF;
 }
 
 .result a:hover {
@@ -26,7 +27,7 @@
 }
 
 .result-icon {
-    width: 150px;
+    width: 100px;
     padding-right: 15px;
 }
 
