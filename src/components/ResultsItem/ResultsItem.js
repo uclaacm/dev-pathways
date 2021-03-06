@@ -30,12 +30,12 @@ const Home = props => {
     return (
         <div className="result" key={props.item.id}>
             {props.item.resource.icon ?
-            <img className="result-icon" src={props.item.resource.icon}></img> : ""}
+            <img className="result-icon" alt="source icon for spice" src={props.item.resource.icon}></img> : ""}
             
             <div className="result-body">
             <a href={props.link} className="titleLink">{props.item.resource.name}</a>
             <img className="resource-type-icon" src={resourceTypeIcon} alt="resource type icon"></img>
-            {props.otherSources != 0 ? <img className="resource-type-icon" src={article} alt="resource type icon"></img> : ""}
+            {props.otherSources !== 0 ? <img className="resource-type-icon" src={article} alt="resource type icon"></img> : ""}
 
             <div className="description">{props.item.resource.description ?? "No description available."}</div>
             

@@ -8,8 +8,10 @@
 import acm from "../img/acm_logo.svg"
 import teachla from "../img/teachLA_logo_light.svg";
 import hack from "../img/hack_logo_light.svg";
+import design from "../img/design_logo_light.svg"
 import external from "../img/external_source.svg"
 
+//TODO: replace icons with more specific icons (i.e. for hackschool give hackschool icon)
 
 const resources = [
     {
@@ -361,6 +363,7 @@ const resources = [
                 video: "https://www.youtube.com/watch?v=CPel8OzGRSc",
                 description: "Creative Labs' Justine Du connects the concepts behind storytelling with design to teach Bloom fellows how to use Figma, an industry standard tool, for collaboration & storyboarding.",
                 source: "External",
+                icon: design,
                 difficulty: "Beginner",
             },
             {
@@ -368,6 +371,7 @@ const resources = [
                 video: "https://www.youtube.com/watch?v=ol9KoOUqK4c",
                 description: "Justin Liu, designer and CL alumni, explains the basics of typography on the web. We cover how to choose fonts for your project, how to use them, and why Comic Sans might not suck as much as you think it does.",
                 source: "External",
+                icon: design,
                 difficulty: "Beginner",
             },
             {
@@ -375,6 +379,7 @@ const resources = [
                 video: "https://www.youtube.com/watch?v=Zbonn0ysq5M",
                 description: "This week at Bloom, Ruth Lee—DMA/Communications major and Adobe Ambassador walks you through tips and tricks to bring out the best of your design skills, whatever level you’re at. Here you can explore the strategy behind color, the science of design elements, and have access to a handy design toolkit you can use instead of Canva. Time to learn how to make your designs pop!",
                 source: "External",
+                icon: design,
                 difficulty: "Beginner",
             },
             {
@@ -382,6 +387,7 @@ const resources = [
                 video: "https://www.youtube.com/watch?v=WUjqASyONLE",
                 description: "Sam Chai, UX Designer and Creative Labs Co-Director, teaches you how to get started on a design, no prior experience needed. The workshop goes over basic website structure, designing for different screen sizes, text & image placement, and more.",
                 source: "External",
+                icon: design,
                 difficulty: "Beginner",
             },
             {
@@ -389,6 +395,7 @@ const resources = [
                 video: "https://www.youtube.com/watch?v=p1Y5jqpDP-M",
                 description: "Kailey Nichols, from the Creative Labs family, breaks down design patterns of beautiful websites and explains how to build an interaction model for your own website's user experience. This workshop teaches you different design tips and how to identify and create a beautiful design!",
                 source: "External",
+                icon: design,
                 difficulty: "Beginner",
             },
             {
@@ -396,6 +403,7 @@ const resources = [
                 video: "https://www.youtube.com/watch?v=VQ8eaYMKS90",
                 description: "Jess Lam, who is apart of the Creative Labs family teaches our final Bloom Workshop!  She gives an in-depth tutorial in creating high-fidelity designs, and show you how to put the finishing touches in your beautiful designs!",
                 source: "External",
+                icon: design,
                 difficulty: "Beginner",
             },
         ],
