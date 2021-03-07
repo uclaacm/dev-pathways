@@ -6,11 +6,13 @@ import Pressable from '../Clickable/Clickable';
 const DropDownButton = props => {
     return (
         <Pressable onClick={props.onClick}>
-            <span>{props.text}</span>
-            <img 
-                className={props.isExpanded ? "arrow flip" : "arrow"} 
-                src={arrow} alt="arrow" 
-            />
+            <div className="button-container">
+                <span>{props.text}</span>
+                <img 
+                    className={props.isExpanded ? "arrow flip" : "arrow"} 
+                    src={arrow} alt="arrow" 
+                />
+            </div>
         </Pressable>
     );
 }

@@ -5,6 +5,8 @@
     margin: 30px 2%;
     padding: 15px;
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    min-width: 300px;
 }
 
 .result a:link {
@@ -13,21 +15,34 @@
 }
 
 .result a:visited {
-    color: purple;
+    color: #1E6CFF;
 }
 
 .result a:hover {
     text-decoration: underline;
 }
 
+.result-body {
+    flex-direction: column;
+}
+
+.result-icon {
+    width: 100px;
+    padding-right: 15px;
+}
+
 .titleLink {
     font-size: 20px;
 }
 
-.result p {
+.resource-type-icon {
+    height: 20px;
+    margin-left: 10px;
+}
+
+.description {
     font-size: 17px;
-    height: 50px;
-    margin: 5px 0px 5px 0px;
+    margin: 10px 0px;
 }
 
 .result footer {

@@ -9,9 +9,11 @@ import search from './search.svg';
 const SearchBar = props => {
     return (
         <div className="searchbar">
-            <Clickable onClick={props.onSubmit}>
-                <img src={search} className="search-icon" alt="search icon"/>
-            </Clickable>
+            <div className="search-icon">
+                <Clickable onClick={props.onSubmit}>
+                    <img src={search} alt="search icon"/>
+                </Clickable>
+            </div>
             <img src={line} alt="line"/>
             <input 
                 value={props.value}
