@@ -4,7 +4,7 @@
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/103c2d04-cd84-4939-a9e5-aae35ee68a3c/deploy-status)](https://app.netlify.com/sites/dev-pathways/deploys)
 
-Hey, welcome to the Dev Pathways repo! Dev Pathways is a web app that aims to compile learning resources for popular technologies and serve them to users them in a personalized way. As ACM has grown it's become clear that we as an organization need to find a better way to support our new devs, and that's the goal of this app! By establishing a single source for learning all the technologies that the dev teams at ACM use, we hope to make onboarding new devs smoother than ever before.
+Hey, welcome to the Dev Pathways repo! Dev Pathways is a web app that aims to compile learning resources for popular technologies and serve them to users in a personalized way. As ACM has grown it's become clear that we as an organization need to find a better way to support our new devs, and that's the goal of this app! By establishing a single source for learning all the technologies that the dev teams at ACM use, we hope to make onboarding new devs smoother than ever before.
 
 ## Development Setup
 
