@@ -42,12 +42,6 @@ Want to make a change? Great! Here are the steps:
 6. Make a [pull request](https://github.com/uclaacm/dev-pathways/pulls) with your changes, and let someone on the dev team know. Netlify has a neat feature called "Deploy Previews" that give you a link to preview your changes; [see the blog post](https://www.netlify.com/blog/2016/07/20/introducing-deploy-previews-in-netlify/) for more info!
 7. If your code passes code review, we'll merge it into `master`. Congratulations! If you'd like, it's now safe to delete your branch/fork.
 
-## The Team
-- [@EinarBalan](https://github.com/EinarBalan)
-- [@c-m-kim](https://github.com/c-m-kim)
-- [@nicole-chang](https://github.com/nicole-chang)
-- [@nendow02](https://github.com/nendow02)
-
 ## Licensing & Attribution
 
 This project and its code are licensed under the MIT License. You're free to use them however you wish, though we'd love to hear from you if you found this useful!
