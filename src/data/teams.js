@@ -51,8 +51,8 @@ const teams = [
     },
     {
          logotype: studio,
-         technologies: ["HTML/CSS", "Jekyll/Liquid", "React"],
-         projects: ["Static Site", "Learning Labs"],
+         technologies: ["Unity", "Game Art", "Twine"],
+         projects: ["Games"],
     },
 ];
 
