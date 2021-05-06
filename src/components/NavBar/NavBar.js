@@ -22,19 +22,21 @@ const NavBar = () => {
                         alt="acm logo"
                         onClick={() => navigate("/")} />
                 </div>
-                <div className="element-container">
-                    <DropDownButton
-                        text="Resources"
-                        isExpanded={isMenuExpanded}
-                        onClick={() => setMenuExpanded(prev => !prev)}
-                    />
-                </div>
-                <div className="element-container">
-                        <LinkButton
-                            text="Request New Resources"
-                            url={resourceRequestLink}
+                <div className="nav-btn-group">
+                    <div className="element-container">
+                        <DropDownButton
+                            text="Resources"
+                            isExpanded={isMenuExpanded}
+                            onClick={() => setMenuExpanded(prev => !prev)}
                         />
                     </div>
+                    <div className="element-container">
+                            <LinkButton
+                                text="Request New Resources"
+                                url={resourceRequestLink}
+                            />
+                    </div>
+                </div>
             </div>
             {isMenuExpanded ? <DropDownMenu resources={resources}/> : null}
         </div>
