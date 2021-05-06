@@ -1,6 +1,6 @@
 import React from 'react'
 import './ResultsBody.css'
-import resources from '../../../src/data/resources.js';
+import { resources } from '../../../src/data/resources.js';
 import ResultsItem from '../ResultsItem/ResultsItem.js';
 
 const ResultsBody = props => {

@@ -551,4 +551,6 @@ const resources = [
     },
 ]
 
-export default resources;
+const resourceRequestLink = "https://docs.google.com/forms/d/1SFE8zabjOE662GENVG6L7TZ6qg-MQeqQElsxjaDzyMg/edit"
+
+export { resources, resourceRequestLink };

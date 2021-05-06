@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './NavBar.css';
 import logo from './acm_logo.svg';
-import resources from '../../data/resources';
+import { resources, resourceRequestLink } from '../../data/resources';
 import IconButton from '../IconButton/IconButton';
 import DropDownButton from '../DropDownButton/DropDownButton';
 import DropDownMenu from '../DropDownMenu/DropDownMenu';

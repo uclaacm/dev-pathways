@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './SearchandSuggested.css';
 import SearchBar from '../SearchBar/SearchBar';
-import resources from '../../data/resources.js';
+import { resources } from '../../data/resources.js';
 
 const SearchandSuggested = props => {
     //props it can take: searchFunction and text
