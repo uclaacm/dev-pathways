@@ -5,6 +5,7 @@ import { resources, resourceRequestLink } from '../../data/resources';
 import IconButton from '../IconButton/IconButton';
 import DropDownButton from '../DropDownButton/DropDownButton';
 import DropDownMenu from '../DropDownMenu/DropDownMenu';
+import LinkButton from '../LinkButton/LinkButton';
 import { useNavigate } from 'react-router-dom';
 
 const NavBar = () => {
@@ -28,6 +29,12 @@ const NavBar = () => {
                         onClick={() => setMenuExpanded(prev => !prev)}
                     />
                 </div>
+                <div className="element-container">
+                        <LinkButton
+                            text="Request New Resources"
+                            url={resourceRequestLink}
+                        />
+                    </div>
             </div>
             {isMenuExpanded ? <DropDownMenu resources={resources}/> : null}
         </div>
