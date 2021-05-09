@@ -11,6 +11,7 @@ const checkboxes = {
             { name: "AI" },
             { name: "Cyber" },
             { name: "External" },
+            { name: "Studio" }
         ],
     },
     "Preferred Format": {
