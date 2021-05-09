@@ -10,7 +10,7 @@ import teachla from "../img/teachLA_logo_light.svg";
 import hack from "../img/hack_logo_light.svg";
 import design from "../img/design_logo_light.svg"
 import external from "../img/external_source.svg"
-import studio from "../img/studio.svg"
+import studio from "../img/studio_logo_light.svg"
 
 //TODO: replace icons with more specific icons (i.e. for hackschool give hackschool icon)
 
@@ -406,7 +406,44 @@ const resources = [
                 source: "External",
                 icon: design,
                 difficulty: "Beginner",
+            }, 
+            {
+                name: "Art Tutorials | Post Processing",
+                video: "https://www.youtube.com/watch?v=CZnslTaWy5M&list=PLPO7_kXilXFbvbERRf1S0pJdXYkKPCDJr&index=7",
+                // documentation: "https://drive.google.com/file/d/1L8MQb38_i0sLIP0bO0oR9hUV065iUq2y/view",
+                source: "Studio",
+                icon: studio,
+                description: "In this tutorial, we introduce the post processing stack available in Unity to increase visual fidelity of a scene.",
+                difficulty: "Beginner",
             },
+            {
+                name: "Art Tutorials | Tilemaps",
+                video: "https://www.youtube.com/watch?v=CZnslTaWy5M&list=PLPO7_kXilXFbvbERRf1S0pJdXYkKPCDJr&index=9",
+                // documentation: "https://drive.google.com/file/d/1RzJLp-JhWoJSzRDbyfuz2ZGYbg5BqF59/view",
+                source: "Studio",
+                icon: studio,
+                description: "In this tutorial, we will be going over tilemaps and sprites which are used to easily design a level.",
+                difficulty: "Beginner",
+            },
+            {
+                name: "Art Tutorials | 2D Animation",
+                video: "https://www.youtube.com/watch?v=tm-xUtDbbE0",
+                // documentation: "https://drive.google.com/file/d/1PG5fQ9Pma4obW59UAtUSoo8Otb5iaALT/view",
+                source: "Studio",
+                icon: studio,
+                description: "In this tutorial, we will be going over the basics of model rigging and frame by frame animation- crucial to any game. Learn how to set up skeletons for basic 2D models, how to record animations, how to navigate the animation components, and more!",
+                difficulty: "Beginner",
+            },
+            
+            {
+                name: "Art Tutorials | Twine",
+                video: "https://www.youtube.com/watch?v=X-D_kEFyyZM&list=PLPO7_kXilXFbvbERRf1S0pJdXYkKPCDJr&index=10",
+                // documentation: "https://twinery.org/2/#!/stories",
+                source: "Studio",
+                icon: studio,
+                description: "A tutorial for Twine, a free visual software that is used to organize writing for nonlinear, interactive stories.",
+                difficulty: "Beginner",
+            },        
         ],
     },
     {
@@ -550,7 +587,11 @@ const resources = [
             },
         ],
     },
-    {
+
+    //Unity omitted for now since dev teams at ACM don't typically use Unity
+    //Game art moved to Graphic Design for now for a better layout
+
+    /*{
         category: "Unity",
         links: [
             {
@@ -666,7 +707,7 @@ const resources = [
                 difficulty: "Beginner",
             },        
         ],
-    },
+    },*/
 ]
 
 
