@@ -551,6 +551,6 @@ const resources = [
     },
 ]
 
-const resourceRequestLink = "https://docs.google.com/forms/d/1SFE8zabjOE662GENVG6L7TZ6qg-MQeqQElsxjaDzyMg/edit"
+const resourceRequestLink = "https://docs.google.com/forms/d/e/1FAIpQLSetpg4nnKfdhMRY_B_YytXl0fJSb8EEzGecO6ks0hx2SKb8OQ/viewform?usp=sf_link"
 
 export { resources, resourceRequestLink };
