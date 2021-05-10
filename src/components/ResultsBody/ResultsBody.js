@@ -34,10 +34,13 @@ const ResultsBody = props => {
             }
             for (let j = 0; j < resources[i].links.length; j++) { //parse through all resources in category
                 for (let p = 0; p < vals.length; p++) {
-                    if (resources[i].links[j].name.toLowerCase().indexOf(vals[p]) !== -1) {
+                    if (resources[i].links[j].name.toLowerCase().indexOf(vals[p]) !== -1) { //check name
                         matches++;
                     }
-                    if (resources[i].links[j].description.toLowerCase().indexOf(vals[p]) !== -1) {
+                    if (resources[i].links[j].description.toLowerCase().indexOf(vals[p]) !== -1) { //check description
+                        matches++;
+                    }
+                    if (resources[i].links[j].source.toLowerCase().indexOf(value) !== -1) { //check source, exact match
                         matches++;
                     }
                 }
