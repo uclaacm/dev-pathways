@@ -11,10 +11,6 @@
     margin-bottom: 2px;
 }
 
-.nav-btn-group {
-    display: flex;
-}
-
 .element-container {
     display: flex;
     align-items: center;
