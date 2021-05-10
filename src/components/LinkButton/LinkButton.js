@@ -1,5 +1,6 @@
 import React from 'react';
-import Pressable from '../Clickable/Clickable';
+import Clickable from '../Clickable/Clickable';
+import './LinkButton.css';
 
 const LinkButton = props => {
     const openInNewTab = (url) => {
@@ -8,13 +9,13 @@ const LinkButton = props => {
     }
 
     return (
-        <Pressable
+        <Clickable
             onClick={() => setTimeout(() => openInNewTab(props.url), 400)}
         >
-            <div className="button-container">
+            <div className="button-container button-blue">
                 <span>{props.text}</span>
             </div>
-        </Pressable>
+        </Clickable>
     );
 }
 
