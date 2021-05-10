@@ -28,19 +28,23 @@ const ResultsBody = props => {
 
         let catMatch = 0; // # of vals found in category
         let matches = 0; //# of vals found in resource
+        let sourceMatches = [];
         for (let i = 0; i < resources.length; i++) { //parse through all categories
-            if (resources[i].category.toLowerCase().indexOf(value) !== -1) { //must be exact match
+            if (resources[i].category.toLowerCase().indexOf(value) !== -1) { //check for category match
                 catMatch++;
             }
             for (let j = 0; j < resources[i].links.length; j++) { //parse through all resources in category
+                if (resources[i].links[j].source.toLowerCase() === value) { //check source, exact match
+                    sourceMatches.push({ id: i.toString() + j.toString(), resource: resources[i].links[j]});
+                }
+                if (sourceMatches.length > 0) {
+                    continue; //skip rest of loop since only searching for resources of certain source now
+                }
                 for (let p = 0; p < vals.length; p++) {
                     if (resources[i].links[j].name.toLowerCase().indexOf(vals[p]) !== -1) { //check name
                         matches++;
                     }
                     if (resources[i].links[j].description.toLowerCase().indexOf(vals[p]) !== -1) { //check description
-                        matches++;
-                    }
-                    if (resources[i].links[j].source.toLowerCase().indexOf(value) !== -1) { //check source, exact match
                         matches++;
                     }
                 }
@@ -51,7 +55,11 @@ const ResultsBody = props => {
             }
             catMatch = 0;
         }
-        results.sort((a,b) => {return b.match - a.match}); //sort so resource with most matches goes on top
+        if (sourceMatches.length > 0) {
+            results = sourceMatches;
+        } else {
+            results.sort((a,b) => {return b.match - a.match}); //sort so resource with most matches goes on top
+        }
     }
 
     //checkbox options filtering for each category
