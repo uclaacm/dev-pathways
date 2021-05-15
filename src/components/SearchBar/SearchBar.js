@@ -1,43 +1,39 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './SearchBar.css';
 import Clickable from '../Clickable/Clickable';
 import line from './line.svg';
 import search from './search.svg';
-import Typed from 'typed.js';
+import TypingAnimation from '../shared/TypingAnimation';
 
 //TODO: implement search bar query cycling animation
 
-const typed4 = () => {
-    return (
-        new Typed('#typed4', {
-            strings: ['Some strings without', 'Some HTML', 'Chars'],
-            typeSpeed: 0,
-            backSpeed: 0,
-            attr: 'placeholder',
-            bindInputFocusEvents: true,
-            loop: true
-          })
-    );
-}
-
-
 const SearchBar = props => {
+    const [showPlaceholder, setShowPlaceholder] = useState(true);
+    const { value, onSubmit, onChange, onKeyDown } = props;
+
     return (
         <div className="searchbar">
             <div className="search-icon">
-                <Clickable onClick={props.onSubmit}>
-                    <img src={search} alt="search icon"/>
+                <Clickable onClick={onSubmit}>
+                    <img src={search} alt="search icon" />
                 </Clickable>
             </div>
-            <img src={line} alt="line"/>
-            <input 
-                value={props.value}
-                type="text" 
-                onChange={props.onChange}
-                onKeyDown={props.onKeyDown}
-                autoComplete="off"
-                placeholder= {<typed4/>}
-            />
+            <img src={line} alt="line" />
+            <div>
+                {showPlaceholder && !value && <label for="search">
+                    <TypingAnimation words={["What do you want to learn?", "html/css", "javascript", "react"]} />
+                </label>}
+                <input
+                    id="search"
+                    value={[value]}
+                    type="text"
+                    onChange={onChange}
+                    onFocus={() => setShowPlaceholder(false)}
+                    onBlur={() => setShowPlaceholder(true)}
+                    onKeyDown={onKeyDown}
+                    autoComplete="off"
+                />
+            </div>
         </div>
     );
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import NavBar from '../../components/NavBar/NavBar';
 import SearchSection from '../../components/SearchSection/SearchSection';
+import TypingAnimation from '../../components/shared/TypingAnimation';
 import TeamSection from '../../components/TeamSection/TeamSection';
 import './Home.css';
 
