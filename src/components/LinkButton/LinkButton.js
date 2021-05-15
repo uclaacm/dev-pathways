@@ -12,7 +12,7 @@ const LinkButton = props => {
         <Clickable
             onClick={() => openInNewTab(props.url)}
         >
-            <div className="button-container button-blue">
+            <div className="link-button">
                 <span>{props.text}</span>
             </div>
         </Clickable>
