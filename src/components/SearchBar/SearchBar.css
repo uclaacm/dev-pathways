@@ -31,3 +31,7 @@
 .search-icon {
     margin-right: 10px;
 }
+
+.search-icon button {
+    padding: 5px;
+}

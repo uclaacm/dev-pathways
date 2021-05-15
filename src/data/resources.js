@@ -10,6 +10,7 @@ import teachla from "../img/teachLA_logo_light.svg";
 import hack from "../img/hack_logo_light.svg";
 import design from "../img/design_logo_light.svg"
 import external from "../img/external_source.svg"
+import studio from "../img/studio_logo_light.svg"
 
 //TODO: replace icons with more specific icons (i.e. for hackschool give hackschool icon)
 
@@ -405,7 +406,44 @@ const resources = [
                 source: "External",
                 icon: design,
                 difficulty: "Beginner",
+            }, 
+            {
+                name: "Art Tutorials | Post Processing",
+                video: "https://www.youtube.com/watch?v=CZnslTaWy5M&list=PLPO7_kXilXFbvbERRf1S0pJdXYkKPCDJr&index=7",
+                // documentation: "https://drive.google.com/file/d/1L8MQb38_i0sLIP0bO0oR9hUV065iUq2y/view",
+                source: "Studio",
+                icon: studio,
+                description: "In this tutorial, we introduce the post processing stack available in Unity to increase visual fidelity of a scene.",
+                difficulty: "Beginner",
             },
+            {
+                name: "Art Tutorials | Tilemaps",
+                video: "https://www.youtube.com/watch?v=CZnslTaWy5M&list=PLPO7_kXilXFbvbERRf1S0pJdXYkKPCDJr&index=9",
+                // documentation: "https://drive.google.com/file/d/1RzJLp-JhWoJSzRDbyfuz2ZGYbg5BqF59/view",
+                source: "Studio",
+                icon: studio,
+                description: "In this tutorial, we will be going over tilemaps and sprites which are used to easily design a level.",
+                difficulty: "Beginner",
+            },
+            {
+                name: "Art Tutorials | 2D Animation",
+                video: "https://www.youtube.com/watch?v=tm-xUtDbbE0",
+                // documentation: "https://drive.google.com/file/d/1PG5fQ9Pma4obW59UAtUSoo8Otb5iaALT/view",
+                source: "Studio",
+                icon: studio,
+                description: "In this tutorial, we will be going over the basics of model rigging and frame by frame animation- crucial to any game. Learn how to set up skeletons for basic 2D models, how to record animations, how to navigate the animation components, and more!",
+                difficulty: "Beginner",
+            },
+            
+            {
+                name: "Art Tutorials | Twine",
+                video: "https://www.youtube.com/watch?v=X-D_kEFyyZM&list=PLPO7_kXilXFbvbERRf1S0pJdXYkKPCDJr&index=10",
+                // documentation: "https://twinery.org/2/#!/stories",
+                source: "Studio",
+                icon: studio,
+                description: "A tutorial for Twine, a free visual software that is used to organize writing for nonlinear, interactive stories.",
+                difficulty: "Beginner",
+            },        
         ],
     },
     {
@@ -549,6 +587,127 @@ const resources = [
             },
         ],
     },
+
+    //Unity omitted for now since dev teams at ACM don't typically use Unity
+    //Game art moved to Graphic Design for now for a better layout
+
+    /*{
+        category: "Unity",
+        links: [
+            {
+                name: "Beginner Track | Intro to Unity 1",
+                video: "https://www.youtube.com/watch?v=IHioQljCOFs&list=PLPO7_kXilXFbvbERRf1S0pJdXYkKPCDJr&index=2",
+                documentation: "https://drive.google.com/file/d/1YG2i9Wj99WFel9Mk6k3qyPfuA2KkYrXJ/view",
+                source: "Studio",
+                icon: studio,
+                description: "If you haven't used Unity before, this tutorial will give you a very strong foundation to the engine. We'll be working on creating a simple rolling ball!",
+                difficulty: "Beginner",
+            },
+            {
+                name: "Beginner Track | Intro to Unity 2",
+                video: "https://www.youtube.com/watch?v=IHioQljCOFs&list=PLPO7_kXilXFbvbERRf1S0pJdXYkKPCDJr&index=3",
+                documentation: "https://drive.google.com/file/d/1YG2i9Wj99WFel9Mk6k3qyPfuA2KkYrXJ/view",
+                source: "Studio",
+                icon: studio,
+                description: "In this tutorial, we finish the rolling ball project by showing you how to implement pickups!",
+                difficulty: "Beginner",
+            },
+            {
+                name: "Beginner Track | UI in Unity",
+                video: "https://www.youtube.com/watch?v=IHioQljCOFs&list=PLPO7_kXilXFbvbERRf1S0pJdXYkKPCDJr&index=4",
+                documentation: "https://drive.google.com/file/d/1pYn4R5AvQxFT4qy2xQO2V1J1ZkAOJybt/view",
+                source: "Studio",
+                icon: studio,
+                description: "In this tutorial, we will be covering the basics of UI elements in Unity and how to make a point and click escape game.",
+                difficulty: "Beginner",
+            },
+            {
+                name: "Beginner Track | 2D Game",
+                video: "https://www.youtube.com/watch?v=IHioQljCOFs&list=PLPO7_kXilXFbvbERRf1S0pJdXYkKPCDJr&index=5",
+                documentation: "https://drive.google.com/file/d/1Q3sIKsPwkSU2hGvSq_ivOG1km-Qyrlcb/view",
+                source: "Studio",
+                icon: studio,
+                description: "In this tutorial, we will be going over the basics of developing a simple 2D side-scroller in Unity.",
+                difficulty: "Beginner",
+            },
+            {
+                name: "Beginner Track | Tower Defense",
+                video: "https://www.youtube.com/watch?v=Y9FPlkfiEZM&list=PLPO7_kXilXFbvbERRf1S0pJdXYkKPCDJr&index=6",
+                documentation: "https://drive.google.com/file/d/1Q3sIKsPwkSU2hGvSq_ivOG1km-Qyrlcb/view",
+                source: "Studio",
+                icon: studio,
+                description: "In this tutorial, we show you how to script the mechanics for a 3D tower defense game.",
+                difficulty: "Beginner",
+            },
+            {
+                name: "Advanced Track | Shaders",
+                video: "https://www.youtube.com/watch?v=bR5q0tIIKzI&list=PLPO7_kXilXFbvbERRf1S0pJdXYkKPCDJr&index=10",
+                documentation: "https://drive.google.com/file/d/1Wd3_EqSm00f2V4PyfJ4ySb_ECJN0f5tt/view",
+                source: "Studio",
+                icon: studio,
+                description: "In this tutorial, we will introduce Unity's graphic and render pipeline. Learn how to create special effects, and manipulate lighting/texture on a code and pixel level.",
+                difficulty: "Advanced",
+            },
+            {
+                name: "Advanced Track | Particles",
+                video: "https://www.youtube.com/watch?v=bR5q0tIIKzI&list=PLPO7_kXilXFbvbERRf1S0pJdXYkKPCDJr&index=11",
+                source: "Studio",
+                icon: studio,
+                description: "In this tutorial, we'll be discussing the unity particle system and showing off some cool stuff you can achieve with it!",
+                difficulty: "Advanced",
+            },
+            {
+                name: "Advanced Track | Coroutines",
+                video: "https://www.youtube.com/watch?v=bR5q0tIIKzI&list=PLPO7_kXilXFbvbERRf1S0pJdXYkKPCDJr&index=12",
+                source: "Studio",
+                icon: studio,
+                description: "In this tutorial, we will be going over coroutines and how to build a simple state machine AI.",
+                difficulty: "Advanced",
+            },
+        ],
+    },
+    {
+        category: "Game Art",
+        links: [
+            {
+                name: "Art Tutorials | Post Processing",
+                video: "https://www.youtube.com/watch?v=CZnslTaWy5M&list=PLPO7_kXilXFbvbERRf1S0pJdXYkKPCDJr&index=7",
+                documentation: "https://drive.google.com/file/d/1L8MQb38_i0sLIP0bO0oR9hUV065iUq2y/view",
+                source: "Studio",
+                icon: studio,
+                description: "In this tutorial, we introduce the post processing stack available in Unity to increase visual fidelity of a scene.",
+                difficulty: "Beginner",
+            },
+            {
+                name: "Art Tutorials | Tilemaps",
+                video: "https://www.youtube.com/watch?v=CZnslTaWy5M&list=PLPO7_kXilXFbvbERRf1S0pJdXYkKPCDJr&index=9",
+                documentation: "https://drive.google.com/file/d/1RzJLp-JhWoJSzRDbyfuz2ZGYbg5BqF59/view",
+                source: "Studio",
+                icon: studio,
+                description: "In this tutorial, we will be going over tilemaps and sprites which are used to easily design a level.",
+                difficulty: "Beginner",
+            },
+            {
+                name: "Art Tutorials | 2D Animation",
+                video: "https://www.youtube.com/watch?v=tm-xUtDbbE0",
+                documentation: "https://drive.google.com/file/d/1PG5fQ9Pma4obW59UAtUSoo8Otb5iaALT/view",
+                source: "Studio",
+                icon: studio,
+                description: "In this tutorial, we will be going over the basics of model rigging and frame by frame animation- crucial to any game. Learn how to set up skeletons for basic 2D models, how to record animations, how to navigate the animation components, and more!",
+                difficulty: "Beginner",
+            },
+            
+            {
+                name: "Art Tutorials | Twine",
+                video: "https://www.youtube.com/watch?v=X-D_kEFyyZM&list=PLPO7_kXilXFbvbERRf1S0pJdXYkKPCDJr&index=10",
+                documentation: "https://twinery.org/2/#!/stories",
+                source: "Studio",
+                icon: studio,
+                description: "A tutorial for Twine, a free visual software that is used to organize writing for nonlinear, interactive stories.",
+                difficulty: "Beginner",
+            },        
+        ],
+    },*/
 ]
 
 const resourceRequestLink = "https://docs.google.com/forms/d/e/1FAIpQLSetpg4nnKfdhMRY_B_YytXl0fJSb8EEzGecO6ks0hx2SKb8OQ/viewform?usp=sf_link"
