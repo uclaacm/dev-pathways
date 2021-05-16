@@ -8,9 +8,10 @@ const TypingAnimation = ({words}) => {
   useEffect(() => {
     const typed = new Typed(typeTarget.current, {
       strings: words,
-      typeSpeed: 35,
-      backSpeed: 25,
+      typeSpeed: 40,
+      backSpeed: 55,
       loop: true,
+      backDelay: 1200,
     });
 
     return () => {

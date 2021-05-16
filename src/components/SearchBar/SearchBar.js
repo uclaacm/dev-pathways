@@ -5,8 +5,6 @@ import line from './line.svg';
 import search from './search.svg';
 import TypingAnimation from '../shared/TypingAnimation';
 
-//TODO: implement search bar query cycling animation
-
 const SearchBar = props => {
     const [showPlaceholder, setShowPlaceholder] = useState(true);
     const { value, onSubmit, onChange, onKeyDown } = props;
@@ -21,7 +19,7 @@ const SearchBar = props => {
             <img src={line} alt="line" />
             <div>
                 {showPlaceholder && !value && <label for="search">
-                    <TypingAnimation words={["What do you want to learn?", "html/css", "javascript", "react"]} />
+                    What do you want to learn? <TypingAnimation words={["html/css", "javascript", "react"]} />
                 </label>}
                 <input
                     id="search"
