@@ -1,26 +1,36 @@
+:root {
+    --searchbar-padding-left: 15px;
+}
+
 .searchbar {
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #ffffff;
     padding: 15px;
-    padding-left: 25px;
+    padding-left: var(--searchbar-padding-left);
     border-radius: 30px;
 }
 
 .searchbar input {
-    padding-left: 15px;
+    padding-left: var(--searchbar-padding-left);
     font-size: 20px;
     width: 100%;
     border-width: 0px;
 }
 
-@media screen and (min-width: 720px){
+@media screen and (min-width: 720px) {
     .searchbar {
         width: fit-content;
     }
     .searchbar input {
         width: 600px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    #animation {
+        font-size: 0px;
     }
 }
 
@@ -30,6 +40,13 @@
 
 .search-icon {
     margin-right: 10px;
+}
+
+
+.searchbar label {
+    position: absolute;
+    padding-left: var(--searchbar-padding-left);
+    color: rgba(0, 0, 0, 0.5);
 }
 
 .search-icon button {
