@@ -19,7 +19,7 @@ const SearchBar = props => {
             <img src={line} alt="line" />
             <div>
                 {showPlaceholder && !value && <label for="search">
-                    What do you want to learn? <TypingAnimation words={["html/css", "javascript", "react"]} />
+                    What do you want to learn? <span id="animation"><TypingAnimation words={["html/css", "javascript", "react"]} /></span>
                 </label>}
                 <input
                     id="search"
