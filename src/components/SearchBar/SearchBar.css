@@ -30,7 +30,7 @@
 
 @media screen and (max-width: 720px) {
     #animation {
-        color: rgba(0, 0, 0, 0);
+        font-size: 0px;
     }
 }
 
