@@ -51,7 +51,7 @@ const teams = [
     },
     {
          logotype: studio,
-         technologies: ["Unity", "Game Art", "Twine"],
+         technologies: ["Game Art", "Twine"],
          projects: ["Games"],
     },
 ];
