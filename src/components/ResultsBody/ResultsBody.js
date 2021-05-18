@@ -11,19 +11,54 @@ const ResultsBody = props => {
     
     //Find applicable resources
     if (value.trim() !== "") {
-        for (let i = 0; i < resources.length; i++) {
-            if (resources[i].category.toLowerCase() === value) {
-                for (let j = 0; j < resources[i].links.length; j++) {
-                    results.push({ id: [i, j], resource: resources[i].links[j] });
-                }
-                break;
+        //break value into array of words
+        let vals = [];
+        let temp = "";
+        for (let r = 0; r< value.length; r++) {
+            if (value[r].match(/[a-z]/i)) {
+                temp += (value[r]);
+            } else if (temp !== "") {
+                vals.push(temp);
+                temp = "";
             }
-            for (let j = 0; j < resources[i].links.length; j++) {
-                const indexJ = resources[i].links[j].name.toLowerCase().indexOf(value);
-                if (indexJ !== -1) {
-                    results.push({ id: [i, j], resource: resources[i].links[j] });
+        }
+        if (temp !== "") {
+            vals.push(temp);
+        }
+
+        let catMatch = 0; // # of vals found in category
+        let matches = 0; //# of vals found in resource
+        let sourceMatches = [];
+        for (let i = 0; i < resources.length; i++) { //parse through all categories
+            if (resources[i].category.toLowerCase().indexOf(value) !== -1) { //check for category match
+                catMatch++;
+            }
+            for (let j = 0; j < resources[i].links.length; j++) { //parse through all resources in category
+                if (resources[i].links[j].source.toLowerCase() === value) { //check source, exact match
+                    sourceMatches.push({ id: i.toString() + j.toString(), resource: resources[i].links[j]});
+                }
+                if (sourceMatches.length > 0) {
+                    continue; //skip rest of loop since only searching for resources of certain source now
+                }
+                for (let p = 0; p < vals.length; p++) {
+                    if (resources[i].links[j].name.toLowerCase().indexOf(vals[p]) !== -1) { //check name
+                        matches++;
+                    }
+                    if (resources[i].links[j].description.toLowerCase().indexOf(vals[p]) !== -1) { //check description
+                        matches++;
+                    }
+                }
+                if (matches + catMatch > 0) { 
+                    results.push({ id: i.toString() + j.toString(), resource: resources[i].links[j], match: matches + catMatch});
+                    matches = 0;
                 }
             }
+            catMatch = 0;
+        }
+        if (sourceMatches.length > 0) {
+            results = sourceMatches;
+        } else {
+            results.sort((a,b) => {return b.match - a.match}); //sort so resource with most matches goes on top
         }
     }
 
