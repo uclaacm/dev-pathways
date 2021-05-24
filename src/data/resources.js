@@ -14,6 +14,25 @@ import studio from "../img/studio_logo_light.svg"
 
 //TODO: replace icons with more specific icons (i.e. for hackschool give hackschool icon)
 
+/*
+Beginner 
+    - know nothing about the topic 
+    - looking for a reintroduction from scratch 
+    - source can be understood even if no prior knowledge
+
+Advanced
+     - things that are nice to know, but you don't need to know to b
+        be comfortable with the technology
+        use the technology effectively
+     - extra skills
+     - ideas that are complicated such that you wont understand them unless you've worked with the technology for a while
+
+Intermediate 
+    - stuff to look into after you understand how the basics of a technology work 
+    - helpful to better understand and work comfortably with a specific technology 
+    - most developers know this stuff
+*/
+
 const resources = [
     {
         category: "HTML/CSS",
