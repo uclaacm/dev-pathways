@@ -53,7 +53,7 @@ const resources = [
                 source: "Hack",
                 description: "Covers advanced styling and layout, including: cascading, specificity, inheritance, pseudo-classes, transitions, animations, Flexbox, and Grid.",
                 icon: hack,
-                difficulty: "Beginner",
+                difficulty: "Advanced",
             },
             {
                 name: "Learning Labs | Intro to HTML/CSS",
@@ -87,7 +87,7 @@ const resources = [
                 source: "Teach LA",
                 description: "With Leo, we will learn a little bit about what happens when you take preprocessing principles from compilers and apply them to CSS. The answer is SASS! We'll talk about some of the cool things that SASS can do to make your life easier, and the state of CSS in comparison.",
                 icon: teachla,
-                difficulty: "Beginner",
+                difficulty: "Intermediate",
             },
             {
                 name: "Learning Labs | CSS Box Model & Positioning",
@@ -105,7 +105,7 @@ const resources = [
                 source: "Teach LA",
                 description: "In this session, we will learn about two of the most powerful tools in our vanilla CSS toolbox: CSS flexbox and CSS grid. By the end of this, you should be able to understand the flex axis and flow of a page. You should understand the differences between aligning versus justifying items and content in a flex container, and how CSS grid works.",
                 icon: teachla,
-                difficulty: "Beginner",
+                difficulty: "Intermediate",
             },
             {
                 name: "Learning Labs | CSS Animations",
@@ -114,7 +114,7 @@ const resources = [
                 source: "Teach LA",
                 description: "Matt gives you a brief flyover of how CSS Animations work, making them by hand with keyframes, and then other options (CSS & JS, lottie).",
                 icon: teachla,
-                difficulty: "Intermediate",
+                difficulty: "Advanced",
             },
             {
                 name: "Interneting is Hard | Intro to HTML/CSS",
@@ -122,7 +122,7 @@ const resources = [
                 source: "External",
                 icon: external,
                 description: "Learning HTML and CSS is hard, but it doesn’t have to be. This 14-chapter tutorial is one of the friendliest HTML and CSS guides on the Internet. We’ll walk you through everything from selecting a good text editor (which is surprisingly important) to building full-fledged, professional-quality web pages from scratch.",
-                difficulty: "Intermediate",
+                difficulty: "Beginner",
             },
             {
                 name: "Marksheet | Intro to HTML/CSS",
@@ -130,7 +130,7 @@ const resources = [
                 source: "External",
                 icon: external,
                 description: "MarkSheet is a free tutorial to learn HTML and CSS. It's short (just as long as a 50 page book), simple (for everyone: beginners, designers, developers), and free (as in 'free beer' and 'free speech'). It consists of 50 lessons across 4 chapters, covering the Web, HTML5, CSS3, and Sass.",
-                difficulty: "Advanced",
+                difficulty: "Beginner",
             },
             {
                 name: "Mozilla | CSS Basics",
@@ -138,7 +138,7 @@ const resources = [
                 source: "External",
                 icon: external,
                 description: "CSS (Cascading Style Sheets) is the code that styles web content. CSS basics walks through what you need to get started. We'll answer questions like: How do I make text red? How do I make content display at a certain location in the (webpage) layout? How do I decorate my webpage with back`ground images and colo`rs?",
-                difficulty: "Advanced",
+                difficulty: "Beginner",
             },
         ],
     },
@@ -170,7 +170,7 @@ const resources = [
                 source: "Teach LA",
                 icon: teachla,
                 description: "In this note, we'll go over some very basic concepts of testing, and then delve into how we can write tests using Jest (and Enzyme).",
-                difficulty: "Beginner",
+                difficulty: "Intermediate",
             },
             {
                 name: "Mozilla | Javascript Basics",
@@ -178,7 +178,7 @@ const resources = [
                 source: "External",
                 icon: external,
                 description: "JavaScript is a programming language that adds interactivity to your website. This happens in games, in the behavior of responses when buttons are pressed or with data entry on forms; with dynamic styling; with animation, etc. This article helps you get started with JavaScript and furthers your understanding of what is possible.",
-                difficulty: "Intermediate",
+                difficulty: "Beginner",
             },
             {
                 name: "Mozilla | Re-Intro to JavaScript",
@@ -186,7 +186,7 @@ const resources = [
                 source: "External",
                 icon: external,
                 description: "Why a re-introduction? Because JavaScript is notorious for being the world's most misunderstood programming language. It is often derided as being a toy, but beneath its layer of deceptive simplicity, powerful language features await.",
-                difficulty: "Advanced",
+                difficulty: "Intermediate",
             },
         ],
     },
@@ -234,7 +234,6 @@ const resources = [
                 source: "External",
                 icon: external,
                 description: "In this guide, we'll briefly introduce the DOM. We'll look at how the DOM represents an HTML or XML document in memory and how you use APIs to create web content and applications.",
-
                 difficulty: "Advanced",
             },
             {
@@ -317,7 +316,7 @@ const resources = [
                 source: "External",
                 icon: external,
                 description: "We will build a small game during this tutorial. You might be tempted to skip it because you’re not building games — but give it a chance. The techniques you’ll learn in the tutorial are fundamental to building any React app, and mastering it will give you a deep understanding of React.",
-                difficulty: "Intermediate",
+                difficulty: "Beginner",
             },
             {
                 name: "Facebook | Thinking in React",
@@ -363,7 +362,7 @@ const resources = [
                 source: "External",
                 icon: external,
                 description: "Most software projects have a bug tracker of some kind. GitHub’s tracker is called Issues, and has its own section in every repository.",
-                difficulty: "Beginner",
+                difficulty: "Intermediate",
             },
             {
                 name: "GitHub | All Guides",
@@ -508,7 +507,6 @@ const resources = [
                 source: "External",
                 icon: external,
                 description: "This page is an introduction to why accessibility matters, and we hope that you share it with your team.",
-
                 difficulty: "Intermediate",
             },
             {
@@ -517,7 +515,7 @@ const resources = [
                 source: "External",
                 icon: external,
                 description: 'Marcy Sutton describes testing websites for accessibility in structure, keyboard interactivity, automated testing, screen readers, and color contrast.',
-                difficulty: "Intermediate",
+                difficulty: "Advanced",
             },
         ],
     },
@@ -538,7 +536,7 @@ const resources = [
                 icon: acm,
                 description: "A compilation of resources about the interview process.",
                 source: "Dev",
-                difficulty: "Advanced",
+                difficulty: "Intermediate",
             },
             {
                 name: "5 Must-Know PM Resources",
@@ -546,7 +544,7 @@ const resources = [
                 source: "External",
                 icon: external,
                 description: "Behind every successful product is a product manager. But exactly what is a product manager and what do they do?",
-                difficulty: "Intermediate",
+                difficulty: "Beginner",
             },
             {
                 name: "Evolution of a Product",
@@ -570,7 +568,7 @@ const resources = [
                 source: "External",
                 icon: external,
                 description: "All the frequently asked Qs + As I get from the ~100 APM chats I've done.",
-                difficulty: "Advanced",
+                difficulty: "Beginner",
             },
             {
                 name: "Advice when Recruiting for Salesforce APM",
