@@ -11,6 +11,11 @@ import hack from "../img/hack_logo_light.svg";
 import design from "../img/design_logo_light.svg"
 import external from "../img/external_source.svg"
 import studio from "../img/studio_logo_light.svg"
+import react from "../img/react.svg"
+import github from "../img/github.svg"
+import mdn from "../img/mdn.svg"
+ import sequoia from "../img/sequoia.svg"
+//import sequoia from "../img/acm_logo.svg"
 
 //TODO: replace icons with more specific icons (i.e. for hackschool give hackschool icon)
 
@@ -117,7 +122,7 @@ const resources = [
                 name: "Mozilla | CSS Basics",
                 documentation: "https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics",
                 source: "External",
-                icon: external,
+                icon: mdn,
                 description: "CSS (Cascading Style Sheets) is the code that styles web content. CSS basics walks through what you need to get started. We'll answer questions like: How do I make text red? How do I make content display at a certain location in the (webpage) layout? How do I decorate my webpage with back`ground images and colo`rs?",
                 difficulty: "Advanced",
             },
@@ -157,7 +162,7 @@ const resources = [
                 name: "Mozilla | Javascript Basics",
                 documentation: "https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics",
                 source: "External",
-                icon: external,
+                icon: mdn,
                 description: "JavaScript is a programming language that adds interactivity to your website. This happens in games, in the behavior of responses when buttons are pressed or with data entry on forms; with dynamic styling; with animation, etc. This article helps you get started with JavaScript and furthers your understanding of what is possible.",
                 difficulty: "Intermediate",
             },
@@ -165,7 +170,7 @@ const resources = [
                 name: "Mozilla | Re-Intro to JavaScript",
                 article: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript",
                 source: "External",
-                icon: external,
+                icon: mdn,
                 description: "Why a re-introduction? Because JavaScript is notorious for being the world's most misunderstood programming language. It is often derided as being a toy, but beneath its layer of deceptive simplicity, powerful language features await.",
                 difficulty: "Advanced",
             },
@@ -213,7 +218,7 @@ const resources = [
                 name: "Mozilla | Javascript DOM API",
                 documentation: "https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction",
                 source: "External",
-                icon: external,
+                icon: mdn,
                 description: "In this guide, we'll briefly introduce the DOM. We'll look at how the DOM represents an HTML or XML document in memory and how you use APIs to create web content and applications.",
 
                 difficulty: "Advanced",
@@ -296,7 +301,7 @@ const resources = [
                 name: "Facebook | Intro to React",
                 article: "https://reactjs.org/tutorial/tutorial.html",
                 source: "External",
-                icon: external,
+                icon: react,
                 description: "We will build a small game during this tutorial. You might be tempted to skip it because you’re not building games — but give it a chance. The techniques you’ll learn in the tutorial are fundamental to building any React app, and mastering it will give you a deep understanding of React.",
                 difficulty: "Intermediate",
             },
@@ -304,7 +309,7 @@ const resources = [
                 name: "Facebook | Thinking in React",
                 article: "https://reactjs.org/docs/thinking-in-react.html",
                 source: "External",
-                icon: external,
+                icon: react,
                 description: "In this document, we’ll walk you through the thought process of building a searchable product data table using React.",
                 difficulty: "Advanced",
             },
@@ -334,7 +339,7 @@ const resources = [
                 name: "GitHub | Hello World",
                 article: "https://guides.github.com/activities/hello-world/",
                 source: "External",
-                icon: external,
+                icon: github,
                 description: "The Hello World project is a time-honored tradition in computer programming. It is a simple exercise that gets you started when learning something new. Let’s get started with GitHub!",
                 difficulty: "Beginner",
             },
@@ -342,7 +347,7 @@ const resources = [
                 name: "GitHub | Mastering Issues",
                 article: "https://guides.github.com/features/issues/",
                 source: "External",
-                icon: external,
+                icon: github,
                 description: "Most software projects have a bug tracker of some kind. GitHub’s tracker is called Issues, and has its own section in every repository.",
                 difficulty: "Beginner",
             },
@@ -350,7 +355,7 @@ const resources = [
                 name: "GitHub | All Guides",
                 article: "https://guides.github.com/",
                 source: "External",
-                icon: external,
+                icon: github,
                 description: "A collection of guides on how to use GitHub.",
                 difficulty: "Intermediate",
             },
@@ -533,7 +538,7 @@ const resources = [
                 name: "Evolution of a Product",
                 article: "https://www.sequoiacap.com/article/evolution-of-a-product",
                 source: "External",
-                icon: external,
+                icon: sequoia,
                 description: "Products evolve over time; the characteristics of an early-stage product are quite different from those of a mature one.",
                 difficulty: "Intermediate",
             },
@@ -541,7 +546,7 @@ const resources = [
                 name: "Measuring Product Health",
                 article: "https://www.sequoiacap.com/article/measuring-product-health",
                 source: "External",
-                icon: external,
+                icon: sequoia,
                 description: "This post explores multiple dimensions of healthy products with a particular focus on how consumer companies should measure aspects such as growth, retention, stickiness and engagement.",
                 difficulty: "Intermediate",
             },
@@ -573,7 +578,7 @@ const resources = [
                 name: "Retention",
                 article: "https://www.sequoiacap.com/article/retention",
                 source: "External",
-                icon: external,
+                icon: sequoia,
                 description: "Wouldn't it be nice if every new user continued to engage with your product forever? That's retention—a measure of the people who tried your product and liked it enough to return.",
                 difficulty: "Advanced",
             },
