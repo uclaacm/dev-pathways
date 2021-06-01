@@ -15,7 +15,6 @@ import react from "../img/react.svg"
 import github from "../img/github.svg"
 import mdn from "../img/mdn.svg"
  import sequoia from "../img/sequoia.svg"
-//import sequoia from "../img/acm_logo.svg"
 
 //TODO: replace icons with more specific icons (i.e. for hackschool give hackschool icon)
 
