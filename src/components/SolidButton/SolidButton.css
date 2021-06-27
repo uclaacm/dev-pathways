@@ -1,4 +1,4 @@
-.text {
+.solid-button > .text {
     font-weight: bold;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -11,4 +11,9 @@
     border-radius: 30px;
     font-size: 25px;
     width: 100%;
+    transition: background-color 0.3s;
+}
+
+.solid-button:hover {
+    background-color: #1b61e6;
 }
