@@ -7,6 +7,7 @@ import { useParams } from 'react-router-dom'
 import { useState } from 'react';
 import checkboxes from '../../data/checkboxes'
 import Checkbox from '../../components/Checkbox/Checkbox'
+import SolidButton from '../../components/SolidButton/SolidButton'
 
 const Results = () => {
     const param = useParams();
@@ -43,6 +44,7 @@ const Results = () => {
                 />
                 
                 <div className="filters-container">
+                    <SolidButton text="Generate Pathway"/>
                     {Object.keys(checkboxes).map(key => (
                         <div className="filter-category">
                             <h3> {key} </h3>

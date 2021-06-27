@@ -1,4 +1,4 @@
-.results-page-section{
+.results-page-section {
     display: flex;
 }
 
@@ -16,7 +16,7 @@
     background-position: 95%;
 }
 
-.results-search-container h1{
+.results-search-container h1 {
     text-align: left;
     margin-bottom: 5px;
     margin-top: 80px;
@@ -34,21 +34,25 @@
     z-index: 1;
 }
 
-.filters-container{
+.filters-container {
     width: 30%;
     height: 100%;
     margin: 2%;
     text-align: left;
     border-left: 2px solid #00000015;
+    padding: 30px;
 }
 
-h2{
+.filters-container > * {
+    margin-bottom: 30px;
+}
+
+h2 {
     font-size: 36px;
 }
 
-.filter-category{
+.filter-category {
     border: 2px solid #00000015;
     border-radius: 15px;
-    margin: 30px;
     padding: 15px;
 }

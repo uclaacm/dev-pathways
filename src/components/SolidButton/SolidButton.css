@@ -1,0 +1,14 @@
+.text {
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white;
+    font-family: "Poppins";
+}
+
+.solid-button {
+    background-color: #1E6CFF;
+    border-radius: 30px;
+    font-size: 25px;
+    width: 100%;
+}

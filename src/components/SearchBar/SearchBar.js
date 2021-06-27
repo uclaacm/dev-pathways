@@ -3,7 +3,7 @@ import './SearchBar.css';
 import Clickable from '../Clickable/Clickable';
 import line from './line.svg';
 import search from './search.svg';
-import TypingAnimation from '../shared/TypingAnimation';
+import TypingAnimation from '../TypingAnimation/TypingAnimation';
 
 const SearchBar = props => {
     const [showPlaceholder, setShowPlaceholder] = useState(true);
