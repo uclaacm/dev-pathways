@@ -15,19 +15,19 @@ First, let's clone our repository, and install all of our node dependencies:
 ```
 git clone https://github.com/uclaacm/dev-pathways.git
 cd dev-pathways
-npm install
+yarn install
 ```
 
-To start our app, you just need to run `npm start`!
+To start our app, you just need to run `yarn start`!
 
 ```
-npm start
+yarn start
 ```
 
 And to build our project for production (with CRA's webpack bundling and all that goodness),
 
 ```
-npm run build
+yarn run build
 ```
 
 ## Contribution Workflow
@@ -37,7 +37,7 @@ Want to make a change? Great! Here are the steps:
 1. Either make a new branch or a fork of this repository. `master` is a protected branch, **so you cannot push to it**.
 2. Follow the instructions in "Development Setup" above. If you're on a fork, replace the URL with the fork's URL; if you're on a different branch, check it out using `git checkout`.
 3. Make your changes!
-4. **Before you push**, make sure your app builds with `npm run build`. If there are any errors, our CI/CD service will **reject your build**.
+4. **Before you push**, make sure your app builds with `yarn run build`. If there are any errors, our CI/CD service will **reject your build**.
 5. Once you're ready, stage and commit your changes!
 6. Make a [pull request](https://github.com/uclaacm/dev-pathways/pulls) with your changes, and let someone on the dev team know. Netlify has a neat feature called "Deploy Previews" that give you a link to preview your changes; [see the blog post](https://www.netlify.com/blog/2016/07/20/introducing-deploy-previews-in-netlify/) for more info!
 7. If your code passes code review, we'll merge it into `master`. Congratulations! If you'd like, it's now safe to delete your branch/fork.
