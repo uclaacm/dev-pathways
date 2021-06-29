@@ -1,7 +1,5 @@
 import React from 'react'
 import './Results.css'
-import NavBar from '../../components/NavBar/NavBar'
-import Footer from '../../components/Footer/Footer'
 import ResultsBody from '../../components/ResultsBody/ResultsBody'
 import SearchandSuggested from '../../components/SearchandSuggested/SearchandSuggested';
 import { useParams } from 'react-router-dom'
@@ -30,7 +28,6 @@ const Results = () => {
 
     return (
         <div>
-            <NavBar />
             <div className="results-search-container">
                 <h1>Search Results</h1>
                 <SearchandSuggested
@@ -61,7 +58,6 @@ const Results = () => {
                     ))}
                 </div>
             </div>
-            <Footer/>
         </div>
     )
 }

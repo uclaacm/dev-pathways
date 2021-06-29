@@ -1,4 +1,5 @@
 import React from 'react';
+import Page from './pages/Page';
 import Home from './pages/Home/Home';
 import Results from './pages/Results/Results';
 import './App.css';
@@ -13,10 +14,13 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/results/:userText" element={<Results/>}/>
+        <Route path="/" element={
+          <Page content={<Home />} />
+        } />
+        <Route path="/results/:userText" element={
+          <Page content={<Results />} />
+        } />
       </Routes>
-
     </Router>
   );
 }
