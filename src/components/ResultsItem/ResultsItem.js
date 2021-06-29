@@ -39,10 +39,10 @@ const Home = props => {
 
             <div className="description">{props.item.resource.description ?? "No description available."}</div>
             
-            <footer>
+            <div className="results-item-footer">
                 {props.item.resource.source}
                 {props.otherSources}
-            </footer>
+            </div>
             </div>
         </div> 
     )

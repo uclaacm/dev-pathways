@@ -11,7 +11,7 @@ const TypingAnimation = ({words}) => {
       typeSpeed: 40,
       backSpeed: 55,
       loop: true,
-      backDelay: 1200,
+      backDelay: 1700,
     });
 
     return () => {

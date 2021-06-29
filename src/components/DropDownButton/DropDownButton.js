@@ -1,11 +1,11 @@
 import React from 'react';
 import './DropDownButton.css';
 import arrow from './arrow.svg';
-import Pressable from '../Clickable/Clickable';
+import Clickable from '../Clickable/Clickable';
 
 const DropDownButton = props => {
     return (
-        <Pressable onClick={props.onClick}>
+        <Clickable onClick={props.onClick}>
             <div className="button-container">
                 <span>{props.text}</span>
                 <img 
@@ -13,7 +13,7 @@ const DropDownButton = props => {
                     src={arrow} alt="arrow" 
                 />
             </div>
-        </Pressable>
+        </Clickable>
     );
 }
 
