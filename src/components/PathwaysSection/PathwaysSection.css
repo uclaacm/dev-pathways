@@ -7,7 +7,7 @@
 
 .pathway-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 45px;
@@ -15,8 +15,8 @@
 }
 
 .pathway-container > img {
-    width: 600px;
-    margin-right: 200px;
+    width: 350px;
+    margin-bottom: 30px;
 }
 
 .pathway-info {
@@ -28,5 +28,18 @@
 
 .gen-pathway-button {
     margin-top: 24px;
+}
+
+
+@media screen and (min-width: 1280px) {
+    .pathway-container {
+        flex-direction: row;
+    } 
+
+    .pathway-container > img {
+        width: 600px;
+        margin-right: 200px;
+        margin-bottom: 0px;
+    }
 }
 

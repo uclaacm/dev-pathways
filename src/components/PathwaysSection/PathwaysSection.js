@@ -3,7 +3,6 @@ import './PathwaysSection.css';
 import SolidButton from '../SolidButton/SolidButton';
 import pathway1 from './pathway1.svg';
 
-//passing index as key is okay since list is static, would need to use a unique id if list is not static
 const PathwaysSection = () => {
     return (
         <div className="pathway-section">
