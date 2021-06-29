@@ -1,0 +1,32 @@
+.pathway-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pathway-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 45px;
+    max-width: 1200px;
+}
+
+.pathway-container > img {
+    width: 600px;
+    margin-right: 200px;
+}
+
+.pathway-info {
+    display: block;
+    text-align: start;
+    font-size: 1.1em;
+    margin-bottom: 90px;
+}
+
+.gen-pathway-button {
+    margin-top: 24px;
+}
+

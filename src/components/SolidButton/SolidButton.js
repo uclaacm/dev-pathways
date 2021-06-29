@@ -4,7 +4,7 @@ import Clickable from '../Clickable/Clickable';
 
 const SolidButton = props => {
     return (
-        <Clickable className="solid-button" onClick={props.onClick}>
+        <Clickable className={`solid-button ${props.className}`} onClick={props.onClick}>
             <span className="text">{props.text}</span>
         </Clickable>
     );
