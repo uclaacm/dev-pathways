@@ -3,6 +3,7 @@ import NavBar from '../../components/NavBar/NavBar';
 import SearchSection from '../../components/SearchSection/SearchSection';
 import TeamSection from '../../components/TeamSection/TeamSection';
 import PathwaysSection from '../../components/PathwaysSection/PathwaysSection';
+import Footer from '../../components/Footer/Footer';
 import './Home.css';
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
             <SearchSection/>
             <TeamSection />
             <PathwaysSection/>
+            <Footer/>
         </div>
     );
 }

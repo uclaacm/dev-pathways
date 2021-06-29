@@ -1,0 +1,38 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    height: 250px;
+    border-top: 1px solid #E5E5E5;
+}
+
+.social-media {
+    margin-bottom: 30px;
+}
+
+.social-media-icon {
+    width: 32px;
+    margin-top: 10px;
+    margin-right: 25px;
+}
+
+#social-media-header {
+    font-size: .8em;
+}
+
+@media screen and (min-width: 1280px) {
+    footer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        height: 200px;
+    }
+
+    .social-media {
+        margin-right: 100px;
+        margin-bottom: 0px;
+    }
+}
