@@ -3,6 +3,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 10px;
+    padding-bottom: 0px;
 }
 
 .pathway-container {
@@ -11,6 +13,7 @@
     justify-content: center;
     align-items: center;
     padding: 45px;
+    padding-bottom: 0px;
     max-width: 1200px;
 }
 

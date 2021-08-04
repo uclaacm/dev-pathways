@@ -1,0 +1,16 @@
+.quiz-question {
+    display: flex;
+    flex-direction: column;
+    margin-left: 4%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 1.2em;
+}
+
+.quiz-question > h2 {
+    font-size: 36px;
+}
+
+.quiz-choice {
+    margin-left: 20px;
+}

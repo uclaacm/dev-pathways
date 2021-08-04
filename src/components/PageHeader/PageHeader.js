@@ -2,9 +2,10 @@ import React from 'react';
 import './PageHeader.css';
 
 
-const PageHeader = ({header, subheader, img}) => {
+const PageHeader = ({header, subheader, img, imgStyle}) => {
     const backgroundStyle = {
-        backgroundImage: `url(${img})`
+        backgroundImage: `url(${img})`,
+        ...imgStyle
     }
 
     return (

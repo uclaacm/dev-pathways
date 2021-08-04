@@ -8,10 +8,12 @@
 
     background-repeat: no-repeat;
     background-position: 95%;
+    font-size: 1.2em;
 }
 
 .page-header-container h1 {
     text-align: left;
     margin-bottom: 5px;
     margin-top: 80px;
+    margin-left: 0px;
 }
