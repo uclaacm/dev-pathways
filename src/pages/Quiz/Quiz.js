@@ -44,6 +44,11 @@ const Quiz = () => {
                 choices={["3 days", "1 week", "2 weeks", "1 month"]}
                 onChange={onChoiceSelection}
             />
+            <QuizQuestion
+                question="How long do you want to spend learning each week?"
+                choices={["2 hours", "5 hours", "10 hours", "20 hours"]}
+                onChange={onChoiceSelection}
+            />
             <SolidButton
                 className="goto-pathway-button"
                 text="Generate"
