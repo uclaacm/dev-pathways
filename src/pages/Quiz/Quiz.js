@@ -25,31 +25,37 @@ const Quiz = () => {
                 }}
             />
             <QuizQuestion
+                type="dropdown"
                 question="Which technology do you want to learn?"
                 choices={["HTML/CSS", "Javascript", "React", "Git"]}
                 onChange={onChoiceSelection}
             />
             <QuizQuestion
+                type="radio"
                 question="How experienced are you?"
                 choices={["Beginner", "Intermediate", "Advanced"]}
                 onChange={onChoiceSelection}
             />
             <QuizQuestion
+                type="radio"
                 question="What kind of resources do you prefer?"
                 choices={["Video", "Article", "Game", "Documentation"]}
                 onChange={onChoiceSelection}
             />
             <QuizQuestion
+                type="radio"
                 question="What's your ideal timeline?"
                 choices={["3 days", "1 week", "2 weeks", "1 month"]}
                 onChange={onChoiceSelection}
             />
             <QuizQuestion
+                type="radio"
                 question="How long do you want to spend learning each week?"
                 choices={["2 hours", "5 hours", "10 hours", "20 hours"]}
                 onChange={onChoiceSelection}
             />
             <SolidButton
+                type="radio"
                 className="goto-pathway-button"
                 text="Generate"
                 onClick={() => navigate("/pathway")}
