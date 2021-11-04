@@ -1,6 +1,9 @@
 import React from 'react';
 import PageHeader from '../../components/PageHeader/PageHeader';
 import PathwayHeader from '../../img/pathway-header.svg';
+import Floating from '../../img/quiz_floating.svg';
+import Career from '../../img/quiz_career.svg';
+import Adventure from '../../img/quiz_adventure.svg';
 import QuizQuestion from '../../components/QuizQuestion/QuizQuestion';
 import SolidButton from '../../components/SolidButton/SolidButton';
 import { useNavigate } from 'react-router-dom';
@@ -24,6 +27,9 @@ const Quiz = () => {
                     backgroundPosition: "100%",
                 }}
             />
+            <img src={Floating} alt="floating" className="quiz-floating"/>
+            <img src={Career} alt="career" className="quiz-career"/>
+            <img src={Adventure} alt="adventure" className="quiz-adventure"/>
             <QuizQuestion
                 type="dropdown"
                 question="Which technology do you want to learn?"

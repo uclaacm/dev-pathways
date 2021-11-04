@@ -2,3 +2,21 @@
     max-width: 300px;
     margin: 50px; 
 }
+
+.quiz-floating {
+    position:absolute;
+    top:427px;
+    left:789px;
+}
+
+.quiz-career {
+    position:absolute;
+    top:704px;
+    left:1046px;
+}
+
+.quiz-adventure {
+    position:absolute;
+    top:940px;    
+    left:791px;
+}
