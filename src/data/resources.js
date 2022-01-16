@@ -5,16 +5,16 @@
 //  - only first 5 resources are shown in resources drop down (so most important are at top)
 //  - these items will be selectable in resultsItem: video, article, interactive, doc (add new sources in ResultsBody)
 
-import acm from "../img/acm_logo.svg"
+import acm from "../img/acm_logo.svg";
 import teachla from "../img/teachLA_logo_light.svg";
 import hack from "../img/hack_logo_light.svg";
-import design from "../img/design_logo_light.svg"
-import external from "../img/external_source.svg"
-import studio from "../img/studio_logo_light.svg"
-import react from "../img/react.svg"
-import github from "../img/github.svg"
-import mdn from "../img/mdn.svg"
-import sequoia from "../img/sequoia.svg"
+import design from "../img/design_logo_light.svg";
+import external from "../img/external_source.svg";
+import studio from "../img/studio_logo_light.svg";
+import react from "../img/react.svg";
+import github from "../img/github.svg";
+import mdn from "../img/mdn.svg";
+import sequoia from "../img/sequoia.svg";
 
 /*
 Beginner 
@@ -728,9 +728,5 @@ const resources = [
         ],
     },*/
 ]
-
-
-
-
 
 export default resources;
