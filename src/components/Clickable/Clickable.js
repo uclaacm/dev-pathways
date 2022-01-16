@@ -5,7 +5,7 @@ import './Clickable.css';
 
 const Clickable = props => {
     return (
-        <button className="clickable" onClick={props.onClick}>
+        <button className={`clickable ${props.className}`} onClick={props.onClick}>
             { props.children }
         </button>
     );
