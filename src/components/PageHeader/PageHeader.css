@@ -1,0 +1,19 @@
+.page-header-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 300px;
+    background-color: #F8F8F8;
+    padding-left: 5%;
+
+    background-repeat: no-repeat;
+    background-position: 95%;
+    font-size: 1.2em;
+}
+
+.page-header-container h1 {
+    text-align: left;
+    margin-bottom: 5px;
+    margin-top: 80px;
+    margin-left: 0px;
+}

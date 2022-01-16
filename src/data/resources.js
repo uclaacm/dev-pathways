@@ -5,16 +5,16 @@
 //  - only first 5 resources are shown in resources drop down (so most important are at top)
 //  - these items will be selectable in resultsItem: video, article, interactive, doc (add new sources in ResultsBody)
 
-import acm from "../img/acm_logo.svg"
+import acm from "../img/acm_logo.svg";
 import teachla from "../img/teachLA_logo_light.svg";
 import hack from "../img/hack_logo_light.svg";
-import design from "../img/design_logo_light.svg"
-import external from "../img/external_source.svg"
-import studio from "../img/studio_logo_light.svg"
-import react from "../img/react.svg"
-import github from "../img/github.svg"
-import mdn from "../img/mdn.svg"
-import sequoia from "../img/sequoia.svg"
+import design from "../img/design_logo_light.svg";
+import external from "../img/external_source.svg";
+import studio from "../img/studio_logo_light.svg";
+import react from "../img/react.svg";
+import github from "../img/github.svg";
+import mdn from "../img/mdn.svg";
+import sequoia from "../img/sequoia.svg";
 
 /*
 Beginner 
@@ -22,17 +22,17 @@ Beginner
     - looking for a reintroduction from scratch 
     - source can be understood even if no prior knowledge
 
-Advanced
-     - things that are nice to know, but you don't need to know to b
-        be comfortable with the technology
-        use the technology effectively
-     - extra skills
-     - ideas that are complicated such that you wont understand them unless you've worked with the technology for a while
-
 Intermediate 
     - stuff to look into after you understand how the basics of a technology work 
     - helpful to better understand and work comfortably with a specific technology 
     - most developers know this stuff
+
+Advanced
+     - things that are nice to know, but you don't need to know to
+        be comfortable with the technology
+        use the technology effectively
+     - extra skills
+     - ideas that are complicated such that you wont understand them unless you've worked with the technology for a while
 */
 
 const resources = [
@@ -728,9 +728,5 @@ const resources = [
         ],
     },*/
 ]
-
-
-
-
 
 export default resources;

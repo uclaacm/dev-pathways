@@ -1,14 +1,17 @@
-import React from 'react'
-import './Results.css'
-import NavBar from '../../components/NavBar/NavBar'
-import ResultsBody from '../../components/ResultsBody/ResultsBody'
+import React from 'react';
+import './Results.css';
+import ResultsBody from '../../components/ResultsBody/ResultsBody';
 import SearchandSuggested from '../../components/SearchandSuggested/SearchandSuggested';
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom';
 import { useState } from 'react';
-import checkboxes from '../../data/checkboxes'
-import Checkbox from '../../components/Checkbox/Checkbox'
+import checkboxes from '../../data/checkboxes';
+import Checkbox from '../../components/Checkbox/Checkbox';
+import SolidButton from '../../components/SolidButton/SolidButton';
+import PageHeader from '../../components/PageHeader/PageHeader';
+import SearchingArt from '../../img/searching_art.svg';
 
 const Results = () => {
+    const navigate = useNavigate();
     const param = useParams();
     const [text, setText] = useState(decodeURIComponent(param.userText));
     const [checkedItems, setCheckedItems] = useState({});
@@ -28,14 +31,11 @@ const Results = () => {
 
     return (
         <div>
-            <NavBar />
-            <div className="results-search-container">
-                <h1>Search Results</h1>
-                <SearchandSuggested
-                    searchFunction={search}
-                    text={text}
-                />
-            </div>
+            <PageHeader 
+                header="Search Results" 
+                subheader={<SearchandSuggested searchFunction={search} text={text}/>}
+                img={SearchingArt}
+            />
             <div className="results-page-section">
                 <ResultsBody
                     text={text}
@@ -43,6 +43,7 @@ const Results = () => {
                 />
                 
                 <div className="filters-container">
+                    <SolidButton text="Generate Pathway" onClick={() => navigate("/quiz")}/>
                     {Object.keys(checkboxes).map(key => (
                         <div className="filter-category">
                             <h3> {key} </h3>

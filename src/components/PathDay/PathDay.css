@@ -1,0 +1,39 @@
+.pathway-day {
+    display: flex;
+    padding: 100px;
+    padding-bottom: 0px;
+    width: 1500px;
+}
+
+.pathway-resource-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+    border: 2px solid #00000010;
+    border-radius: 25px;
+    width: 240px;
+}
+
+.pathway-resource-card > img {
+    width: 150px;
+}
+
+.pathway-resource-card > h3 {
+    font-size: 1.5em;
+}
+
+.pathway-info {
+    margin-left: 40px;
+    height: 100%;
+}
+
+.pathway-info > h2 {
+    margin-left: 0px;
+}
+
+.pathway-difficulty {
+    margin-top: 50px;
+}

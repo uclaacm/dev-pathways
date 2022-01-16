@@ -1,0 +1,25 @@
+.goto-pathway-button {
+  max-width: 300px;
+  margin: 50px;
+}
+
+.quiz-floating {
+  position: absolute;
+  top: 427px;
+  right: 305px;
+  z-index: -1;
+}
+
+.quiz-career {
+  position: absolute;
+  top: 704px;
+  right: 50px;
+  z-index: -1;
+}
+
+.quiz-adventure {
+  position: absolute;
+  top: 940px;
+  right: 230px;
+  z-index: -1;
+}
