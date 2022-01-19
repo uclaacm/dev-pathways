@@ -25,7 +25,7 @@ const Pathway = () => {
             )}
             <h2>Come back later?</h2>
             <p3>You can come back later and your pathway will be saved! Alternatively,
-                 you can <a href="/quiz" target="_blank" rel="noreferrer noopener">start over</a>.</p3>
+                 you can <a href="/quiz" rel="noreferrer noopener">start over</a>.</p3>
 
         </div>
     );
