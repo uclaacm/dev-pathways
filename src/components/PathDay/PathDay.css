@@ -22,7 +22,9 @@
 }
 
 .pathway-resource-card > h3 {
-    font-size: 1.5em;
+    margin: 30px 0px 0px 0px;
+    font-size: 1.35em;
+    line-height: 1.25;
 }
 
 .pathway-info {
@@ -36,4 +38,21 @@
 
 .pathway-difficulty {
     margin-top: 50px;
+    text-transform: lowercase;
+}
+
+.pathway-difficulty a:link { 
+    text-decoration: none; 
+}
+
+.pathway-difficulty a:visited { 
+    text-decoration: none; 
+}
+
+.pathway-difficulty a:hover { 
+    text-decoration: none; 
+}
+
+.pathway-difficulty a:active { 
+    text-decoration: none; 
 }
