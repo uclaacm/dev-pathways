@@ -1,0 +1,20 @@
+.information{
+    display: flex;
+    position: absolute;
+    right: 25%;
+    width: 20%;
+    height: 30%;
+    border-radius: 5%;
+    background-color: rgb(252, 252, 252);
+    text-align: left;
+    border-right: 1px solid #00000015;
+    border-left: 3px solid #00000015;
+    border-bottom: 4px solid #00000015;
+    padding: 10px;
+}
+
+.displayInfo{
+    word-wrap: break-word;
+    font-size: 70%;
+    
+}
