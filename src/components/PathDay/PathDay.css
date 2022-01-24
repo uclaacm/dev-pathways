@@ -50,7 +50,7 @@
 }
 
 .pathway-difficulty a:hover { 
-    text-decoration: none; 
+    text-decoration: underline; 
 }
 
 .pathway-difficulty a:active { 
