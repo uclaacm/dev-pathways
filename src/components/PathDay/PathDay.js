@@ -17,8 +17,9 @@ const PathDay = ({ index, resource }) => {
                 <h2>Day {index}</h2>
                 {resource.description}
                 <div className="pathway-difficulty">
-                    {resource.difficulty}               
-                    {/* TODO: links */}
+                    {resource.difficulty}
+                    {resource.video != null && <span> • <a href={resource.video}>video</a></span>}
+                    {resource.article != null && <span> • <a href={resource.article}>article</a></span>}
                 </div>
             </div>
         </div>
