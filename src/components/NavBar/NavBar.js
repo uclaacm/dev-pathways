@@ -24,7 +24,7 @@ const NavBar = () => {
                         alt="acm logo"
                         onClick={() => navigate("/")} />
                 </div>
-                {
+                
                 <div className="element-container resouce-btn">
                     <DropDownButton
                         text="Resources"
@@ -32,7 +32,7 @@ const NavBar = () => {
                         onClick={() => setMenuExpanded(prev => !prev)}
                     />
                 </div>
-                }
+                
                 <button className={isMenuExpanded ? 'active' : ''} id="hamburger" type="button" onClick={() => setMenuExpanded(prev => !prev)} aria-label="navigation menu" aria-expanded={isMenuExpanded} tabIndex="0">
                     <span className= "bar" id="bar-one"></span>
                     <span className= "bar" id="bar-two"></span>
