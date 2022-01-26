@@ -7,7 +7,6 @@ import DropDownButton from '../DropDownButton/DropDownButton';
 import DropDownMenu from '../DropDownMenu/DropDownMenu';
 import { useNavigate } from 'react-router-dom';
 
-
 const NavBar = () => {
     const [isMenuExpanded, setMenuExpanded] = useState(false);
     const navigate = useNavigate();
