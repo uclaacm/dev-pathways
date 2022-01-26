@@ -22,7 +22,7 @@ const NavBar = () => {
                         onClick={() => navigate("/")} />
                 </div>
                 
-                <div className="element-container resouce-btn">
+                <div className="element-container resource-btn>
                     <DropDownButton
                         text="Resources"
                         isExpanded={isMenuExpanded}
