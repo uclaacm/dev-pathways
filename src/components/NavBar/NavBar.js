@@ -31,8 +31,8 @@ const NavBar = () => {
                 </div>
                 
                 <button className={isMenuExpanded ? 'active' : ''} id="hamburger" type="button" onClick={() => setMenuExpanded(prev => !prev)} aria-label="navigation menu" aria-expanded={isMenuExpanded} tabIndex="0">
-                    <span className= "bar" id="bar-one"></span>
-                    <span className= "bar" id="bar-two"></span>
+                    <span className="bar" id="bar-one"></span>
+                    <span className="bar" id="bar-two"></span>
                     <span className="bar" id="bar-three"></span>
                 </button>
             </div>
