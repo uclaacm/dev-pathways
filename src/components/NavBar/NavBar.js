@@ -36,9 +36,7 @@ const NavBar = () => {
                     <span className="bar" id="bar-three"></span>
                 </button>
             </div>
-            {isMenuExpanded ? <DropDownMenu resources={resources} /> : null}
-
-
+            {isMenuExpanded && <DropDownMenu resources={resources} />}
         </div>
     );
 }
