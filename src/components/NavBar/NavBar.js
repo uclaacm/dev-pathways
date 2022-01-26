@@ -11,8 +11,6 @@ const NavBar = () => {
     const [isMenuExpanded, setMenuExpanded] = useState(false);
     const navigate = useNavigate();
 
-
-   
     return (
         <div>
             <div className="nav-container">
