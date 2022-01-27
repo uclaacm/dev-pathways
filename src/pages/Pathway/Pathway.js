@@ -7,9 +7,9 @@ import resources from '../../data/resources';
 import './Pathway.css';
 
 const Pathway = () => {
-    const quiz_result = useContext(QuizContext);
+    const {quizResults} = useContext(QuizContext);
     // start from here...
-    console.log(quiz_result);
+    console.log(quizResults);
     
     const example_resources = resources[3].links;
 

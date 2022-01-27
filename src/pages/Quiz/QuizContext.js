@@ -1,7 +1,7 @@
 import { createContext, useState } from "react";
 
 export const defaultQuizContext = {
-    data: {
+    quizResults: {
         category: "HTML/CSS",
         difficulty: "Beginner",
         type: "Any",
@@ -16,7 +16,7 @@ const QuizContext = createContext(defaultQuizContext);
 export default QuizContext;
 
 export const QuizProvider = (props) => {
-    const [quizResults, setQuizResults] = useState(defaultQuizContext.data);
+    const [quizResults, setQuizResults] = useState(defaultQuizContext.quizResults);
     return (
       <QuizContext.Provider
         value={{

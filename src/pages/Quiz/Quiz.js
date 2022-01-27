@@ -13,9 +13,9 @@ import "./Quiz.css";
 const Quiz = (props) => {
   const navigate = useNavigate();
 
-  const finalizedQuiz = useContext(QuizContext)
+  const {setQuizResults} = useContext(QuizContext)
 
-  let quizResults = defaultQuizContext.data;
+  let quizResults = defaultQuizContext.quizResults;
 
   return (
     <div>
@@ -87,7 +87,7 @@ const Quiz = (props) => {
         className="goto-pathway-button"
         text="Generate"
         onClick={() => {
-          finalizedQuiz.setQuizResults(quizResults);
+          setQuizResults(quizResults);
           navigate("/pathway")
         }}
       />
