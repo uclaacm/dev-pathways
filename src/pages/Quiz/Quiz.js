@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import PageHeader from "../../components/PageHeader/PageHeader";
 import PathwayHeader from "../../img/pathway-header.svg";
 import Floating from "../../img/quiz_floating.svg";
@@ -7,13 +7,13 @@ import Adventure from "../../img/quiz_adventure.svg";
 import QuizQuestion from "../../components/QuizQuestion/QuizQuestion";
 import SolidButton from "../../components/SolidButton/SolidButton";
 import { useNavigate } from "react-router-dom";
-import defaultQuizContext from "./default-quiz-context"
+import QuizContext, { defaultQuizContext } from "./QuizContext";
 import "./Quiz.css";
-
-
 
 const Quiz = (props) => {
   const navigate = useNavigate();
+
+  const finalizedQuiz = useContext(QuizContext)
 
   let quizResults = defaultQuizContext.data;
 
@@ -87,7 +87,7 @@ const Quiz = (props) => {
         className="goto-pathway-button"
         text="Generate"
         onClick={() => {
-          props.setQuizResults(quizResults)
+          finalizedQuiz.setQuizResults(quizResults);
           navigate("/pathway")
         }}
       />

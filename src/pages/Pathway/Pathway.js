@@ -2,10 +2,9 @@ import React, {useContext} from 'react';
 import PageHeader from '../../components/PageHeader/PageHeader';
 import PathwayHeader from '../../img/pathway-header.svg';
 import PathDay from '../../components/PathDay/PathDay';
-import './Pathway.css';
-import QuizContext from '../Quiz/quiz-context';
-
+import QuizContext from '../Quiz/QuizContext';
 import resources from '../../data/resources';
+import './Pathway.css';
 
 const Pathway = () => {
     const quiz_result = useContext(QuizContext);

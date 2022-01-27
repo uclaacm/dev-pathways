@@ -1,11 +1,10 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Page from './pages/Page';
 import Home from './pages/Home/Home';
 import Results from './pages/Results/Results';
 import Quiz from './pages/Quiz/Quiz';
 import Pathway from './pages/Pathway/Pathway';
-import defaultQuizContext from './pages/Quiz/default-quiz-context';
-import QuizContext from './pages/Quiz/quiz-context';
+import { QuizProvider } from './pages/Quiz/QuizContext';
 import './App.css';
 
 import {
@@ -16,10 +15,8 @@ import {
 
 
 const App = () => {
-  const [quizResults, setQuizResults] = useState(defaultQuizContext.data);
-
   return (
-    <QuizContext.Provider value={{quizResults}}>
+    <QuizProvider>
       <Router>
         <Routes>
           <Route path="/" element={
@@ -29,14 +26,14 @@ const App = () => {
             <Page content={<Results />} />
           } />
           <Route path="/quiz" element={
-            <Page content={<Quiz setQuizResults={setQuizResults}/>} />
+            <Page content={<Quiz />} />
           } />
           <Route path="/pathway" element={
             <Page content={<Pathway />} />
           } />
         </Routes>
       </Router>
-    </QuizContext.Provider>
+    </QuizProvider>
   );
 }
 
