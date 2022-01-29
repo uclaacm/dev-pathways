@@ -35,6 +35,21 @@ use the technology effectively
 - ideas that are complicated such that you wont understand them unless you've worked with the technology for a while
 */
 
+const difficultyTextMap = {
+    Beginner: ["- Know nothing about the topic.",
+                "- Looking for a reintroduction from scratch.",
+                "- Source can be understood even if no prior knowledge."
+            ],
+    Intermediate: ["- Most developers know this stuff.",
+                    "- Stuff to look into after you understand how the basics of a technology work.",
+                    "- Helpful to better understand and work comfortably with a specific technology."
+            ],
+    Advanced: ["- Extra skills",
+                "- Things that are nice to know, but not needed, to be comfortable with and use the technology effectively",
+                "- Ideas that are complicated to understand unless you've worked with the technology for awhile"
+            ]
+}
+
 const resources = [
     {
         category: "HTML/CSS",
@@ -730,3 +745,4 @@ const resources = [
 ]
 
 export default resources;
+export {difficultyTextMap};
