@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './SearchandSuggested.css';
 import SearchBar from '../SearchBar/SearchBar';
 import resources from '../../data/resources.js';
@@ -10,12 +10,23 @@ const SearchandSuggested = props => {
     const [suggestedItem, setSuggestedItem] = useState([]); //holds all suggested items
     const [showSuggested, setShowSuggested] = useState(false);
 
-    //TODO: implement debouncing
+    const debouncedText = useDebounce(searchBarText, 150);
+
     const handleSearchInput = onChange => {
+        setSearchBarText(onChange.target.value);
+        if(!onChange.target.value) setShowSuggested(false);
+    }
+
+    useEffect(
+        () => {
+          generateSuggestions(debouncedText);
+        },
+        [debouncedText] 
+      );
+
+    const generateSuggestions = (debouncedText) => {
         let tempSuggest = [];
-        let value = onChange.target.value;
-        setSearchBarText(value);
-        value = value.toLowerCase();
+        let value = debouncedText.toLowerCase();
 
         //Parse for suggestions
         if (value.trim() !== "") {
@@ -66,6 +77,25 @@ const SearchandSuggested = props => {
         }
     }
 
+    // debounce custom hook
+    function useDebounce(value, delay) {
+        const [debouncedValue, setDebouncedValue] = useState(value);
+      
+        useEffect(
+          () => {
+            const handler = setTimeout(() => {
+              setDebouncedValue(value);
+            }, delay);
+            return () => {
+              clearTimeout(handler);
+            };
+          },
+          [value, delay] 
+        );
+      
+        return debouncedValue;
+      }
+
     //Turn suggested items into list
     if (suggestedItem.length === 0) {
         suggested = <li id="no-results">No results found...</li>
@@ -74,8 +104,8 @@ const SearchandSuggested = props => {
          suggested = suggestedItem.map((item) =>
             <li className="searchitem" key={item.id} onClick={() => handleSuggestionSelect(item.id)}>
                 <b>{item.name.substring(0,item.index)}</b>
-                {searchBarText.toLowerCase()}
-                <b>{item.name.substring(item.index+searchBarText.length)}</b>
+                {debouncedText.toLowerCase()}
+                <b>{item.name.substring(item.index+debouncedText.length)}</b>
             </li>
          );
     }
