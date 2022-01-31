@@ -2,8 +2,7 @@
     display: flex;
     position: absolute;
     right: 25%;
-    width: 20%;
-    height: 30%;
+    width: max(20%, 10rem);
     border-radius: 5%;
     background-color: rgb(252, 252, 252);
     text-align: left;
@@ -15,5 +14,5 @@
 
 .displayInfo{
     word-wrap: break-word;
-    font-size: 0.9vw;
+    font-size: 0.85rem;
 }
