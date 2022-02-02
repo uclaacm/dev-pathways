@@ -8,31 +8,43 @@ const ComeBackFeedback = () => {
     return (
         <div className="comeback-feedback">
 
-            <h2>Come back later?</h2>
-            <p>
-                You can come back later and your pathway will be saved! 
-                <br/> 
-                Alternatively, you can start over or export it.
-            </p>
+            <div className="comeback-container">
+                <div className="comeback-text">
+                    <p>
+                        <strong>Come back later?</strong>
+                        <br/>
+                        You can come back later and your pathway will be saved! 
+                        <br/> 
+                        Alternatively, you can <a href="/quiz" rel="noreferrer noopener">start over</a> or export it.
+                    </p>
+                </div>
 
-            <img src={comeBackLater} alt="come back later image"/>
+                <img id="comeback-image" src={comeBackLater} alt="come back later image"/>
+            </div>
 
-            <img src={feedback} alt="feedback image"/>
 
-            
-            
+            <div className="feedback-container">
+                <img src={feedback} alt="feedback image"/>
 
-            <h2>Have any feedback?</h2>
-            <p>We want to hear from you!</p>
+                <div className="feedback-text">
+                    {/* <h2>Have any feedback?</h2> */}
+                    <p>
+                        <strong>Have any feedback?</strong> 
+                        <br/>
+                        We want to hear from you!
+                    </p>
 
-            <SolidButton
-                className="contact-us-button"
-                text="Contact Us"
-                onClick={() => {}}
-            />
+                    <a href="https://forms.gle/ANBjEcXLut27WAgc7">
+                        <SolidButton
+                            className="contact-us-button"
+                            text="Contact Us"
+                            onClick={() => {}}
+                        />
+                    </a>
 
-            
-            
+                </div>
+            </div>
+
         </div>
     );
 };
