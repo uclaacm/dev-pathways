@@ -1,15 +1,7 @@
 .comeback-feedback {
-
-    /* display: flex;
-    flex-direction: column; 
-    align-items: center;
-    justify-content: center; */
-
-    
     width: 100vw;
     border-top: 1px solid #E5E5E5;
     text-align: center;
-
     margin: 150px auto 0px auto;
 }
 
@@ -47,8 +39,18 @@ a {
 }
 
 .feedback-text {
-    /* max-width: 380px; */
+    display: flex;
     text-align: left;
     padding-right: 90px;
     font-size: 14pt;
+    flex-direction: column;
 }
+
+#feedback-paragraph {
+    margin-top: 75px;
+}
+
+#contact-us {
+    margin-top: 110px;
+}
+

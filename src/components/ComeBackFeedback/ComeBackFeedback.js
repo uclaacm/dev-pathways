@@ -19,29 +19,27 @@ const ComeBackFeedback = () => {
                     </p>
                 </div>
 
-                <img id="comeback-image" src={comeBackLater} alt="come back later image"/>
+                <img id="comeback-image" src={comeBackLater} alt="come back later"/>
             </div>
 
 
             <div className="feedback-container">
-                <img src={feedback} alt="feedback image"/>
+                <img src={feedback} alt="feedback"/>
 
                 <div className="feedback-text">
-                    {/* <h2>Have any feedback?</h2> */}
-                    <p>
+                    <p id="feedback-paragraph">
                         <strong>Have any feedback?</strong> 
                         <br/>
                         We want to hear from you!
                     </p>
 
-                    <a href="https://forms.gle/ANBjEcXLut27WAgc7">
+                    <a id="contact-us" href="https://forms.gle/ANBjEcXLut27WAgc7">
                         <SolidButton
                             className="contact-us-button"
                             text="Contact Us"
                             onClick={() => {}}
                         />
                     </a>
-
                 </div>
             </div>
 

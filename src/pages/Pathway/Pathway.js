@@ -25,10 +25,6 @@ const Pathway = () => {
                 <PathDay index={index + 1} resource={resource} />
             )}
 
-            {/* <h2>Come back later?</h2>
-            <p3>You can come back later and your pathway will be saved! Alternatively,
-                 you can <a href="/quiz" rel="noreferrer noopener">start over</a>.</p3> */}
-
             <ComeBackFeedback/>
 
         </div>
