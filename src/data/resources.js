@@ -16,24 +16,20 @@ import github from "../img/github.svg";
 import mdn from "../img/mdn.svg";
 import sequoia from "../img/sequoia.svg";
 
-/*
-Beginner 
-    - know nothing about the topic 
-    - looking for a reintroduction from scratch 
-    - source can be understood even if no prior knowledge
-
-Intermediate 
-    - stuff to look into after you understand how the basics of a technology work 
-    - helpful to better understand and work comfortably with a specific technology 
-    - most developers know this stuff
-
-Advanced
-     - things that are nice to know, but you don't need to know to
-        be comfortable with the technology
-        use the technology effectively
-     - extra skills
-     - ideas that are complicated such that you wont understand them unless you've worked with the technology for a while
-*/
+const difficultyTextMap = {
+    Beginner: ["- Know nothing about the topic.",
+                "- Looking for a reintroduction from scratch.",
+                "- Source can be understood even if no prior knowledge."
+            ],
+    Intermediate: ["- Most developers know this stuff.",
+                    "- Stuff to look into after you understand how the basics of a technology work.",
+                    "- Helpful to better understand and work comfortably with a specific technology."
+            ],
+    Advanced: ["- Extra skills",
+                "- Things that are nice to know, but not needed, to be comfortable with and use the technology effectively",
+                "- Ideas that are complicated to understand unless you've worked with the technology for awhile"
+            ]
+}
 
 const resources = [
     {
@@ -730,3 +726,4 @@ const resources = [
 ]
 
 export default resources;
+export {difficultyTextMap};
