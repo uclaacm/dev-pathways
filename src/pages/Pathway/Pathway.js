@@ -1,13 +1,17 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import PageHeader from '../../components/PageHeader/PageHeader';
 import PathwayHeader from '../../img/pathway-header.svg';
 import PathDay from '../../components/PathDay/PathDay';
 import ComeBackFeedback from '../../components/ComeBackFeedback/ComeBackFeedback';
+import QuizContext from '../Quiz/QuizContext';
+import resources from '../../data/resources';
 import './Pathway.css';
 
-import resources from '../../data/resources';
-
 const Pathway = () => {
+    const {quizResults} = useContext(QuizContext);
+    // start from here...
+    console.log(quizResults);
+    
     const example_resources = resources[3].links;
 
     return (
