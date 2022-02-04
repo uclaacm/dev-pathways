@@ -2,7 +2,7 @@ import React from 'react';
 import './NavBar.css';
 import logo from './acm_logo.svg';
 import IconButton from '../IconButton/IconButton';
-import DropDownButton from '../DropDownButton/DropDownButton';
+import ResourceButton from '../ResourceButton/ResourceButton';
 import { useNavigate } from 'react-router-dom';
 
 const NavBar = () => {
@@ -18,11 +18,10 @@ const NavBar = () => {
                         alt="acm logo"
                         onClick={() => navigate("/")} />
                 </div>
-                
                 <div className="element-container resource-btn">
-                    <DropDownButton
+                    <ResourceButton
                         text="Resources"
-                        onClick = {() => navigate("/archive")}
+                        onClick={() => navigate("/archive")}
                     />
                 </div>
             </div>
