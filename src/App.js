@@ -12,6 +12,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import Archive from './pages/Archive/Archive';
 
 
 const App = () => {
@@ -30,6 +31,9 @@ const App = () => {
           } />
           <Route path="/pathway" element={
             <Page content={<Pathway />} />
+          } />
+          <Route path="/archive" element={
+            <Page content={<Archive />} />
           } />
         </Routes>
       </Router>
