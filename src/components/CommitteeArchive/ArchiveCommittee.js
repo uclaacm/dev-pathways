@@ -15,9 +15,9 @@ const ArchiveCommittee = (props) => {
         <div>
             <h2>{committeeName}</h2>
             {filteredList.map((item) => {
-                return item.links[0] ?
+                return(item.links[0] &&
                     <ArchiveTopicList topicName={item.category} resourceList={item.links} />
-                    : null;
+                );
             })}
         </div>
     );

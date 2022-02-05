@@ -12,11 +12,10 @@ const ArchiveTopicList = (props) => {
                 onClick={()=>{setIsExpanded(!isExpanded)}} 
                 isExpanded={isExpanded}
                 text={topicName} />
-            {isExpanded ? 
+            {isExpanded && 
                 resourceList.map((link) => {
                     return <p>{link.name}</p>
-                })
-                : null}
+                })}
         </div>
         );
 }
