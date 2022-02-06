@@ -1,17 +1,29 @@
 import React from 'react'
 import './ResultsItem.css'
-
 import video from './video_icon.svg'
 import article from './article_icon.svg'
 import game from './game_icon.svg'
 import doc from './doc_icon.svg'
 import none from './none_icon.svg'
+import HoverableDiv from './HoverableDiv'
+import { useState } from 'react'
 
-const Home = props => {
+const ResultsItem = props => {
+
+    const [isHovering, setIsHovering] = useState(false);
+
+    // const handleMouseOver = () => {
+    //     setIsHovering(true);
+    // }
+      
+    // const handleMouseOut = () => {
+    //     setIsHovering(false);
+    // }
+
     let resourceTypeIcon = "";
     switch(props.link) {
         case props.item.resource.video:
-            resourceTypeIcon = video;
+            resourceTypeIcon = video; 
             break;
         case props.item.resource.article:
             resourceTypeIcon = article;
@@ -26,14 +38,14 @@ const Home = props => {
             resourceTypeIcon = none;
             break;
     }
-    
+
     return (
         <div className="result" key={props.item.id}>
             {props.item.resource.icon ?
             <img className="result-icon" alt="source icon for spice" src={props.item.resource.icon}></img> : ""}
             
             <div className="result-body">
-            <a href={props.link} className="titleLink">{props.item.resource.name}</a>
+            <HoverableDiv isVideo={props.item.resource.video} link={props.link} linkName={props.item.resource.name} isHovering={isHovering} setIsHovering={setIsHovering} />
             <img className="resource-type-icon" src={resourceTypeIcon} alt="resource type icon"></img>
             {props.otherSources.length !== 0 && resourceTypeIcon !== article ? <img className="resource-type-icon" src={article} alt="resource type icon"></img> : ""}
 
@@ -48,4 +60,4 @@ const Home = props => {
     )
 }
 
-export default Home;
+export default ResultsItem;
