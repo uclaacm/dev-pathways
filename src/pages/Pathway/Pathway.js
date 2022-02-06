@@ -1,12 +1,16 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import PageHeader from '../../components/PageHeader/PageHeader';
 import PathwayHeader from '../../img/pathway-header.svg';
 import PathDay from '../../components/PathDay/PathDay';
+import QuizContext from '../Quiz/QuizContext';
+import resources from '../../data/resources';
 import './Pathway.css';
 
-import resources from '../../data/resources';
-
 const Pathway = () => {
+    const {quizResults} = useContext(QuizContext);
+    // start from here...
+    console.log(quizResults);
+    
     const example_resources = resources[3].links;
 
     return (
@@ -23,7 +27,10 @@ const Pathway = () => {
             {example_resources.map((resource, index) => 
                 <PathDay index={index + 1} resource={resource} />
             )}
-            
+            <h2>Come back later?</h2>
+            <p3>You can come back later and your pathway will be saved! Alternatively,
+                 you can <a href="/quiz" rel="noreferrer noopener">start over</a>.</p3>
+
         </div>
     );
 };

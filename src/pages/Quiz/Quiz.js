@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import PageHeader from "../../components/PageHeader/PageHeader";
 import PathwayHeader from "../../img/pathway-header.svg";
 import Floating from "../../img/quiz_floating.svg";
@@ -7,14 +7,15 @@ import Adventure from "../../img/quiz_adventure.svg";
 import QuizQuestion from "../../components/QuizQuestion/QuizQuestion";
 import SolidButton from "../../components/SolidButton/SolidButton";
 import { useNavigate } from "react-router-dom";
+import QuizContext, { defaultQuizContext } from "./QuizContext";
 import "./Quiz.css";
 
-const Quiz = () => {
+const Quiz = (props) => {
   const navigate = useNavigate();
 
-  const onChoiceSelection = (event) => {
-    console.log(event.target.value);
-  };
+  const {setQuizResults} = useContext(QuizContext)
+
+  let quizResults = defaultQuizContext.quizResults;
 
   return (
     <div>
@@ -34,37 +35,61 @@ const Quiz = () => {
         type="dropdown"
         question="Which technology do you want to learn?"
         choices={["HTML/CSS", "Javascript", "React", "Git"]}
-        onChange={onChoiceSelection}
+        onChange={(event) => {
+          quizResults = {
+            ...quizResults,
+            category: event.target.value}
+          }}
       />
       <QuizQuestion
         type="radio"
         question="How experienced are you?"
         choices={["Beginner", "Intermediate", "Advanced"]}
-        onChange={onChoiceSelection}
+        onChange={(event)=> {
+          quizResults = {
+            ...quizResults,
+            difficulty: event.target.value}
+          }}
       />
       <QuizQuestion
         type="radio"
         question="What kind of resources do you prefer?"
         choices={["Video", "Article", "Game", "Documentation"]}
-        onChange={onChoiceSelection}
+        onChange={(event) => {
+          quizResults = {
+            ...quizResults,
+            type: event.target.value}
+          }}
       />
       <QuizQuestion
         type="radio"
         question="What's your ideal timeline?"
         choices={["3 days", "1 week", "2 weeks", "1 month"]}
-        onChange={onChoiceSelection}
+        onChange={(event) => {
+            quizResults = {
+              ...quizResults,
+              time: event.target.value}
+            }}
       />
       <QuizQuestion
         type="radio"
         question="How long do you want to spend learning each week?"
         choices={["2 hours", "5 hours", "10 hours", "20 hours"]}
-        onChange={onChoiceSelection}
+        onChange={(event) => {
+          quizResults = {
+            ...quizResults,
+            hours: event.target.value
+          }
+        }}
       />
       <SolidButton
         type="radio"
         className="goto-pathway-button"
         text="Generate"
-        onClick={() => navigate("/pathway")}
+        onClick={() => {
+          setQuizResults(quizResults);
+          navigate("/pathway")
+        }}
       />
     </div>
   );
