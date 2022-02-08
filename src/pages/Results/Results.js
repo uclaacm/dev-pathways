@@ -8,6 +8,7 @@ import checkboxes from '../../data/checkboxes';
 import Checkbox from '../../components/Checkbox/Checkbox';
 import SolidButton from '../../components/SolidButton/SolidButton';
 import PageHeader from '../../components/PageHeader/PageHeader';
+import SearchOptions from '../../components/SearchOptions/SearchOptions';
 import SearchingArt from '../../img/searching_art.svg';
 import DifficultyExplanation from '../../components/DifficultyExplanation/DifficultyExplanation';
 
@@ -16,6 +17,7 @@ const Results = () => {
     const param = useParams();
     const [text, setText] = useState(decodeURIComponent(param.userText));
     const [checkedItems, setCheckedItems] = useState({});
+    const [SearchSelected, setSearchResult] = useState(true);
 
     const search = input => {
         console.log(`searched for ${input}`)
@@ -23,32 +25,40 @@ const Results = () => {
     }
 
     const handleChange = (event, category, predicate) => {
-        setCheckedItems({ ...checkedItems, [event.target.name]: {
-            checked: event.target.checked,
-            category: category,
-            predicate: predicate,
-        }});
+        setCheckedItems({
+            ...checkedItems, [event.target.name]: {
+                checked: event.target.checked,
+                category: category,
+                predicate: predicate,
+            }
+        });
     }
 
     return (
         <div>
-            <PageHeader 
-                header="Search Results" 
-                subheader={<SearchandSuggested searchFunction={search} text={text}/>}
+
+            <PageHeader
+                header="Search Results"
+                subheader={<SearchandSuggested searchFunction={search} text={text} />}
                 img={SearchingArt}
             />
-            <div className="results-page-section">
+
+            <SearchOptions
+                SearchState={SearchSelected}
+                onClick={() => setSearchResult(!SearchSelected)}
+            />
+
+            <div className="results-page-section display-desktop">
                 <ResultsBody
                     text={text}
                     checkedItems={checkedItems}
                 />
-                
                 <div className="filters-container">
-                    <SolidButton text="Generate Pathway" onClick={() => navigate("/quiz")}/>
+                    <SolidButton text="Generate Pathway" onClick={() => navigate("/quiz")} />
                     {Object.keys(checkboxes).map(key => (
                         <div className="filter-category">
                             <h3> {key} </h3>
-                            { checkboxes[key].names.map(item => ( key !== "Experience Level" ? 
+                            {checkboxes[key].names.map(item => (key !== "Experience Level" ?
                                 <div>
                                     <Checkbox name={item.name} checked={checkedItems[item.name]?.checked} onChange={event => handleChange(event, key, checkboxes[key].predicate)} />
                                     <label key={item.name}>
@@ -60,12 +70,42 @@ const Results = () => {
                                     <Checkbox name={item.name} checked={checkedItems[item.name]?.checked} onChange={event => handleChange(event, key, checkboxes[key].predicate)} />
                                     <DifficultyExplanation difficulty={item.name} />
                                 </div>
-                                ))
+                            ))
                             }
                         </div>
                     ))}
                 </div>
             </div>
+            <div className="results-page-section display-phone">
+                {SearchSelected ? <ResultsBody
+                    text={text}
+                    checkedItems={checkedItems}
+                /> :
+                    <div className="filters-container">
+                        <SolidButton text="Generate Pathway" onClick={() => navigate("/quiz")} />
+                        {Object.keys(checkboxes).map(key => (
+                            <div className="filter-category">
+                                <h3> {key} </h3>
+                                {checkboxes[key].names.map(item => (key !== "Experience Level" ?
+                                    <div>
+                                        <Checkbox name={item.name} checked={checkedItems[item.name]?.checked} onChange={event => handleChange(event, key, checkboxes[key].predicate)} />
+                                        <label key={item.name}>
+                                            {item.name}
+                                        </label>
+                                    </div>
+                                    :
+                                    <div className='Experience-Level'>
+                                        <Checkbox name={item.name} checked={checkedItems[item.name]?.checked} onChange={event => handleChange(event, key, checkboxes[key].predicate)} />
+                                        <DifficultyExplanation difficulty={item.name} />
+                                    </div>
+                                ))
+                                }
+                            </div>
+                        ))}
+                    </div>
+                }
+            </div>
+
         </div>
     )
 }

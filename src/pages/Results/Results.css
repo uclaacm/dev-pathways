@@ -11,7 +11,7 @@
     padding: 30px;
 }
 
-.filters-container > * {
+.filters-container>* {
     margin-bottom: 30px;
 }
 
@@ -28,4 +28,24 @@ h2 {
 .Experience-Level {
     display: flex;
     flex-direction: row;
+}
+
+.display-phone {
+    display: none;
+}
+
+@media (max-width: 720px) {
+
+    .filters-container {
+        width: 100%;
+        margin: auto;
+    }
+
+    .display-desktop {
+        display: none;
+    }
+
+    .display-phone {
+        display: block;
+    }
 }

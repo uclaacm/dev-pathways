@@ -1,0 +1,37 @@
+.result-selection {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.results-button {
+    width: 110px;
+    border-radius: 15px;
+}
+.results-button> .text {
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+.result-nobackground-button {
+    width: 110px;
+    background-color: white;
+}
+
+.result-nobackground-button>.text {
+    font-weight: none;
+    color: black;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+.result-nobackground-button:hover {
+    background-color: white;
+}
+
+
+@media (min-width: 720px) {
+    .result-selection {
+        display: none;
+    }
+}
