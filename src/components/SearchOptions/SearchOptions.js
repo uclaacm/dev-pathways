@@ -1,7 +1,6 @@
 import React from 'react';
 import './SearchOptions.css'
 import SolidButton from '../../components/SolidButton/SolidButton';
-import { useState } from 'react';
 const SearchOptions = (props) => {
     if (props.SearchState === true) {
         return (
