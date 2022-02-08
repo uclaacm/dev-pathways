@@ -1,10 +1,7 @@
 import React from 'react';
 import './SearchOptions.css'
 import SolidButton from '../../components/SolidButton/SolidButton';
-import { useState } from 'react';
 const SearchOptions = (props) => {
-    const [ResultButton, sethResultButton] = useState(true);
-    const [FilterButtton, setFilterButton] = useState(true);
     if (props.SearchState === true) {
         return (
 
@@ -15,7 +12,7 @@ const SearchOptions = (props) => {
                     onClick={props.onClick}
                 />
                 <SolidButton
-                    className="results-button filters"
+                    className="results-button"
                     text="Filters"
                     onClick={props.onClick}
                 />
@@ -32,7 +29,7 @@ const SearchOptions = (props) => {
                     onClick={props.onClick}
                 />
                 <SolidButton
-                    className="result-nobackground-button filters"
+                    className="result-nobackground-button"
                     text="Filters"
                     onClick={props.onClick}
                 />
