@@ -3,8 +3,6 @@ import './SearchOptions.css'
 import SolidButton from '../../components/SolidButton/SolidButton';
 import { useState } from 'react';
 const SearchOptions = (props) => {
-    const [ResultButton, sethResultButton] = useState(true);
-    const [FilterButtton, setFilterButton] = useState(true);
     if (props.SearchState === true) {
         return (
 
