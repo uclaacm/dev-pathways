@@ -1,0 +1,15 @@
+.button-container {
+  padding: 7px;
+}
+
+.arrow {
+  width: 12px;
+  height: 7px;
+  margin-left: 10px;
+  margin-bottom: 3px;
+  transition: 0.3s;
+}
+
+.flip {
+  transform: rotateX(180deg);
+}
