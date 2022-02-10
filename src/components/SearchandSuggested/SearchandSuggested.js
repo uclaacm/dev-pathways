@@ -9,7 +9,7 @@ const SearchandSuggested = props => {
     const [searchBarText, setSearchBarText] = useState(props.text ?? "");
     const [suggestedItem, setSuggestedItem] = useState([]); //holds all suggested items
     const [showSuggested, setShowSuggested] = useState(false);
-
+    const [textSelected, setTextSelected] = useState(true);
     const debouncedText = useDebounce(searchBarText, 150);
 
     const handleSearchInput = onChange => {
@@ -29,7 +29,10 @@ const SearchandSuggested = props => {
         let value = debouncedText.toLowerCase();
 
         //Parse for suggestions
-        if (value.trim() !== "") {
+        if (textSelected) {
+            setTextSelected(false)
+        }
+       else if (value.trim() !== "") {
             for(let i=0; i < resources.length; i++) {
                 const indexI = resources[i].category.toLowerCase().indexOf(value);
                 if (tempSuggest.length === 10) {break;}
@@ -65,6 +68,7 @@ const SearchandSuggested = props => {
         } else {
             val = resources[id[0]].links[id[1]].name.toLowerCase();  
         }
+        setTextSelected(true)
         setShowSuggested(false);
         setSearchBarText(val);
         props.searchFunction(val);
