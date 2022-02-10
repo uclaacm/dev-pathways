@@ -1,0 +1,37 @@
+.ArchiveBody{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 100%;
+    margin-top: 4rem;
+    margin-bottom: 10rem;
+    margin-left: 3rem;
+}
+
+.button-col {
+    height: auto;
+}
+
+.team-button{
+    width: 100%;
+    height: 50px;
+    padding: 12px;
+}
+
+.list-content{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.static-bar{
+    border: 1px solid #E6E6E6;
+    width: 1px;
+    height: 100%;
+    margin-right: 4rem;
+}
+
+.list-content-header{
+    font-size: 30px;
+    margin-top: 0px;
+}
