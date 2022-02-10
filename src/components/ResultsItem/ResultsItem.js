@@ -1,24 +1,16 @@
 import React from 'react'
 import './ResultsItem.css'
-import video from './video_icon.svg'
-import article from './article_icon.svg'
-import game from './game_icon.svg'
-import doc from './doc_icon.svg'
-import none from './none_icon.svg'
-import HoverableDiv from './HoverableDiv'
+import video from '../../img/video_icon.svg'
+import article from '../../img/article_icon.svg'
+import game from '../../img/game_icon.svg'
+import doc from '../../img/doc_icon.svg'
+import none from '../../img/none_icon.svg'
+import HoverableDiv from '../HoverableDiv/HoverableDiv'
 import { useState } from 'react'
 
 const ResultsItem = props => {
 
     const [isHovering, setIsHovering] = useState(false);
-
-    // const handleMouseOver = () => {
-    //     setIsHovering(true);
-    // }
-      
-    // const handleMouseOut = () => {
-    //     setIsHovering(false);
-    // }
 
     let resourceTypeIcon = "";
     switch(props.link) {
