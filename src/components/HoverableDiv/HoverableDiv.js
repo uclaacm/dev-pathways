@@ -1,5 +1,6 @@
 import React from 'react'
 import HoverVideo from './HoverVideo';
+import './HoverableDiv.css'
 
 const HoverableDiv = ({isVideo, isHovering, link,linkName,setIsHovering}) => {
 
