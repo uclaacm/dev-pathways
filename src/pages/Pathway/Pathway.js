@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { BlobProvider, Link, Document, Page, usePDF, Text, View, StyleSheet, Svg } from "@react-pdf/renderer";
+import { BlobProvider } from "@react-pdf/renderer";
 import PageHeader from "../../components/PageHeader/PageHeader";
 import PathwayHeader from "../../img/pathway-header.svg";
 import PathDay from "../../components/PathDay/PathDay";

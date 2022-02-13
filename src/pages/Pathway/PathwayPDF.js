@@ -1,4 +1,4 @@
-import { Link, Document, Page, Text, View, StyleSheet, Font, Svg, G, Polyline } from "@react-pdf/renderer";
+import { Link, Document, Page, Text, View, StyleSheet, Font } from "@react-pdf/renderer";
 
 const PathwayPDF = ({ resources }) => {
     Font.register({
