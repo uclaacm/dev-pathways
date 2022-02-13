@@ -18,7 +18,7 @@ const Pathway = () => {
     const PDFExportLink = ({children}) => (
         <BlobProvider document={<PathwayPDF resources={example_resources} />}>
             {({ url }) => (
-                <a href={url} target="_blank">
+                <a href={url} target="_blank" rel="noreferrer noopener">
                     {children}
                 </a>
             )}
