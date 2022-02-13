@@ -1,8 +1,9 @@
 import React, { useContext } from 'react';
-import { BlobProvider, PDFDownloadLink, Document, Page, usePDF, Text } from '@react-pdf/renderer';
+import { BlobProvider, Link, Document, Page, usePDF, Text, View, StyleSheet } from '@react-pdf/renderer';
 import PageHeader from '../../components/PageHeader/PageHeader';
 import PathwayHeader from '../../img/pathway-header.svg';
 import PathDay from '../../components/PathDay/PathDay';
+import PathwayPDF from './PathwayPDF';
 import QuizContext from '../Quiz/QuizContext';
 import resources from '../../data/resources';
 import './Pathway.css';
@@ -13,16 +14,6 @@ const Pathway = () => {
     console.log(quizResults);
 
     const example_resources = resources[3].links;
-
-    const MyDoc = () => (
-        <Document>
-            <Page>
-                <Text>My document data</Text>
-            </Page>
-        </Document>
-    );
-
-    //const [instance, updateInstance] = usePDF({ document: MyDoc });
 
     return (
         <div className="pathway-page">
@@ -46,7 +37,7 @@ const Pathway = () => {
                     start over
                 </a>
             </p3>
-            <BlobProvider document={<MyDoc />}>
+            <BlobProvider document={<PathwayPDF resources={example_resources}/>}>
                 {({ url }) => (
                     <a href={url} target="_blank">
                         Open in new tab
