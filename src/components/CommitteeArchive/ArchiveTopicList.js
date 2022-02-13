@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import DropDownButton from "../DropDownButton/DropDownButton";
+import ResourceItem from "../ResourceItem/ResourceItem";
 
 const ArchiveTopicList = (props) => {
 
@@ -14,7 +15,7 @@ const ArchiveTopicList = (props) => {
                 text={topicName} />
             {isExpanded && 
                 resourceList.map((link) => {
-                    return <p>{link.name}</p>
+                    return <ResourceItem link={link} />
                 })}
         </div>
         );

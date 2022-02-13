@@ -1,0 +1,40 @@
+.item-container {
+    display: table-cell;
+    width: 350px;
+    height: 160px;
+}
+
+.click-area {
+    text-decoration: none;
+    width: 160px;
+    height: 90px;
+    background-color: rgb(200, 200, 200);
+    border-radius: 10px;
+    display: block;
+}
+
+.extern-icon {
+    height: 90px;
+    width: 160px;
+    position: relative;
+}
+
+.link_icon {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.ex_svg {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+table.center {
+    margin-left:auto; 
+    margin-right:auto;
+  }
