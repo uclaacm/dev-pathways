@@ -10,22 +10,19 @@ import game_icon from '../../img/game_icon.svg'
 
 const ResourceItem = (props) => {
     let { link } = props;
-
-    let video = !!link.video;
-    let links = [{l: link.video, i: null},
-                {l: link.article, i: article_icon}, 
+    let links = [{l: link.article, i: article_icon}, 
                 {l: link.documentation, i: doc_icon},
                 {l: link.game, i: game_icon}].filter(item => item.l);
-    if(!links[0]) links[0] = {l: "https://acm.cs.ucla.edu/404", i: external_source};
+    if(!links[0]) links = [{l: "https://acm.cs.ucla.edu/404", i: external_source}];
 
     const displayThumbnail = () => {
         return (
-            video ?
-                <a href={links[0]}
-                    title={"Watch " + links[0].l}
+            link.video ?
+                <a href={link.video}
+                    title={"Watch " + link.video}
                     class="click-area">
                     <ReactPlayer 
-                        url={links[0].l} 
+                        url={link.video} 
                         width={160} height={90}
                         light={true} 
                     />
@@ -44,7 +41,7 @@ const ResourceItem = (props) => {
 
     const displayLinks = () => {
         return (
-            links.slice(1).map((item) => {
+            links.slice(!link.video).map((item) => {
                 return (
                     <a href={item.l} title={"Visit" + item.l}>
                         <img src={item.i} width="30" height="30" alt="" />
