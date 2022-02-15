@@ -9,9 +9,7 @@ const SearchandSuggested = props => {
     const [searchBarText, setSearchBarText] = useState(props.text ?? "");
     const [suggestedItem, setSuggestedItem] = useState([]); //holds all suggested items
     const [showSuggested, setShowSuggested] = useState(false);
-    // eslint-disable-line react-hooks/exhaustive-deps
     const [textSelected, setTextSelected] = useState(true);
-
     const debouncedText = useDebounce(searchBarText, 150);
 
     const handleSearchInput = onChange => {
@@ -25,10 +23,8 @@ const SearchandSuggested = props => {
             let value = debouncedText.toLowerCase();
 
             //Parse for suggestions
-            if (textSelected) {
-                setTextSelected(false)
-            }
-            else if (value.trim() !== "") {
+
+            if (value.trim() !== "" && textSelected === false) {
                 for (let i = 0; i < resources.length; i++) {
                     const indexI = resources[i].category.toLowerCase().indexOf(value);
                     if (tempSuggest.length === 10) { break; }
@@ -53,15 +49,14 @@ const SearchandSuggested = props => {
                 }
                 setShowSuggested(true);
             } else {
+                setTextSelected(false)
                 setShowSuggested(false);
             }
             setSuggestedItem(tempSuggest);
         }
-
         generateSuggestions(debouncedText);
-    },
-        [debouncedText]
-    );
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [debouncedText]);
 
 
     //Handle different ways of submitting search
