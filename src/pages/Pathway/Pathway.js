@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import PageHeader from '../../components/PageHeader/PageHeader';
 import PathwayHeader from '../../img/pathway-header.svg';
 import PathDay from '../../components/PathDay/PathDay';
@@ -7,8 +7,17 @@ import './Pathway.css';
 import resources from '../../data/resources';
 
 const Pathway = () => {
-    const example_resources = resources[3].links;
-
+    // will probably need props to know when to use the function to create a new pathway, not positive though
+    const [pathway, setPathway] = useState(
+        JSON.parse(localStorage.getItem('pathwayData')) ? JSON.parse(localStorage.getItem('pathwayData')) : resources[2].links
+    ); 
+    // here there will be a function that creates a list of resource objects, called upon hitting the
+    // generate a pathway button
+    // inside function have something like :
+    // setPathway(example_resources ? example_resources : pathway); // if a new one is generated, take it; otherwise take the last one generated
+    const finalPathway = resources[4].links; // remove this line once the function is created to take care of it
+    localStorage.setItem('pathwayData', JSON.stringify(finalPathway)); // this sets the initial one to show
+    
     return (
         <div className="pathway-page">
             <PageHeader
@@ -20,7 +29,7 @@ const Pathway = () => {
                     backgroundPosition: "100%",
                 }}
             />
-            {example_resources.map((resource, index) => 
+            {pathway.map((resource, index) => 
                 <PathDay index={index + 1} resource={resource} />
             )}
             <h2>Come back later?</h2>
