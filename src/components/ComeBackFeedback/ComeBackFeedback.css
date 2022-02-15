@@ -9,8 +9,8 @@ img {
     max-width: 450px;
 }
 
-strong {
-    font-size: 23pt;
+strong {    
+    font-size: 2rem;
     font-weight: 600;
 }
 
@@ -26,9 +26,9 @@ a {
 }
 
 .comeback-text {
-    max-width: 380px;
+    max-width: 22rem;
     text-align: left;
-    font-size: 14pt;
+    font-size: 1.2rem;
 }
 
 .feedback-container {
@@ -42,7 +42,7 @@ a {
     display: flex;
     text-align: left;
     padding-right: 90px;
-    font-size: 14pt;
+    font-size: 1.2rem;
     flex-direction: column;
 }
 
