@@ -1,0 +1,7 @@
+.button-container {
+    padding: 7px;
+}
+
+.flip {
+    transform: rotateX(180deg);
+}
