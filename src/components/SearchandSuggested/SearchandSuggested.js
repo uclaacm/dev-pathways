@@ -23,7 +23,6 @@ const SearchandSuggested = props => {
             let value = debouncedText.toLowerCase();
 
             //Parse for suggestions
-
             if (value.trim() !== "" && textSelected === false) {
                 for (let i = 0; i < resources.length; i++) {
                     const indexI = resources[i].category.toLowerCase().indexOf(value);
