@@ -9,7 +9,9 @@ const SearchandSuggested = props => {
     const [searchBarText, setSearchBarText] = useState(props.text ?? "");
     const [suggestedItem, setSuggestedItem] = useState([]); //holds all suggested items
     const [showSuggested, setShowSuggested] = useState(false);
+    // eslint-disable-line react-hooks/exhaustive-deps
     const [textSelected, setTextSelected] = useState(true);
+
     const debouncedText = useDebounce(searchBarText, 150);
 
     const handleSearchInput = onChange => {
