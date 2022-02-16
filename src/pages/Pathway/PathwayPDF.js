@@ -3,7 +3,7 @@ import { Link, Document, Page, Text, View, StyleSheet, Font } from "@react-pdf/r
 const PathwayPDF = ({ resources }) => {
     Font.register({
         family: "Poppins",
-        src: "http://fonts.gstatic.com/s/poppins/v1/TDTjCH39JjVycIF24TlO-Q.ttf",
+        src: "https://fonts.gstatic.com/s/poppins/v1/TDTjCH39JjVycIF24TlO-Q.ttf",
         fontStyle: "normal",
         fontWeight: "normal",
     });
