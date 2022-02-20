@@ -3,11 +3,12 @@
     flex-direction: row;
     justify-content: flex-start;
     height: 100%;
-    margin: 90px 0 10px 45px
+    margin: 64px 0 10px 45px
 }
 
 .button-col {
     height: auto;
+    margin-top: 36px;
 }
 
 .team-button{

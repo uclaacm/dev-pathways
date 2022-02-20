@@ -8,13 +8,13 @@ function ArchiveBody() {
 
   const [committee, setCommittee] = useState("studio")
 
-  const refArray = ["studio", "icpc", "design", "cyber", "teachla", "w", "ai", "hack"]
+  const refArray = ["Studio", "ICPC", "Design", "Cyber", "Teach LA", "W", "AI", "Hack"]
   const sortedTeams = JSON.parse(JSON.stringify(teams))
 
   return (
     <div className='ArchiveBody'>
         <div className='button-col'>
-            {sortedTeams.sort((a,b) => refArray.indexOf(a.name) - refArray.indexOf(b.name)).map((team) => (team.name !== "board") && 
+            {sortedTeams.sort((a,b) => refArray.indexOf(a.name) - refArray.indexOf(b.name)).map((team) => (team.name !== "Board") && 
             <TeamButton
                 className = 'team-button'
                 icon = {team.logotype}
