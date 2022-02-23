@@ -9,6 +9,7 @@ import Checkbox from '../../components/Checkbox/Checkbox';
 import SolidButton from '../../components/SolidButton/SolidButton';
 import PageHeader from '../../components/PageHeader/PageHeader';
 import SearchingArt from '../../img/searching_art.svg';
+import DifficultyExplanation from '../../components/DifficultyExplanation/DifficultyExplanation';
 
 const Results = () => {
     const navigate = useNavigate();
@@ -47,14 +48,20 @@ const Results = () => {
                     {Object.keys(checkboxes).map(key => (
                         <div className="filter-category">
                             <h3> {key} </h3>
-                            { checkboxes[key].names.map(item => (
+                            { checkboxes[key].names.map(item => ( key !== "Experience Level" ? 
                                 <div>
                                     <Checkbox name={item.name} checked={checkedItems[item.name]?.checked} onChange={event => handleChange(event, key, checkboxes[key].predicate)} />
                                     <label key={item.name}>
                                         {item.name}
                                     </label>
                                 </div>
-                            ))}
+                                :
+                                <div className='Experience-Level'>
+                                    <Checkbox name={item.name} checked={checkedItems[item.name]?.checked} onChange={event => handleChange(event, key, checkboxes[key].predicate)} />
+                                    <DifficultyExplanation difficulty={item.name} />
+                                </div>
+                                ))
+                            }
                         </div>
                     ))}
                 </div>

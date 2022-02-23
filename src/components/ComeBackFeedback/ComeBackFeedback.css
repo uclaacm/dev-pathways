@@ -1,0 +1,56 @@
+.comeback-feedback {
+    width: 100vw;
+    border-top: 1px solid #E5E5E5;
+    text-align: center;
+    margin: 150px auto 0px auto;
+}
+
+img {
+    max-width: 450px;
+}
+
+strong {    
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+}
+
+.comeback-container {
+    display: flex;
+    max-width: 1020px;
+    margin: 150px auto 250px auto;
+    justify-content: space-between;
+}
+
+.comeback-text {
+    max-width: 22rem;
+    text-align: left;
+    font-size: 1.2rem;
+}
+
+.feedback-container {
+    display: flex;
+    max-width: 1020px;
+    margin: 250px auto 0 auto;
+    justify-content: space-between;
+}
+
+.feedback-text {
+    display: flex;
+    text-align: left;
+    padding-right: 90px;
+    font-size: 1.2rem;
+    flex-direction: column;
+}
+
+#feedback-paragraph {
+    margin-top: 75px;
+}
+
+#contact-us {
+    margin-top: 110px;
+}
+
