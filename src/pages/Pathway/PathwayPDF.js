@@ -1,4 +1,5 @@
-import { Link, Document, Page, Text, View, StyleSheet, Font } from "@react-pdf/renderer";
+import { Link, Document, Page, Text, View, StyleSheet, Font, Image } from "@react-pdf/renderer";
+import { Canvg } from 'canvg';
 
 const PathwayPDF = ({ resources }) => {
     Font.register({
@@ -22,13 +23,16 @@ const PathwayPDF = ({ resources }) => {
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
+            border: "1px solid rgba(0, 0, 0, 0.05)",
+            borderRadius: "30px",
+            padding: "10px"
         },
         resourceTitle: {
             fontSize: "10px",
             textAlign: "center",
         },
         resourceSource: {
-            fontSize: "6px",
+            fontSize: "8px",
             textAlign: "center",
         },
         resource: {
@@ -76,6 +80,25 @@ const PathwayPDF = ({ resources }) => {
                     return (
                         <View wrap={false} style={pdfStyles.resource}>
                             <View style={pdfStyles.thumbnail}>
+
+                                <Image
+                                src={(async () => {
+                                    const canvas = new OffscreenCanvas(1000, 1000); // width, height
+                                    const ctx = canvas.getContext('2d');
+
+                                    const v = await Canvg.from(ctx, resource.icon);
+                                    await v.render();
+
+                                    // the canvas calls to output a png
+                                    var blob = await canvas.convertToBlob();
+                                    const img = URL.createObjectURL(blob);
+
+                                    // do what you want with the base64, write to screen, post to server, etc...
+                                    console.log(img)
+                                    return img;
+                                })()}
+                                />
+
                                 <Text style={pdfStyles.resourceTitle}>{title}</Text>
                                 <Text style={pdfStyles.resourceSource}>{source}</Text>
                             </View>

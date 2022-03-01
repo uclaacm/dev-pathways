@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { BlobProvider } from "@react-pdf/renderer";
+import { BlobProvider, PDFDownloadLink } from "@react-pdf/renderer";
 import PageHeader from "../../components/PageHeader/PageHeader";
 import PathwayHeader from "../../img/pathway-header.svg";
 import PathDay from "../../components/PathDay/PathDay";
@@ -16,6 +16,15 @@ const Pathway = () => {
     const example_resources = resources[3].links;
 
     const PDFExportLink = ({children}) => (
+        /** NOTE: now file takes a bit to load to PDF */
+
+        // I left this here in case you wanted the loading and error stuff, but feel free to delete!
+        // <PDFDownloadLink document={<PathwayPDF resources={example_resources} />} fileName="pathways.pdf">
+        // {({ blob, url, loading, error }) =>
+        //     loading ? 'Loading document...' : 'Download now!'
+        // }
+        // </PDFDownloadLink>
+
         <BlobProvider document={<PathwayPDF resources={example_resources} />}>
             {({ url }) => (
                 <a href={url} target="_blank" rel="noreferrer noopener">
