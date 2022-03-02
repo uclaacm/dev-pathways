@@ -2,6 +2,7 @@ import React, {useContext} from 'react';
 import PageHeader from '../../components/PageHeader/PageHeader';
 import PathwayHeader from '../../img/pathway-header.svg';
 import PathDay from '../../components/PathDay/PathDay';
+import ComeBackFeedback from '../../components/ComeBackFeedback/ComeBackFeedback';
 import QuizContext from '../Quiz/QuizContext';
 import resources from '../../data/resources';
 import './Pathway.css';
@@ -27,9 +28,8 @@ const Pathway = () => {
             {example_resources.map((resource, index) => 
                 <PathDay index={index + 1} resource={resource} />
             )}
-            <h2>Come back later?</h2>
-            <p3>You can come back later and your pathway will be saved! Alternatively,
-                 you can <a href="/quiz" rel="noreferrer noopener">start over</a>.</p3>
+
+            <ComeBackFeedback/>
 
         </div>
     );
