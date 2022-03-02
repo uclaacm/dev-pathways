@@ -5,11 +5,11 @@
     justify-content: space-between;
 }
 
-.results-button {
+.result-button {
     width: 110px;
     border-radius: 15px;
 }
-.results-button> .text {
+.result-button> .text {
     margin-top: 1px;
     margin-bottom: 1px;
 }

@@ -17,7 +17,7 @@ const Results = () => {
     const param = useParams();
     const [text, setText] = useState(decodeURIComponent(param.userText));
     const [checkedItems, setCheckedItems] = useState({});
-    const [SearchSelected, setSearchResult] = useState(true);
+    const [SearchSelected, setSearchSelected] = useState(true);
 
     const search = input => {
         console.log(`searched for ${input}`)
@@ -45,7 +45,7 @@ const Results = () => {
 
             <SearchOptions
                 SearchState={SearchSelected}
-                onClick={() => setSearchResult(!SearchSelected)}
+                onClick={() => setSearchSelected(!SearchSelected)}
             />
 
             <div className="results-page-section display-desktop">

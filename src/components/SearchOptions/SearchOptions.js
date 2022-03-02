@@ -1,42 +1,28 @@
-import React from 'react';
-import './SearchOptions.css'
-import SolidButton from '../../components/SolidButton/SolidButton';
+import React from "react";
+import "./SearchOptions.css";
+import SolidButton from "../../components/SolidButton/SolidButton";
 const SearchOptions = (props) => {
-    if (props.SearchState === true) {
-        return (
 
-            <div className="result-selection" >
-                <SolidButton
-                    className="result-nobackground-button"
-                    text="Results"
-                    onClick={props.onClick}
-                />
-                <SolidButton
-                    className="results-button"
-                    text="Filters"
-                    onClick={props.onClick}
-                />
+  return (
+    <div className="result-selection">
+      <SolidButton
+        className={`result-${
+          props.SearchState ? "nobackground-":""
+        }button`}
+        text="Results"
+        onClick={props.onClick}
+      />
 
-            </div>
-        );
-    }
-    else {
-        return (
-            <div className="result-selection" >
-                <SolidButton
-                    className="results-button"
-                    text="Results"
-                    onClick={props.onClick}
-                />
-                <SolidButton
-                    className="result-nobackground-button"
-                    text="Filters"
-                    onClick={props.onClick}
-                />
-            </div>
-
-        )
-    }
-}
+      <SolidButton
+        className={`result-${
+          props.SearchState ?"" : "nobackground-"
+        }button`}
+        text="Filters"
+        onClick={props.onClick}
+      />
+    </div>
+  );
+  
+};
 
 export default SearchOptions;
