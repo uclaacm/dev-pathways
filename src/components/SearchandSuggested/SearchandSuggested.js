@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './SearchandSuggested.css';
 import SearchBar from '../SearchBar/SearchBar';
 import resources from '../../data/resources.js';
@@ -11,6 +11,26 @@ const SearchandSuggested = props => {
     const [showSuggested, setShowSuggested] = useState(false);
     const [textSelected, setTextSelected] = useState(true);
     const debouncedText = useDebounce(searchBarText, 150);
+
+    // create a reference to dropdown search box
+    const dropdownBox = useRef();
+
+    useEffect(() => {
+        // closes the dropdown search box if user clicks anywhere on the page outside the box
+        const handleOutsideClick = e => {
+            if (showSuggested && dropdownBox.current && !dropdownBox.current.contains(e.target)) {
+                // if the user clicks outside the dropdown box, close the dropdown
+                setShowSuggested(false);
+            }
+        }
+
+        document.addEventListener("click", handleOutsideClick);
+
+        // clean up
+        return () => {
+            document.removeEventListener("click", handleOutsideClick);
+        };
+    }, [showSuggested])
 
     const handleSearchInput = onChange => {
         setSearchBarText(onChange.target.value);
@@ -120,7 +140,7 @@ const SearchandSuggested = props => {
     )
 
     return (
-        <div className="searchandsuggested">
+        <div className="searchandsuggested" ref={dropdownBox}>
             <SearchBar
                 value={searchBarText}
                 onChange={(event) => handleSearchInput(event)}
