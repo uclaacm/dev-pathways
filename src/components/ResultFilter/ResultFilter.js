@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React from "react";
 import "./ResultFilter.css";
 import SolidButton from "../SolidButton/SolidButton";
 import checkboxes from "../../data/checkboxes";
