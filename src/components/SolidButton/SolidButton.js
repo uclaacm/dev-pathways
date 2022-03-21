@@ -10,4 +10,4 @@ const SolidButton = props => {
     );
 }
 
-export default SolidButton;
+export default SolidButton; 

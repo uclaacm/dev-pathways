@@ -1,31 +1,9 @@
-.results-page-section {
-    display: flex;
-}
-
-.filters-container {
-    width: 30%;
-    height: 100%;
-    margin: 2%;
-    text-align: left;
-    border-left: 2px solid #00000015;
-    padding: 30px;
-}
-
-.filters-container > * {
-    margin-bottom: 30px;
-}
-
 h2 {
     font-size: 36px;
 }
-
 .filter-category {
     border: 2px solid #00000015;
     border-radius: 15px;
     padding: 15px;
 }
 
-.Experience-Level {
-    display: flex;
-    flex-direction: row;
-}
