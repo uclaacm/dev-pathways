@@ -34,7 +34,7 @@ const Quiz = (props) => {
       <QuizQuestion
         type="dropdown"
         question="Which technology do you want to learn?"
-        choices={["HTML/CSS", "Javascript", "React", "Git"]}
+        choices={["HTML/CSS", "Javascript", "React", "Git", "Graphic Design", "Accessibility", "Product Management"]}
         onChange={(event) => {
           quizResults = {
             ...quizResults,

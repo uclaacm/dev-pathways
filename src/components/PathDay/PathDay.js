@@ -20,6 +20,8 @@ const PathDay = ({ index, resource }) => {
                     {resource.difficulty}
                     {resource.video != null && <span> • <a href={resource.video}>video</a></span>}
                     {resource.article != null && <span> • <a href={resource.article}>article</a></span>}
+                    {resource.game != null && <span> • <a href={resource.game}>game</a></span>}
+                    {resource.documentation != null && <span> • <a href={resource.documentation}>documentation</a></span>}
                 </div>
             </div>
         </div>
