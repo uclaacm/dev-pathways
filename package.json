@@ -12,7 +12,7 @@
     "react-dom": "^18.0.0",
     "react-hover-video-player": "^9.4.0",
     "react-player": "^2.10.1",
-    "react-router-dom": "^6.2.1",
+    "react-router-dom": "^6.4.2",
     "react-scripts": "4.0.3",
     "react-youtube": "^7.14.0",
     "typed.js": "^2.0.12",
