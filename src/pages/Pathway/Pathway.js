@@ -8,12 +8,16 @@ import resources from '../../data/resources';
 import './Pathway.css';
 
 const Pathway = () => {
+    // inside create pathway function have something like :
+    // setPathway(example_resources ? example_resources : pathway); // if a new one is generated, take it; otherwise take the last one generated
     const {quizResults} = useContext(QuizContext);
     // start from here...
     console.log(quizResults);
-    
-    const example_resources = resources[3].links;
 
+    let pathway = localStorage.getItem('pathwayData') ? JSON.parse(localStorage.getItem('pathwayData')) : resources[2].links; 
+
+    const finalPathway = resources[4].links; // remove this line once the function is created to take care of it
+    localStorage.setItem('pathwayData', JSON.stringify(finalPathway)); // this sets the initial one to be displayed
     return (
         <div className="pathway-page">
             <PageHeader
@@ -25,7 +29,7 @@ const Pathway = () => {
                     backgroundPosition: "100%",
                 }}
             />
-            {example_resources.map((resource, index) => 
+            {pathway.map((resource, index) => 
                 <PathDay index={index + 1} resource={resource} />
             )}
 
